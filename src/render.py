@@ -148,14 +148,18 @@ def logo_full(size: int = 1080) -> Image.Image:
     return im
 
 
-def wordmark(d: ImageDraw.ImageDraw, xy, size: int = 50, fill=FG) -> int:
-    """Logo per esteso: "nuovo quotidiano" minuscolo, Inter Tight Black, lettere strette."""
-    f = font("InterTight-Black", size)
-    x, y = xy
-    for ch in "nuovo quotidiano":
-        d.text((x, y), ch, font=f, fill=fill)
-        x += f.getlength(ch) - size * 0.045 if ch != " " else f.getlength(" ") * 0.85
-    return int(x)
+_WORDMARK = None
+
+
+def wordmark(img: Image.Image, xy, width: int = 470) -> int:
+    """Logo per esteso "nuovo quotidiano": è l'immagine originale (assets/logo-esteso.png), non ricostruita."""
+    global _WORDMARK
+    if _WORDMARK is None:
+        _WORDMARK = Image.open(config.ROOT / "assets" / "logo-esteso.png").convert("RGBA")
+    h = round(_WORDMARK.height * width / _WORDMARK.width)
+    wm = _WORDMARK.resize((width, h), Image.LANCZOS)
+    img.paste(wm, xy, wm)
+    return xy[0] + width
 
 
 _ROUND = None
@@ -166,12 +170,15 @@ def round_logo(size: int) -> Image.Image:
     global _ROUND
     if _ROUND is None:
         _ROUND = Image.open(config.ROOT / "assets" / "logo-tondo.png").convert("RGBA")
-    return _ROUND.resize((size, size), Image.LANCZOS)
+    im = _ROUND.resize((size, size), Image.LANCZOS)
+    # bordo grigio sottile: sul nero delle slide fa vedere che il logo è tondo
+    ImageDraw.Draw(im).ellipse((1, 1, size - 2, size - 2), outline=(85, 85, 85, 255), width=max(2, size // 40))
+    return im
 
 
 def header(img: Image.Image, page: int | None, total: int, date: bool = False):
     d = ImageDraw.Draw(img)
-    wordmark(d, (M, 60), 58)
+    wordmark(img, (M, 62), 430)
     fr = font("Inter-Bold", 28)
     if date:
         mesi = "gen feb mar apr mag giu lug ago set ott nov dic".split()
@@ -385,7 +392,7 @@ def story(cover_img: Image.Image) -> Image.Image:
     d.rounded_rectangle((80, 330, 1000, 1480), radius=4, outline=(60, 60, 60), width=2)
     mark = round_logo(84)
     img.paste(mark, (80, 166), mark)
-    wordmark(d, (184, 184), 50)
+    wordmark(img, (184, 186), 420)
     fs = font("InterTight-ExtraBold", 30)
     spaced(d, (80, 1540), "NUOVO POST  ·  TOCCA PER LEGGERE", fs, ACC, 0.14)
     return img
