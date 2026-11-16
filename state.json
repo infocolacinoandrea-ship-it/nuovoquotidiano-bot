@@ -2,12 +2,18 @@
  "seen": [
   "5b6e483e3821",
   "3068e1a842b0",
-  "e27b31848c69"
+  "e27b31848c69",
+  "47debe0fa6fd",
+  "01b63dad18bf"
  ],
  "topics": [
   {
    "topic": "UE approva acquisizione Commerzbank da parte di UniCredit",
    "date": "2026-11-16T13:38+01:00"
+  },
+  {
+   "topic": "Revolut commissariata in Italia per riciclaggio con aggravante mafiosa",
+   "date": "2026-11-16T14:25+01:00"
   }
  ],
  "pending": {
@@ -22,12 +28,23 @@
    ],
    "topic": "UE approva acquisizione Commerzbank da parte di UniCredit",
    "created": "2026-11-16T12:38:50.779685+00:00"
+  },
+  "20261116-142548": {
+   "message_id": 30,
+   "caption": "Il Tribunale di Milano mette Revolut Italia in amministrazione giudiziaria\n\n📌 La richiesta è del pm Paolo Storari. Le indagini sono della Guardia di Finanza.\nSecondo la procura, le \"gravi carenze\" nei controlli antiriciclaggio avrebbero aperto la banca a soggetti indagati o condannati, anche con aggravante mafiosa.\n📉 Le operazioni contestate valgono 76,5 milioni di euro.\nRevolut dice che collaborerà con le autorità e che i servizi in Italia funzionano senza interruzioni.\n\nSecondo voi, le banche digitali andrebbero controllate in modo diverso da quelle tradizionali?\n\nFonti: ANSA\n\n📷 copertina: ANSA (foto dell'articolo)\n\nSegui @nuovoquotidiano per capire il mondo in 1 minuto.\n\n#revolut #tribunaledimilano #riciclaggio #guardiadifinanza #fintech #banche #economia #notizie",
+   "n": 8,
+   "uids": [
+    "47debe0fa6fd",
+    "01b63dad18bf"
+   ],
+   "topic": "Revolut commissariata in Italia per riciclaggio con aggravante mafiosa",
+   "created": "2026-11-16T13:26:04.883346+00:00"
   }
  },
  "published": {},
- "tg_offset": 146858988,
+ "tg_offset": 146858989,
  "daily": {
-  "2026-11-16": 1
+  "2026-11-16": 2
  },
  "slots_done": {
   "2026-11-16": [
