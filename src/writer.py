@@ -51,7 +51,10 @@ SLIDE = {
         "testo": {"type": "string", "description": "Massimo 45 parole, frasi brevi"},
         "numero": {"type": "string", "description": "Solo per layout dato: il numero, es. '4,25%' o '12 mld €'"},
         "autore": {"type": "string", "description": "Solo per layout citazione: chi l'ha detto e ruolo"},
-        "foto_ricerca": {"type": "string", "description": "Solo per layout foto: 2-5 parole IN INGLESE per cercare una foto libera (es. 'Christine Lagarde', 'European Central Bank Frankfurt', 'oil tanker sea')"},
+        "foto_ricerca": {"type": "string", "description": ("Facoltativo, su qualsiasi slide tranne citazione: 2-5 parole IN INGLESE per cercare "
+                         "una foto reale che illustri ESATTAMENTE il contenuto della slide (persona citata, luogo, edificio, "
+                         "istituzione, oggetto concreto: es. 'Christine Lagarde', 'Revolut app smartphone', 'Milan courthouse'). "
+                         "Mettila solo dove una foto aggiunge qualcosa; ometti il campo se una foto sarebbe generica o forzata.")},
         "foto_tipo": {"type": "string", "enum": ["soggetto", "concetto"],
                       "description": "soggetto = persona, luogo, edificio, istituzione precisi; concetto = immagine generica"},
     },
@@ -71,7 +74,7 @@ WRITE_TOOL = {
             "parole_evidenziate": {"type": "array", "items": {"type": "string"},
                                    "description": "1-3 parole del titolo di copertina da colorare in verde (le più forti)"},
             "slide": {"type": "array", "items": SLIDE, "minItems": config.SLIDES_MIN - 2, "maxItems": config.SLIDES_MAX - 2,
-                      "description": "Slide interne in ordine: cosa è successo, contesto, numeri, reazioni, cosa succede ora. Alterna i layout, almeno 2 con foto."},
+                      "description": "Slide interne in ordine: cosa è successo, contesto, numeri, reazioni, cosa succede ora. Alterna i layout; usa 'foto' per 2-3 slide dove esiste un soggetto fotografabile preciso (le foto sono verificate: se non ce n'è una adatta la slide diventa solo testo)."},
             "perche_ti_riguarda": {"type": "string",
                                    "description": "Ultima slide: max 40 parole su cosa cambia per chi vive in Italia. Se non c'è un effetto concreto, spiega perché conta comunque."},
             "caption": {"type": "string",
@@ -175,6 +178,56 @@ def write(sources: list[dict]) -> dict:
         "Usa solo i fatti di queste fonti:\n\n" + docs
     )
     return _call(WRITE_TOOL, prompt, 4000)
+
+
+PHOTO_TOOL = {
+    "name": "scegli_foto",
+    "description": "Scegli la foto adatta alla slide oppure nessuna.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "scelta": {"type": ["integer", "null"], "description": "Numero della foto adatta (da 0), null se nessuna va bene"},
+            "motivo": {"type": "string", "description": "Una frase"},
+        },
+        "required": ["scelta", "motivo"],
+    },
+}
+
+
+def choose_photo(slide: dict, images: list) -> tuple[int | None, str]:
+    """Claude guarda le foto candidate e sceglie quella coerente con la slide (o nessuna)."""
+    import base64
+    import io as _io
+    content = [{"type": "text", "text": (
+        "Sei il photo editor di NUOVO QUOTIDIANO. Questa è una slide di un carosello di notizie:\n"
+        f"TITOLO: {slide.get('titolo', '')}\nTESTO: {slide.get('testo', '')}\n"
+        f"(ricerca usata: {slide.get('foto_ricerca', '')})\n\n"
+        "Qui sotto ci sono le foto candidate, numerate da 0. Scegline UNA solo se mostra davvero il soggetto "
+        "della slide (la persona giusta, il luogo o l'istituzione giusta, l'oggetto di cui si parla) ed è una foto "
+        "giornalistica credibile: niente foto generiche da stock, illustrazioni, grafici, loghi isolati, screenshot, "
+        "testo in sovrimpressione, persone sbagliate o immagini che potrebbero fuorviare il lettore. "
+        "Sarà convertita in bianco e nero, quindi conta la composizione, non il colore. "
+        "Se nessuna è davvero adatta, scegli null: meglio una slide senza foto che una foto fuori tema.")}]
+    for i, im in enumerate(images):
+        th = im.copy()
+        th.thumbnail((768, 768))
+        buf = _io.BytesIO()
+        th.convert("RGB").save(buf, "JPEG", quality=85)
+        content += [{"type": "text", "text": f"Foto {i}:"},
+                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg",
+                                                 "data": base64.b64encode(buf.getvalue()).decode()}}]
+    content.append({"type": "text", "text": f"Rispondi SOLO chiamando lo strumento `{PHOTO_TOOL['name']}`."})
+    try:
+        msg = _client().messages.create(model=config.CLAUDE_MODEL, max_tokens=400, tools=[PHOTO_TOOL],
+                                        tool_choice={"type": "auto"}, messages=[{"role": "user", "content": content}])
+        res = next((b.input for b in msg.content if b.type == "tool_use"), None) or \
+            _json_from_text("".join(getattr(b, "text", "") for b in msg.content)) or {}
+    except Exception as e:
+        return None, f"verifica non riuscita: {e}"
+    n = res.get("scelta")
+    if isinstance(n, int) and 0 <= n < len(images):
+        return n, res.get("motivo", "")
+    return None, res.get("motivo", "nessuna adatta")
 
 
 def build_caption(c: dict, sources: list[dict], credits: list[tuple[str, str]]) -> str:

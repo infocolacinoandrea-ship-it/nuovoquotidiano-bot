@@ -90,11 +90,17 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
             break
     used: set[str] = set()
     cover_credit = credits[0][1] if credits else ""
-    if cover_img is None:
-        first = next((sl for sl in slides if sl.get("foto_ricerca")), None)
-        found = photos.find(first["foto_ricerca"], first.get("foto_tipo", "soggetto"), used) if first else None
-        if found:
-            cover_img, cover_credit = found
+    # foto interne: solo dove Claude, guardandole, conferma che c'entrano con il testo
+    slide_photos: dict[int, tuple] = {}
+    for i, sl in enumerate(slides):
+        if sl.get("foto_ricerca") and sl.get("layout") in ("foto", "testo") and len(slide_photos) < 4:
+            found = photos.best_for(sl, used, log)
+            if found:
+                slide_photos[i] = found
+    if cover_img is None:  # nessuna foto d'articolo valida: usa la migliore foto verificata, se c'è
+        if slide_photos:
+            first = min(slide_photos)
+            cover_img, cover_credit = slide_photos.pop(first)
             credits.append(("copertina", cover_credit))
 
     cid = now_rome().strftime("%Y%m%d-%H%M%S")
@@ -102,12 +108,11 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
     files = [render.save(render.cover(cover_img, c["categoria"], c["titolo_copertina"],
                                       c.get("parole_evidenziate", []), cover_credit, total), folder / f"{cid}_01.jpg")]
     for n, sl in enumerate(slides, start=2):
-        ph, cr = None, ""
-        if sl.get("layout") == "foto":
-            found = photos.find(sl.get("foto_ricerca", ""), sl.get("foto_tipo", "concetto"), used)
-            if found:
-                ph, cr = found
-                credits.append((f"slide {n}", cr))
+        ph, cr = slide_photos.get(n - 2, (None, ""))
+        if ph is not None:
+            credits.append((f"slide {n}", cr))
+            if sl.get("layout") == "testo":
+                sl = {**sl, "layout": "foto"}
         files.append(render.save(render.content(sl, n, total, ph, cr), folder / f"{cid}_{n:02d}.jpg"))
     files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total, [x["source"] for x in sources]), folder / f"{cid}_{total:02d}.jpg"))
     story = render.save(render.story(Image.open(files[0])), folder / f"{cid}_story.jpg")
