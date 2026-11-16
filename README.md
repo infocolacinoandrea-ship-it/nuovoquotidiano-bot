@@ -10,6 +10,11 @@ Il bot lavora da solo, agli orari stabiliti (di base **07:30, 12:30, 18:00 e 21:
 
 Comandi da scrivere al bot: `/nuovo` (un carosello subito), `/stato`, `/pausa`, `/riprendi`.
 
+**Ricrea da un link:** manda al bot il link di un articolo o di un post Instagram. Il bot ricrea quella notizia con la nostra grafica.
+- **Articolo:** legge l'articolo, cerca la stessa notizia nelle altre testate per completarla e verificarla, poi crea il carosello.
+- **Post Instagram:** Claude legge le slide (immagini) e la caption e ricostruisce la notizia e la scaletta. Poi il bot cerca la notizia nelle testate per verificare i fatti e la riscrive con parole nostre, con la stessa scaletta. Le foto del post non vengono usate perché sono di altri.
+- **Se la notizia non si trova:** nella nota per te compare un avviso, perché i fatti vengono solo dal post.
+
 Per pubblicare senza approvazione imposta `AUTO_PUBLISH: "1"` nel workflow (o nel `.env` sul mini PC).
 
 ## Linea grafica

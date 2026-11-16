@@ -167,7 +167,7 @@ def pick(items: list[Item], recent_topics: list[str]) -> dict | None:
             "reason": res.get("motivo", "")}
 
 
-def write(sources: list[dict]) -> dict:
+def write(sources: list[dict], extra: str = "") -> dict:
     """sources = [{'source','title','link','text'}]. Ritorna il carosello (dict di WRITE_TOOL)."""
     docs = "\n\n".join(
         f"=== FONTE {i + 1}: {s['source']} — {s['title']}\n{s['text'][:7000]}" for i, s in enumerate(sources))
@@ -175,9 +175,73 @@ def write(sources: list[dict]) -> dict:
         "Trasforma questa notizia in un carosello Instagram per NUOVO QUOTIDIANO, in italiano.\n"
         f"Totale slide: copertina + {config.SLIDES_MIN - 2}-{config.SLIDES_MAX - 2} interne + 'perché ti riguarda'.\n"
         "Ogni slide deve dire una cosa sola e far venire voglia di passare alla successiva.\n"
+        + (extra + "\n\n" if extra else "") +
         "Usa solo i fatti di queste fonti:\n\n" + docs
     )
     return _call(WRITE_TOOL, prompt, 4000)
+
+
+READ_POST_TOOL = {
+    "name": "leggi_post",
+    "description": "Cosa racconta il post Instagram.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "notizia": {"type": "string", "description": "Tutti i fatti del post (testo delle slide + caption) riscritti in italiano in modo completo: chi, cosa, quando, numeri, dichiarazioni"},
+            "scaletta": {"type": "array", "items": {"type": "string"}, "description": "Di cosa parla ogni slide del post, in ordine, una riga per slide"},
+            "ricerca": {"type": "string", "description": "Titolo breve della notizia in inglese, per cercarla nelle testate"},
+        },
+        "required": ["notizia", "scaletta", "ricerca"],
+    },
+}
+
+MATCH_TOOL = {
+    "name": "trova_articoli",
+    "description": "Articoli delle testate che parlano della stessa notizia.",
+    "input_schema": {
+        "type": "object",
+        "properties": {"numeri": {"type": "array", "items": {"type": "integer"}, "description": "Fino a 4 numeri, vuoto se nessuno"}},
+        "required": ["numeri"],
+    },
+}
+
+
+def _img_block(im) -> dict:
+    import base64
+    import io as _io
+    th = im.copy()
+    th.thumbnail((1080, 1080))
+    buf = _io.BytesIO()
+    th.convert("RGB").save(buf, "JPEG", quality=88)
+    return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg",
+                                        "data": base64.b64encode(buf.getvalue()).decode()}}
+
+
+def read_post(images: list, caption: str, username: str) -> dict:
+    """Claude legge le slide (immagini) e la caption di un post Instagram."""
+    content = [{"type": "text", "text": f"Post Instagram di @{username or 'sconosciuto'}. Caption:\n{caption[:2500]}\n\nSlide:"}]
+    for i, im in enumerate(images[:10]):
+        content += [{"type": "text", "text": f"Slide {i + 1}:"}, _img_block(im)]
+    content.append({"type": "text", "text": f"Rispondi SOLO chiamando lo strumento `{READ_POST_TOOL['name']}`."})
+    msg = _client().messages.create(model=config.CLAUDE_MODEL, max_tokens=2500, system=LINEA_EDITORIALE,
+                                    tools=[READ_POST_TOOL], tool_choice={"type": "auto"},
+                                    messages=[{"role": "user", "content": content}])
+    res = next((b.input for b in msg.content if b.type == "tool_use"), None) or \
+        _json_from_text("".join(getattr(b, "text", "") for b in msg.content))
+    if not res:
+        raise RuntimeError("non sono riuscito a leggere il post")
+    return res
+
+
+def match_articles(story: str, items: list) -> list:
+    """Tra le notizie delle testate, quelle che parlano della stessa storia."""
+    if not items:
+        return []
+    lines = [f"[{n}] ({it.source}) {it.title} — {it.summary[:160]}" for n, it in enumerate(items[:150])]
+    res = _call(MATCH_TOOL, f"NOTIZIA: {story}\n\nArticoli delle testate:\n" + "\n".join(lines) +
+                "\n\nQuali articoli parlano proprio di questa notizia (stesso fatto, non solo stesso tema)?",
+                600, model=config.PICK_MODEL)
+    return [items[i] for i in res.get("numeri", []) if isinstance(i, int) and 0 <= i < len(items)][:4]
 
 
 PHOTO_TOOL = {

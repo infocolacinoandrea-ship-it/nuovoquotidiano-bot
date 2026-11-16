@@ -6,6 +6,7 @@ Comandi da scrivere al bot:
   /stato   quanti caroselli oggi, quanti in attesa, prossimo orario
   /pausa   il bot smette di preparare caroselli (resta in ascolto)
   /riprendi
+Oppure manda un link (articolo di giornale o post Instagram): il bot ricrea quella notizia con la nostra grafica.
 """
 from __future__ import annotations
 
@@ -79,8 +80,15 @@ def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]]
                 out.append((action, cid, cq))
             continue
         m = u.get("message")
-        if m and str(m.get("chat", {}).get("id")) == str(config.ADMIN_CHAT_ID) and m.get("text", "").startswith("/"):
-            out.append(("cmd", m["text"].split()[0].split("@")[0].lower(), m))
+        if m and str(m.get("chat", {}).get("id")) == str(config.ADMIN_CHAT_ID):
+            text = m.get("text") or m.get("caption") or ""
+            if text.startswith("/"):
+                out.append(("cmd", text.split()[0].split("@")[0].lower(), m))
+            else:
+                import re
+                link = re.search(r"https?://\S+", text)
+                if link:
+                    out.append(("link", link.group(0).rstrip(").,>"), m))
     return out, offset
 
 

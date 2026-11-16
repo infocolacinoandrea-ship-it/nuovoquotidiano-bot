@@ -69,18 +69,78 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
 
     sources, cover_candidates = [], []
     for it in [main] + related:
-        art = news.fetch_article(it.link)
-        text = art["text"] if len(art["text"]) > 400 else f"{it.title}. {it.summary} {art['text']}"
-        sources.append({"source": it.source, "title": it.title, "link": it.link, "text": text})
-        if it is main:  # la copertina viene dall'articolo principale
-            for url in art.get("images") or [art["image"]]:
-                if url:
-                    cover_candidates.append((url, art["credit"], it.source))
-        for url in (art["image"], it.image):
-            if url:
-                cover_candidates.append((url, art["credit"], it.source))
+        sources.append(_article_source(it.link, it.source, it.title, it.summary, cover_candidates, it is main))
+        if it.image:
+            cover_candidates.append((it.image, "", it.source))
 
-    c = writer.write(sources)
+    return assemble(sources, cover_candidates, topic=choice["topic"], reason=choice["reason"],
+                    uids=[main.uid] + [r.uid for r in related], log=log)
+
+
+def _article_source(it_link: str, it_source: str, it_title: str, it_summary: str, cover_candidates: list,
+                    with_cover: bool) -> dict:
+    art = news.fetch_article(it_link)
+    text = art["text"] if len(art["text"]) > 400 else f"{it_title}. {it_summary} {art['text']}"
+    if with_cover:
+        for url in art.get("images") or [art["image"]]:
+            if url:
+                cover_candidates.append((url, art["credit"], it_source))
+    if art["image"]:
+        cover_candidates.append((art["image"], art["credit"], it_source))
+    return {"source": it_source, "title": it_title or art.get("title", ""), "link": it_link, "text": text}
+
+
+def build_from_link(s: dict, url: str, log=print) -> dict | None:
+    """Ricrea con la nostra identità la notizia di un link: articolo di giornale o post Instagram."""
+    import hashlib
+    from urllib.parse import urlparse
+    uid = hashlib.sha1(url.split("?")[0].encode()).hexdigest()[:12]
+    recent = news.fetch_items(hours=72)
+    sources, cover_candidates, extra = [], [], ""
+    if "instagram.com" in url:
+        post = news.instagram_post(url)
+        imgs = [im for im in (_image(u) for u in post["images"][:10]) if im is not None]
+        if not imgs and not post["caption"]:
+            raise RuntimeError("non riesco a leggere il post (è privato o Instagram blocca la lettura)")
+        log(f"Post di @{post['username']}: {len(imgs)} slide lette")
+        read = writer.read_post(imgs, post["caption"], post["username"])
+        matches = writer.match_articles(read["ricerca"] + " — " + read["notizia"][:600], recent)
+        for n, it in enumerate(matches):
+            sources.append(_article_source(it.link, it.source, it.title, it.summary, cover_candidates, n == 0))
+        sources.append({"source": f"post Instagram di @{post['username'] or 'sconosciuto'}", "title": read["ricerca"],
+                        "link": url, "text": read["notizia"]})
+        extra = ("Stai RICREANDO un post Instagram di un'altra pagina con la nostra identità: stessa notizia e "
+                 "stessa scaletta delle slide, ma testi riscritti interamente con parole nostre (non copiare frasi). "
+                 "Verifica i fatti sulle fonti giornalistiche; se un dato del post non è confermato dalle testate, "
+                 "attribuiscilo o toglilo. Scaletta del post originale:\n- " + "\n- ".join(read["scaletta"]))
+        topic = read["ricerca"]
+        warn = "" if matches else "⚠️ Nessuna testata trovata su questa notizia: fatti presi solo dal post, controllali. "
+    else:
+        art = news.fetch_article(url)
+        if len(art["text"]) < 300:
+            raise RuntimeError("non riesco a leggere l'articolo (pagina a pagamento o bloccata)")
+        site = art.get("site") or urlparse(url).netloc.replace("www.", "")
+        title = art.get("title", "")
+        for u in art.get("images") or [art["image"]]:
+            if u:
+                cover_candidates.append((u, art["credit"], site))
+        sources.append({"source": site, "title": title, "link": url, "text": art["text"]})
+        for it in writer.match_articles(title, [i for i in recent if i.link != url])[:2]:
+            sources.append(_article_source(it.link, it.source, it.title, it.summary, cover_candidates, False))
+        extra = ("Il carosello deve raccontare la notizia di questo articolo (FONTE 1); le altre fonti servono a "
+                 "completarla e verificarla.")
+        topic, warn = title, ""
+    log(f"Fonti: {', '.join(x['source'] for x in sources)}")
+    return assemble(sources, cover_candidates, topic=topic, reason=warn + "ricreata da un link che hai mandato",
+                    uids=[uid], log=log, extra=extra)
+
+
+def assemble(sources: list[dict], cover_candidates: list, topic: str, reason: str, uids: list[str],
+             log=print, extra: str = "") -> dict:
+    """Dai testi delle fonti al carosello finito: testi, foto, immagini, caption."""
+
+
+    c = writer.write(sources, extra)
     slides = c["slide"][: config.SLIDES_MAX - 2]
     total = len(slides) + 2
 
@@ -135,9 +195,8 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
     (folder / "carosello.json").write_text(json.dumps({"carosello": c, "fonti": sources and [
         {k: v for k, v in x.items() if k != "text"} for x in sources], "crediti": credits},
         indent=1, ensure_ascii=False))
-    return {"id": cid, "files": files, "story": story, "caption": caption, "topic": choice["topic"],
-            "uids": [main.uid] + [r.uid for r in related], "reason": choice["reason"],
-            "links": [x["link"] for x in sources]}
+    return {"id": cid, "files": files, "story": story, "caption": caption, "topic": topic,
+            "uids": uids, "reason": reason, "links": [x["link"] for x in sources]}
 
 
 # ------------------------------------------------------------------ pubblicazione
@@ -169,12 +228,12 @@ def remember(s: dict, car: dict):
     s["daily"][today] = s["daily"].get(today, 0) + 1
 
 
-def produce(s: dict, exclude: set[str] = frozenset(), why: str = "") -> bool:
+def produce(s: dict, exclude: set[str] = frozenset(), why: str = "", link: str = "") -> bool:
     """Prepara un carosello e lo manda in anteprima (o lo pubblica). Ritorna True se ha fatto qualcosa."""
     if not config.ANTHROPIC_API_KEY:
         bot.notify("⚠️ Manca ANTHROPIC_API_KEY: non posso scrivere i caroselli.")
         return False
-    car = build(s, exclude)
+    car = build_from_link(s, link) if link else build(s, exclude)
     if not car:
         bot.notify("🤷 Nessuna notizia nuova abbastanza importante in questo momento.")
         return False
@@ -205,6 +264,10 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
     for action, arg, u in ups:
         if action == "cmd":
             handle_command(s, arg)
+            continue
+        if action == "link":
+            bot.notify("⏳ Ricreo questa notizia con la nostra grafica… (2-4 minuti)")
+            safe(lambda: produce(s, why="Dal tuo link: ", link=arg), "link")
             continue
         p = s["pending"].pop(arg, None)
         if not p:
@@ -248,7 +311,7 @@ def handle_command(s: dict, cmd: str):
         bot.notify(f"📊 Oggi: {s['daily'].get(today, 0)} caroselli\n⏳ In attesa: {len(s['pending'])}\n"
                    f"🕐 Prossimo: {nxt}\n{'⏸️ IN PAUSA' if s.get('paused') else '▶️ Attivo'}"
                    f"\nModalità: {'pubblicazione automatica' if config.AUTO_PUBLISH else 'approvazione con ✅'}\n\n"
-                   "Comandi: /nuovo /stato /pausa /riprendi")
+                   "Comandi: /nuovo /stato /pausa /riprendi\nOppure mandami un link (articolo o post Instagram) e lo ricreo.")
 
 
 def due_slot(s: dict) -> str | None:

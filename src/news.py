@@ -85,7 +85,7 @@ def fetch_items(hours: int | None = None) -> list[Item]:
 
 def fetch_article(url: str) -> dict:
     """Testo dell'articolo, foto principale e credito della foto (se la pagina lo dichiara)."""
-    res = {"text": "", "image": "", "credit": "", "images": []}
+    res = {"text": "", "image": "", "credit": "", "images": [], "title": "", "site": ""}
     try:
         r = requests.get(url, headers={"User-Agent": UA, "Accept-Language": "en,it;q=0.8"}, timeout=25)
         html = r.text
@@ -99,6 +99,12 @@ def fetch_article(url: str) -> dict:
             res["image"] = tag["content"]
             break
     res["credit"] = _photo_credit(soup)
+    for prop, key in (("og:title", "title"), ("og:site_name", "site")):
+        tag = soup.find("meta", attrs={"property": prop})
+        if tag and tag.get("content"):
+            res[key] = tag["content"].strip()
+    if not res["title"] and soup.title:
+        res["title"] = soup.title.get_text(strip=True)
     res["images"] = _image_candidates(soup, url, res["image"])
     try:
         import trafilatura
@@ -176,3 +182,51 @@ def download(url: str) -> bytes:
     r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
     r.raise_for_status()
     return r.content
+
+
+# ------------------------------------------------------------------ post Instagram
+
+def instagram_post(url: str) -> dict:
+    """Legge un post Instagram pubblico: autore, caption e immagini (tutte le slide se possibile).
+    1) API ufficiale (business_discovery): funziona per account professionali e dà tutte le slide in alta qualità;
+    2) altrimenti i metadati pubblici della pagina (caption e prima immagine)."""
+    import re as _re
+    m = _re.search(r"instagram\.com/(?:[^/]+/)?(?:p|reel|tv)/([A-Za-z0-9_-]+)", url)
+    code = m.group(1) if m else ""
+    res = {"username": "", "caption": "", "images": [], "code": code, "url": url}
+    # metadati pubblici (servono anche per sapere l'autore)
+    try:
+        r = requests.get(url, headers={"User-Agent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"},
+                         timeout=20)
+        soup = BeautifulSoup(r.text, "html.parser")
+        def meta(p):
+            t = soup.find("meta", attrs={"property": p}) or soup.find("meta", attrs={"name": p})
+            return (t.get("content") or "").strip() if t else ""
+        desc = meta("og:description") or meta("description")
+        um = _re.search(r"-\s*([A-Za-z0-9._]+)\s+on\s", desc) or _re.search(r"@([A-Za-z0-9._]+)", meta("og:title") + " " + desc)
+        if um:
+            res["username"] = um.group(1)
+        cm = _re.search(r':\s*"(.*)"\s*\.?$', desc, _re.S)
+        res["caption"] = (cm.group(1) if cm else desc)[:3000]
+        if meta("og:image"):
+            res["images"] = [meta("og:image")]
+    except Exception as e:
+        print(f"Instagram non leggibile: {e}")
+    # API ufficiale: tutte le slide
+    if res["username"] and config.IG_TOKEN and config.IG_USER_ID:
+        try:
+            fields = (f"business_discovery.username({res['username']})"
+                      "{media.limit(60){caption,permalink,media_type,media_url,children{media_type,media_url}}}")
+            r = requests.get(f"{config.IG_API}/{config.IG_USER_ID}", timeout=30,
+                             params={"fields": fields, "access_token": config.IG_TOKEN})
+            for md in r.json().get("business_discovery", {}).get("media", {}).get("data", []):
+                if code and code in (md.get("permalink") or ""):
+                    kids = (md.get("children") or {}).get("data") or [md]
+                    imgs = [k["media_url"] for k in kids if k.get("media_type") == "IMAGE" and k.get("media_url")]
+                    if imgs:
+                        res["images"] = imgs
+                    res["caption"] = md.get("caption") or res["caption"]
+                    break
+        except Exception as e:
+            print(f"business_discovery non disponibile: {e}")
+    return res
