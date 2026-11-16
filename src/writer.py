@@ -100,14 +100,38 @@ def _client():
 
 
 def _call(tool: dict, prompt: str, max_tokens: int = 4000, model: str = "") -> dict:
-    msg = _client().messages.create(
-        model=model or config.CLAUDE_MODEL, max_tokens=max_tokens, system=LINEA_EDITORIALE,
-        tools=[tool], tool_choice={"type": "tool", "name": tool["name"]},
-        messages=[{"role": "user", "content": prompt}])
-    for block in msg.content:
-        if block.type == "tool_use":
-            return block.input
-    raise RuntimeError("Claude non ha restituito il formato atteso")
+    """Chiede a Claude di rispondere con lo strumento `tool`.
+    I modelli più recenti non accettano tool_choice forzato: si usa "auto" con l'istruzione esplicita,
+    e se il modello risponde a testo si prova a leggere il JSON (poi un secondo tentativo)."""
+    instr = (f"\n\nRispondi SOLO chiamando lo strumento `{tool['name']}` con tutti i campi richiesti. "
+             "Non scrivere altro testo.")
+    messages = [{"role": "user", "content": prompt + instr}]
+    last_text = ""
+    for attempt in range(2):
+        msg = _client().messages.create(
+            model=model or config.CLAUDE_MODEL, max_tokens=max_tokens, system=LINEA_EDITORIALE,
+            tools=[tool], tool_choice={"type": "auto"}, messages=messages)
+        for block in msg.content:
+            if block.type == "tool_use" and block.name == tool["name"]:
+                return block.input
+        last_text = "".join(getattr(b, "text", "") for b in msg.content)
+        parsed = _json_from_text(last_text)
+        if parsed is not None:
+            return parsed
+        messages = messages + [{"role": "assistant", "content": msg.content},
+                               {"role": "user", "content": f"Usa lo strumento `{tool['name']}` adesso."}]
+    raise RuntimeError(f"Claude non ha restituito il formato atteso: {last_text[:300]}")
+
+
+def _json_from_text(text: str):
+    import re
+    m = re.search(r"\{.*\}", text or "", re.S)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(0))
+    except Exception:
+        return None
 
 
 def pick(items: list[Item], recent_topics: list[str]) -> dict | None:
