@@ -148,22 +148,39 @@ def logo_full(size: int = 1080) -> Image.Image:
     return im
 
 
+def wordmark(d: ImageDraw.ImageDraw, xy, size: int = 50, fill=FG) -> int:
+    """Logo per esteso: "nuovo quotidiano" minuscolo, Inter Tight Black, lettere strette."""
+    f = font("InterTight-Black", size)
+    x, y = xy
+    for ch in "nuovo quotidiano":
+        d.text((x, y), ch, font=f, fill=fill)
+        x += f.getlength(ch) - size * 0.045 if ch != " " else f.getlength(" ") * 0.85
+    return int(x)
+
+
+_ROUND = None
+
+
+def round_logo(size: int) -> Image.Image:
+    """Logo tondo originale (cerchio nero, nø bianco), con trasparenza attorno."""
+    global _ROUND
+    if _ROUND is None:
+        _ROUND = Image.open(config.ROOT / "assets" / "logo-tondo.png").convert("RGBA")
+    return _ROUND.resize((size, size), Image.LANCZOS)
+
+
 def header(img: Image.Image, page: int | None, total: int, date: bool = False):
     d = ImageDraw.Draw(img)
-    mark = logo_mark(58)
-    img.paste(mark, (M, 58), mark)
-    f = font("InterTight-ExtraBold", 25)
-    d.text((M + 76, 63), "NUOVO", font=f, fill=FG)
-    d.text((M + 76, 89), "QUOTIDIANO", font=f, fill=FG)
-    fr = font("Inter-Medium", 24)
+    wordmark(d, (M, 60), 58)
+    fr = font("Inter-Bold", 28)
     if date:
-        mesi = "GEN FEB MAR APR MAG GIU LUG AGO SET OTT NOV DIC".split()
+        mesi = "gen feb mar apr mag giu lug ago set ott nov dic".split()
         now = dt.datetime.now(ZoneInfo("Europe/Rome"))
-        txt = f"{now.day} {mesi[now.month - 1]} {now.year}"
+        txt = f"{now.day} {mesi[now.month - 1]}"
     else:
-        txt = f"{page:02d} / {total:02d}" if page else ""
+        txt = f"{page}/{total}" if page else ""
     if txt:
-        d.text((W - M - fr.getlength(txt), 76), txt, font=fr, fill=FG)
+        d.text((W - M - fr.getlength(txt), 76), txt, font=fr, fill=(200, 200, 200))
 
 
 def progress(img: Image.Image, page: int, total: int):
@@ -310,8 +327,8 @@ def _cta_editorial(img: Image.Image, y: int):
     """CTA in stile firma editoriale: riga lime, marchio NQ, testo su due righe."""
     d = ImageDraw.Draw(img)
     d.rectangle((M, y, W - M, y + 3), fill=ACC)
-    mark = logo_mark(96)
-    img.paste(mark, (M, y + 40), mark)
+    mark = round_logo(104)
+    img.paste(mark, (M - 4, y + 36), mark)
     f1 = font("InterTight-Black", 44)
     d.text((M + 124, y + 42), "Segui ", font=f1, fill=FG)
     d.text((M + 124 + f1.getlength("Segui "), y + 42), f"@{config.HANDLE}", font=f1, fill=ACC)
@@ -366,10 +383,9 @@ def story(cover_img: Image.Image) -> Image.Image:
     img.paste(c, (80, 330))
     d = ImageDraw.Draw(img)
     d.rounded_rectangle((80, 330, 1000, 1480), radius=4, outline=(60, 60, 60), width=2)
-    mark = logo_mark(70)
-    img.paste(mark, (80, 170), mark)
-    fl = font("InterTight-Black", 44)
-    d.text((172, 180), "NUOVO QUOTIDIANO", font=fl, fill=FG)
+    mark = round_logo(84)
+    img.paste(mark, (80, 166), mark)
+    wordmark(d, (184, 184), 50)
     fs = font("InterTight-ExtraBold", 30)
     spaced(d, (80, 1540), "NUOVO POST  ·  TOCCA PER LEGGERE", fs, ACC, 0.14)
     return img
