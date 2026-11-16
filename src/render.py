@@ -302,27 +302,57 @@ def content(s: dict, page: int, total: int, photo: Image.Image | None = None, cr
     return img
 
 
+CTA_TOP = "Segui @{handle}"
+CTA_SUB = "per scoprire il mondo in un minuto"
+
+
+def _cta_editorial(img: Image.Image, y: int):
+    """CTA in stile firma editoriale: riga lime, marchio NQ, testo su due righe."""
+    d = ImageDraw.Draw(img)
+    d.rectangle((M, y, W - M, y + 3), fill=ACC)
+    mark = logo_mark(96)
+    img.paste(mark, (M, y + 40), mark)
+    f1 = font("InterTight-Black", 44)
+    d.text((M + 124, y + 42), "Segui ", font=f1, fill=FG)
+    d.text((M + 124 + f1.getlength("Segui "), y + 42), f"@{config.HANDLE}", font=f1, fill=ACC)
+    d.text((M + 124, y + 96), CTA_SUB, font=font("Inter-Medium", 32), fill=BODY)
+
+
+def _cta_panel(img: Image.Image, y: int):
+    """CTA in un riquadro grigio scuro con bordo lime a sinistra."""
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((M, y, W - M, y + 170), radius=18, fill=(22, 22, 22))
+    d.rectangle((M, y, M + 8, y + 170), fill=ACC)
+    f1 = font("InterTight-Black", 46)
+    d.text((M + 44, y + 34), "Segui ", font=f1, fill=FG)
+    d.text((M + 44 + f1.getlength("Segui "), y + 34), f"@{config.HANDLE}", font=f1, fill=ACC)
+    d.text((M + 44, y + 98), CTA_SUB, font=font("Inter-Medium", 32), fill=BODY)
+    d.text((W - M - 70, y + 50), "→", font=font("InterTight-Black", 64), fill=ACC)
+
+
+CTA_STYLE = "editorial"
+
+
 def closing(why: str, page: int, total: int, sources: list[str] | None = None) -> Image.Image:
-    """Ultima slide: "Perché ti riguarda" centrato, fonti in basso. Sobria, senza pulsanti."""
+    """Ultima slide: "Perché ti riguarda", fonti e invito a seguire la pagina."""
     img = Image.new("RGB", (W, H), BG)
 
     def blk(dd, y):
         spaced(dd, (M, y), "PERCHÉ TI RIGUARDA", font("InterTight-ExtraBold", 28), ACC, 0.2)
-        f, lines = fit(why, "InterTight-SemiBold", W - 2 * M, 9, range(62, 36, -2))
+        f, lines = fit(why, "InterTight-SemiBold", W - 2 * M, 8, range(58, 34, -2))
         end = draw_lines(dd, (M, y + 70), lines, f, FG, leading=1.22)
         dd.rectangle((0, y + 70, 10, end - 10), fill=ACC)
         return end
 
-    _centered(img, 160, H - 260, blk)
+    cta_y = H - 330
+    _centered(img, 170, cta_y - 120, blk)
     d = ImageDraw.Draw(img)
     if sources:
-        d.line((M, H - 205, W - M, H - 205), fill=(45, 45, 45), width=2)
-        fs = font("Inter-Medium", 24)
+        fs = font("Inter-Medium", 23)
         txt = "Fonti: " + ", ".join(dict.fromkeys(sources))
-        for i, l in enumerate(wrap(txt, fs, W - 2 * M)[:2]):
-            d.text((M, H - 180 + i * 32), l, font=fs, fill=MUTED)
+        d.text((M, cta_y - 70), wrap(txt, fs, W - 2 * M)[0], font=fs, fill=MUTED)
+    (_cta_panel if CTA_STYLE == "panel" else _cta_editorial)(img, cta_y)
     header(img, page, total)
-    footer_handle(img)
     progress(img, page, total)
     return img
 
