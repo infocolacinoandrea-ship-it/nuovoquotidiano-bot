@@ -411,7 +411,7 @@ def story(cover_img: Image.Image) -> Image.Image:
     img.paste(mark, (80, 166), mark)
     wordmark(img, (184, 186), 420)
     fs = font("InterTight-ExtraBold", 30)
-    spaced(d, (80, 1540), "NUOVO POST  ·  TOCCA PER LEGGERE", fs, ACC, 0.14)
+    spaced(d, (80, 1540), "NUOVO POST SUL PROFILO", fs, ACC, 0.14)
     return img
 
 
