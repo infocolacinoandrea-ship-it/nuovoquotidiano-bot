@@ -169,7 +169,8 @@ def produce(s: dict, exclude: set[str] = frozenset(), why: str = "") -> bool:
         except Exception as e:
             bot.notify(f"⚠️ Pubblicazione non riuscita ({car['topic']}): {e}")
         return True
-    note = f"🗞 {why}{car['topic']}\n💡 {car['reason']}\n🔗 " + "\n🔗 ".join(car["links"])
+    note = (f"ℹ️ NOTA PER TE (non viene pubblicata)\n{why}{car['topic']}\nPerché: {car['reason']}\nArticoli: "
+            + "\n".join(car["links"]))
     mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
     s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
                                "uids": car["uids"], "topic": car["topic"],

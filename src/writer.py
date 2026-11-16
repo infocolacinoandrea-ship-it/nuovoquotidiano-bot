@@ -75,19 +75,20 @@ WRITE_TOOL = {
             "perche_ti_riguarda": {"type": "string",
                                    "description": "Ultima slide: max 40 parole su cosa cambia per chi vive in Italia. Se non c'è un effetto concreto, spiega perché conta comunque."},
             "caption": {"type": "string",
-                        "description": ("Caption Instagram in italiano, scritta da un social media editor di una testata seria. "
-                                        "Struttura: 1) prima riga-gancio (max 12 parole) che si capisce anche troncata nel feed, "
-                                        "con il fatto più forte e concreto (numero, nome, conseguenza), senza clickbait né maiuscolo urlato; "
-                                        "2) riga vuota; 3) 3-5 frasi brevi che danno il contesto essenziale e i numeri chiave, "
-                                        "ognuna su una riga, con al massimo 2-3 emoji sobrie usate come punti elenco (es. 📌 📉 🌍); "
-                                        "4) riga vuota; 5) una domanda aperta e specifica sul tema che inviti a commentare. "
-                                        "Niente hashtag, niente 'link in bio', niente frasi fatte ('incredibile', 'shock', 'non ci crederai').")},
-            "hashtag": {"type": "array", "items": {"type": "string"}, "minItems": 6, "maxItems": 10,
-                        "description": ("6-10 hashtag senza #, scelti ad hoc per QUESTA notizia: "
-                                        "3-5 specifici (persone, paesi, istituzioni, aziende, eventi citati, es. 'bce', 'lagarde', 'tassidinteresse'), "
-                                        "2-3 di categoria in italiano molto cercati (es. 'economia', 'geopolitica', 'finanza', 'notizie'), "
-                                        "1 di nicchia della pagina ('nuovoquotidiano'). Tutto minuscolo, senza accenti né spazi, "
-                                        "niente hashtag generici da spam (#instagood, #viral, #fyp) né inventati che nessuno cerca.")},
+                        "description": ("Caption Instagram in italiano con il tono di una testata giornalistica seria "
+                                        "(come un lancio d'agenzia ben scritto), non di un influencer. "
+                                        "Struttura: 1) prima riga: il fatto principale in una frase netta e concreta (chi, cosa, quanto), "
+                                        "max 15 parole, che regge anche troncata nel feed; 2) riga vuota; 3) un paragrafo di 2-4 frasi "
+                                        "con contesto e numeri chiave, attribuendo le fonti ('secondo Reuters...'); "
+                                        "4) riga vuota; 5) una domanda breve e concreta per i commenti. "
+                                        "NIENTE emoji, niente punti esclamativi, niente hashtag, niente 'link in bio', "
+                                        "niente frasi fatte o sensazionalistiche ('incredibile', 'shock', 'ecco perché', 'non ci crederai').")},
+            "hashtag": {"type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 4,
+                        "description": ("Esattamente 4 hashtag senza #, scelti per QUESTA notizia (il quinto, #nuovoquotidiano, "
+                                        "lo aggiunge il sistema): 2-3 specifici (paese, istituzione, azienda o persona chiave, "
+                                        "es. 'bce', 'iran', 'nvidia') e 1-2 di categoria in italiano molto cercati "
+                                        "(es. 'economia', 'geopolitica', 'finanza', 'esteri'). Minuscolo, senza accenti né spazi, "
+                                        "niente hashtag generici da spam né inventati.")},
         },
         "required": ["categoria", "titolo_copertina", "parole_evidenziate", "slide", "perche_ti_riguarda", "caption", "hashtag"],
     },
@@ -177,11 +178,17 @@ def write(sources: list[dict]) -> dict:
 
 
 def build_caption(c: dict, sources: list[dict], credits: list[tuple[str, str]]) -> str:
-    """Caption finale: testo di Claude + fonti + crediti foto + hashtag (max 2200 caratteri)."""
+    """Caption finale: testo di Claude + fonti + crediti foto + CTA + 5 hashtag (max 2200 caratteri)."""
     fonti = ", ".join(dict.fromkeys(s["source"] for s in sources))
-    cred = "\n".join(f"📷 {where}: {who}" for where, who in credits if who)
-    tags = " ".join("#" + h.lstrip("#").replace(" ", "") for h in c.get("hashtag", [])[:8])
-    parts = [c["caption"].strip(), f"Fonti: {fonti}", cred,
-             f"Segui @{config.HANDLE} per capire il mondo in 1 minuto.", tags]
-    text = "\n\n".join(p for p in parts if p)
-    return text[:2200]
+    cred = "; ".join(f"{where} {who}" for where, who in credits if who)
+    tags = []
+    for h in c.get("hashtag", []):
+        h = h.lstrip("#").replace(" ", "").lower()
+        if h and h != config.HANDLE and h not in tags:
+            tags.append(h)
+    tags = tags[:4] + [config.HANDLE]
+    parts = [c["caption"].strip(),
+             f"Fonti: {fonti}." + (f"\nFoto: {cred}." if cred else ""),
+             f"Segui @{config.HANDLE} per scoprire il mondo in un minuto.",
+             " ".join("#" + t for t in tags)]
+    return "\n\n".join(p for p in parts if p)[:2200]

@@ -58,7 +58,7 @@ def keyboard(cid: str) -> str:
 
 def send_preview(images: list[Path], caption: str, cid: str, note: str = "") -> int:
     send_album(images)
-    text = (f"{note}\n\n" if note else "") + "📝 CAPTION\n\n" + caption
+    text = (f"{note}\n\n" if note else "") + "━━━━━━━━━━\n📝 CAPTION (viene pubblicata così)\n━━━━━━━━━━\n\n" + caption
     msg = _api("sendMessage", data={"chat_id": config.ADMIN_CHAT_ID, "text": text[:4000],
                                      "reply_markup": keyboard(cid), "disable_web_page_preview": "true"})
     return msg["message_id"]
