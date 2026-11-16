@@ -88,9 +88,9 @@ def _client():
     return anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY)
 
 
-def _call(tool: dict, prompt: str, max_tokens: int = 4000) -> dict:
+def _call(tool: dict, prompt: str, max_tokens: int = 4000, model: str = "") -> dict:
     msg = _client().messages.create(
-        model=config.CLAUDE_MODEL, max_tokens=max_tokens, system=LINEA_EDITORIALE,
+        model=model or config.CLAUDE_MODEL, max_tokens=max_tokens, system=LINEA_EDITORIALE,
         tools=[tool], tool_choice={"type": "tool", "name": tool["name"]},
         messages=[{"role": "user", "content": prompt}])
     for block in msg.content:
@@ -117,7 +117,7 @@ def pick(items: list[Item], recent_topics: list[str]) -> dict | None:
         "riprese da più testate autorevoli, con conseguenze concrete, e quelle che si possono spiegare bene in "
         "un carosello. Evita cronaca nera, gossip, sport e notizie locali straniere senza rilievo internazionale."
     )
-    res = _call(PICK_TOOL, prompt, 800)
+    res = _call(PICK_TOOL, prompt, 800, model=config.PICK_MODEL)
     n = res.get("scelta")
     if n is None or not (0 <= n < len(items)):
         return None

@@ -82,3 +82,4 @@ python src/main.py --prova   # un carosello vero (serve ANTHROPIC_API_KEY), salv
 | `AUTO_STORY` | 1 | storia con la copertina dopo ogni carosello |
 | `MIN_PHOTO_SIDE` | 900 | sotto questa misura in pixel la foto viene scartata |
 | `CLAUDE_MODEL` | claude-sonnet-5-5 | modello che scrive i caroselli |
+| `PICK_MODEL` | claude-haiku-5-5 | modello (più economico) che sceglie la notizia |

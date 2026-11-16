@@ -45,7 +45,8 @@ IG_TOKEN_EXPIRES = not IG_TOKEN.startswith("EAA")
 
 # --- Claude (scrittura dei caroselli) ---
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5-5")
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5-5")      # scrive il carosello
+PICK_MODEL = os.getenv("PICK_MODEL", "claude-haiku-5-5")           # sceglie la notizia (più economico)
 
 # --- Foto libere (facoltativo: Pexels dà foto belle e coerenti, chiave gratuita su pexels.com/api) ---
 PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
