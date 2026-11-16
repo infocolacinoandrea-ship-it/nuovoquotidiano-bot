@@ -302,27 +302,27 @@ def content(s: dict, page: int, total: int, photo: Image.Image | None = None, cr
     return img
 
 
-def closing(why: str, page: int, total: int) -> Image.Image:
+def closing(why: str, page: int, total: int, sources: list[str] | None = None) -> Image.Image:
+    """Ultima slide: "Perché ti riguarda" centrato, fonti in basso. Sobria, senza pulsanti."""
     img = Image.new("RGB", (W, H), BG)
+
+    def blk(dd, y):
+        spaced(dd, (M, y), "PERCHÉ TI RIGUARDA", font("InterTight-ExtraBold", 28), ACC, 0.2)
+        f, lines = fit(why, "InterTight-SemiBold", W - 2 * M, 9, range(62, 36, -2))
+        end = draw_lines(dd, (M, y + 70), lines, f, FG, leading=1.22)
+        dd.rectangle((0, y + 70, 10, end - 10), fill=ACC)
+        return end
+
+    _centered(img, 160, H - 260, blk)
     d = ImageDraw.Draw(img)
-    s = {"occhiello": "PERCHÉ TI RIGUARDA", "titolo": "", "testo": ""}
-    fo = font("InterTight-ExtraBold", 28)
-    f, lines = fit(why, "InterTight-SemiBold", W - 2 * M, 8, range(60, 36, -2))
-    top = max(200, 820 - 70 - int(f.size * 1.22) * len(lines) - 60)
-    spaced(d, (M, top), s["occhiello"], fo, ACC, 0.2)
-    y = draw_lines(d, (M, top + 70), lines, f, FG, leading=1.22)
-    # blocco call to action
-    y = max(y + 80, 880)
-    d.rounded_rectangle((M, y, W - M, y + 132), radius=22, fill=ACC)
-    fc = font("InterTight-Black", 44)
-    t = f"SEGUI @{config.HANDLE.upper()}"
-    fc, _ = fit(t, "InterTight-Black", W - 2 * M - 80, 1, range(46, 28, -2))
-    bb = d.textbbox((0, 0), t, font=fc)
-    d.text(((W - (bb[2] - bb[0])) / 2 - bb[0], y + (132 - (bb[3] - bb[1])) / 2 - bb[1]), t, font=fc, fill=BG)
-    fs = font("Inter-Medium", 30)
-    sub = "Il mondo spiegato in 1 minuto. Salva e condividi."
-    d.text(((W - fs.getlength(sub)) / 2, y + 160), sub, font=fs, fill=MUTED)
+    if sources:
+        d.line((M, H - 205, W - M, H - 205), fill=(45, 45, 45), width=2)
+        fs = font("Inter-Medium", 24)
+        txt = "Fonti: " + ", ".join(dict.fromkeys(sources))
+        for i, l in enumerate(wrap(txt, fs, W - 2 * M)[:2]):
+            d.text((M, H - 180 + i * 32), l, font=fs, fill=MUTED)
     header(img, page, total)
+    footer_handle(img)
     progress(img, page, total)
     return img
 

@@ -109,7 +109,7 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
                 ph, cr = found
                 credits.append((f"slide {n}", cr))
         files.append(render.save(render.content(sl, n, total, ph, cr), folder / f"{cid}_{n:02d}.jpg"))
-    files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total), folder / f"{cid}_{total:02d}.jpg"))
+    files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total, [x["source"] for x in sources]), folder / f"{cid}_{total:02d}.jpg"))
     story = render.save(render.story(Image.open(files[0])), folder / f"{cid}_story.jpg")
 
     caption = writer.build_caption(c, sources, credits)
@@ -344,7 +344,7 @@ def demo():
     render.save(render.cover(None, c["categoria"], c["titolo_copertina"], c["parole_evidenziate"], "", total), out / "01.jpg")
     for n, sl in enumerate(c["slide"], start=2):
         render.save(render.content(sl, n, total), out / f"{n:02d}.jpg")
-    render.save(render.closing(c["perche_ti_riguarda"], total, total), out / f"{total:02d}.jpg")
+    render.save(render.closing(c["perche_ti_riguarda"], total, total, ["BBC News", "Financial Times", "Reuters"]), out / f"{total:02d}.jpg")
     print(f"Demo salvata in {out}")
 
 
