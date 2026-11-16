@@ -301,6 +301,23 @@ def tick(s: dict) -> bool:
     return True
 
 
+def code_changed() -> bool:
+    """True se su GitHub c'è una versione nuova del codice: il bot si chiude e riparte aggiornato."""
+    try:
+        import subprocess
+        remote = subprocess.run(["git", "ls-remote", "origin", "refs/heads/main"], cwd=config.ROOT,
+                                capture_output=True, text=True, timeout=30).stdout.split()
+        local = storage.git("rev-parse", "HEAD")
+        if not remote or remote[0] == local:
+            return False
+        # cambiano solo lo stato o le immagini? allora non serve riavviare
+        storage.git("fetch", "-q", "--depth=20", "origin", "main", check=False)
+        changed = storage.git("diff", "--name-only", "HEAD", "FETCH_HEAD", check=False).split()
+        return any(not f.startswith(("state.json", "posts/")) for f in changed)
+    except Exception:
+        return False
+
+
 def run():
     s = storage.load_state()
     end = time.time() + config.LISTEN_MINUTES * 60 if config.LISTEN_MINUTES else float("inf")
@@ -317,6 +334,9 @@ def run():
             if time.time() >= next_tick:
                 next_tick = time.time() + 120
                 changed = bool(safe(lambda: tick(s), "giro")) or changed
+                if config.LISTEN_MINUTES and code_changed():
+                    print("Codice aggiornato su GitHub: riparto con la nuova versione")
+                    break
             if changed:
                 storage.save_state(s)
     finally:
