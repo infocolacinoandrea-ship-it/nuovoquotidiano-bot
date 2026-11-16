@@ -75,8 +75,19 @@ WRITE_TOOL = {
             "perche_ti_riguarda": {"type": "string",
                                    "description": "Ultima slide: max 40 parole su cosa cambia per chi vive in Italia. Se non c'è un effetto concreto, spiega perché conta comunque."},
             "caption": {"type": "string",
-                        "description": "Caption Instagram: 1 riga d'apertura forte, poi 3-5 righe di riassunto, poi una domanda per i commenti. Niente hashtag qui."},
-            "hashtag": {"type": "array", "items": {"type": "string"}, "description": "5-8 hashtag senza #"},
+                        "description": ("Caption Instagram in italiano, scritta da un social media editor di una testata seria. "
+                                        "Struttura: 1) prima riga-gancio (max 12 parole) che si capisce anche troncata nel feed, "
+                                        "con il fatto più forte e concreto (numero, nome, conseguenza), senza clickbait né maiuscolo urlato; "
+                                        "2) riga vuota; 3) 3-5 frasi brevi che danno il contesto essenziale e i numeri chiave, "
+                                        "ognuna su una riga, con al massimo 2-3 emoji sobrie usate come punti elenco (es. 📌 📉 🌍); "
+                                        "4) riga vuota; 5) una domanda aperta e specifica sul tema che inviti a commentare. "
+                                        "Niente hashtag, niente 'link in bio', niente frasi fatte ('incredibile', 'shock', 'non ci crederai').")},
+            "hashtag": {"type": "array", "items": {"type": "string"}, "minItems": 6, "maxItems": 10,
+                        "description": ("6-10 hashtag senza #, scelti ad hoc per QUESTA notizia: "
+                                        "3-5 specifici (persone, paesi, istituzioni, aziende, eventi citati, es. 'bce', 'lagarde', 'tassidinteresse'), "
+                                        "2-3 di categoria in italiano molto cercati (es. 'economia', 'geopolitica', 'finanza', 'notizie'), "
+                                        "1 di nicchia della pagina ('nuovoquotidiano'). Tutto minuscolo, senza accenti né spazi, "
+                                        "niente hashtag generici da spam (#instagood, #viral, #fyp) né inventati che nessuno cerca.")},
         },
         "required": ["categoria", "titolo_copertina", "parole_evidenziate", "slide", "perche_ti_riguarda", "caption", "hashtag"],
     },
@@ -115,7 +126,9 @@ def pick(items: list[Item], recent_topics: list[str]) -> dict | None:
         "\n\nNotizie delle ultime ore dalle testate:\n" + "\n".join(lines) +
         "\n\nScegli LA notizia più importante e interessante adesso per il nostro pubblico. Preferisci quelle "
         "riprese da più testate autorevoli, con conseguenze concrete, e quelle che si possono spiegare bene in "
-        "un carosello. Evita cronaca nera, gossip, sport e notizie locali straniere senza rilievo internazionale."
+        "un carosello. Evita cronaca nera, gossip, sport, curiosità, notizie leggere o 'strane', notizie locali "
+        "straniere senza rilievo internazionale e notizie già vecchie. Se nessuna notizia è davvero rilevante, rispondi null: "
+        "meglio saltare un giro che pubblicare una notizia debole."
     )
     res = _call(PICK_TOOL, prompt, 800, model=config.PICK_MODEL)
     n = res.get("scelta")

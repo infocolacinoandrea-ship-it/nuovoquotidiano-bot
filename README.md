@@ -44,7 +44,7 @@ La grafica si cambia in `src/render.py`, la linea editoriale (tono e regole di a
 3. Copia `IG_ACCESS_TOKEN` e `IG_USER_ID`. Servono i permessi `instagram_business_basic` e `instagram_business_content_publish`.
 
 ### 3. Chiave Claude
-1. Su **console.anthropic.com** crea una chiave API (`ANTHROPIC_API_KEY`) e carica un po' di credito. Un carosello costa pochi centesimi.
+1. Su **console.anthropic.com** crea una chiave API (`ANTHROPIC_API_KEY`) e carica un po' di credito. Con il modello migliore (Opus) si spendono circa 25-40 € al mese con 4 caroselli al giorno.
 
 ### 4. Pexels (facoltativo, consigliato)
 1. Su **pexels.com/api** crea la chiave gratuita (`PEXELS_API_KEY`). Senza chiave il bot usa solo Wikimedia Commons.
@@ -81,5 +81,5 @@ python src/main.py --prova   # un carosello vero (serve ANTHROPIC_API_KEY), salv
 | `PENDING_HOURS` | 8 | dopo quante ore scade un'anteprima non approvata |
 | `AUTO_STORY` | 1 | storia con la copertina dopo ogni carosello |
 | `MIN_PHOTO_SIDE` | 900 | sotto questa misura in pixel la foto viene scartata |
-| `CLAUDE_MODEL` | claude-sonnet-5-5 | modello che scrive i caroselli |
-| `PICK_MODEL` | claude-haiku-5-5 | modello (più economico) che sceglie la notizia |
+| `CLAUDE_MODEL` | claude-opus-5-5 | modello che scrive carosello, caption e hashtag |
+| `PICK_MODEL` | claude-opus-5-5 | modello che sceglie la notizia |
