@@ -64,7 +64,7 @@ WRITE_TOOL = {
     "input_schema": {
         "type": "object",
         "properties": {
-            "categoria": {"type": "string", "enum": ["GEOPOLITICA", "GUERRA", "ECONOMIA", "MERCATI", "AZIENDE",
+            "categoria": {"type": "string", "enum": ["GEOPOLITICA", "GUERRA", "ECONOMIA", "MERCATI", "BUSINESS",
                                                       "POLITICA", "EUROPA", "ENERGIA", "TECNOLOGIA", "ITALIA", "MONDO"]},
             "titolo_copertina": {"type": "string",
                                  "description": "Titolo-notizia della copertina, 8-16 parole, chiaro e forte, senza punto finale"},

@@ -393,5 +393,5 @@ def story(cover_img: Image.Image) -> Image.Image:
 
 def save(img: Image.Image, path: Path) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(path, "JPEG", quality=92, optimize=True, progressive=True)
+    img.save(path, "JPEG", quality=97, subsampling=0, optimize=True)  # 4:4:4: testi e verde nitidi
     return path
