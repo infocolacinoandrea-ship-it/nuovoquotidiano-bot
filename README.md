@@ -10,6 +10,15 @@ Il bot lavora da solo, agli orari stabiliti (di base **07:30, 12:30, 18:00 e 21:
 
 Comandi da scrivere al bot: `/nuovo` (un carosello subito), `/stato`, `/pausa`, `/riprendi`.
 
+**✏️ Correggi:** sotto ogni anteprima c'è il pulsante ✏️ Correggi. Lo premi e scrivi cosa cambiare in parole semplici, per esempio:
+- "titolo più corto";
+- "togli la slide 4";
+- "nella slide 3 scrivi che…";
+- "copertina con una foto di Lagarde";
+- "caption più breve".
+
+Il bot applica le correzioni, lascia uguale tutto il resto e ti manda la nuova anteprima. Puoi correggere più volte.
+
 **Ricrea da un link:** manda al bot il link di un articolo o di un post Instagram. Il bot ricrea quella notizia con la nostra grafica.
 - **Articolo:** legge l'articolo, cerca la stessa notizia nelle altre testate per completarla e verificarla, poi crea il carosello.
 - **Post Instagram:** Claude legge le slide (immagini) e la caption e ricostruisce la notizia e la scaletta. Poi il bot cerca la notizia nelle testate per verificare i fatti e la riscrive con parole nostre, con la stessa scaletta. Le foto del post non vengono usate perché sono di altri.

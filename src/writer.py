@@ -181,6 +181,26 @@ def write(sources: list[dict], extra: str = "") -> dict:
     return _call(WRITE_TOOL, prompt, 4000)
 
 
+def revise(c: dict, instruction: str, sources: list[dict]) -> dict:
+    """Riscrive il carosello applicando le correzioni dell'editor, lasciando invariato il resto."""
+    import copy
+    tool = copy.deepcopy(WRITE_TOOL)
+    tool["input_schema"]["properties"]["foto_copertina_ricerca"] = {
+        "type": "string", "description": ("Solo se l'editor chiede di cambiare la foto di copertina: 2-5 parole IN INGLESE "
+                                          "per cercarne una nuova. Altrimenti ometti il campo.")}
+    docs = "\n\n".join(f"=== FONTE {i + 1}: {x['source']} — {x['title']}\n{x.get('text', '')[:5000]}"
+                        for i, x in enumerate(sources))
+    current = {k: v for k, v in c.items() if k != "foto_copertina_ricerca"}
+    prompt = (
+        "Questo è il carosello attuale (JSON):\n" + json.dumps(current, ensure_ascii=False, indent=1) +
+        f"\n\nCORREZIONI RICHIESTE DALL'EDITOR:\n{instruction}\n\n"
+        "Applica esattamente queste correzioni e lascia identico tutto il resto (stessi testi, stesso ordine, "
+        "stesse ricerche foto delle slide non toccate). Se l'editor chiede di aggiungere un fatto, usalo solo se "
+        "è nelle fonti; se non c'è, scrivilo in modo attribuito o non inventarlo. Restituisci il carosello completo.\n\n"
+        "Fonti:\n" + docs)
+    return _call(tool, prompt, 4000)
+
+
 READ_POST_TOOL = {
     "name": "leggi_post",
     "description": "Cosa racconta il post Instagram.",

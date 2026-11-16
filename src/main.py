@@ -138,16 +138,11 @@ def build_from_link(s: dict, url: str, log=print) -> dict | None:
 def assemble(sources: list[dict], cover_candidates: list, topic: str, reason: str, uids: list[str],
              log=print, extra: str = "") -> dict:
     """Dai testi delle fonti al carosello finito: testi, foto, immagini, caption."""
-
-
     c = writer.write(sources, extra)
-    slides = c["slide"][: config.SLIDES_MAX - 2]
-    total = len(slides) + 2
+    c["slide"] = c["slide"][: config.SLIDES_MAX - 2]
 
-    # --- copertina: la foto dell'articolo, solo se è abbastanza grande (niente foto sgranate)
     # copertina: la versione più grande disponibile della foto dell'articolo (niente foto sgranate)
-    cover_img, credits, best = None, [], None
-    tried = set()
+    best, tried = None, set()
     for url, credit, src in cover_candidates[:8]:
         if url in tried:
             continue
@@ -156,47 +151,90 @@ def assemble(sources: list[dict], cover_candidates: list, topic: str, reason: st
         if img is None:
             continue
         if best is None or img.width * img.height > best[0].width * best[0].height:
-            best = (img, credit, src)
+            best = (img, f"{credit} via {src}" if credit else f"{src} (foto dell'articolo)", url)
         if render.scale_needed(img, (render.W, render.H)) <= 1.15:
-            break  # abbastanza grande per tutta la slide
-    if best and best[0].width >= 940:  # largo almeno la slide: va in alto senza ingrandirla troppo
-        cover_img = best[0]
-        credits.append(("copertina", f"{best[1]} via {best[2]}" if best[1] else f"{best[2]} (foto dell'articolo)"))
-    used: set[str] = set()
-    cover_credit = credits[0][1] if credits else ""
+            break
+    cover = best if best and best[0].width >= 940 else None
+
     # foto interne: solo dove Claude, guardandole, conferma che c'entrano con il testo
+    used: set[str] = set()
     slide_photos: dict[int, tuple] = {}
-    for i, sl in enumerate(slides):
+    for i, sl in enumerate(c["slide"]):
         if sl.get("foto_ricerca") and sl.get("layout") in ("foto", "testo") and len(slide_photos) < 4:
             found = photos.best_for(sl, used, log)
             if found:
                 slide_photos[i] = found
-    if cover_img is None:  # nessuna foto d'articolo valida: usa la migliore foto verificata, se c'è
-        if slide_photos:
-            first = min(slide_photos)
-            cover_img, cover_credit = slide_photos.pop(first)
-            credits.append(("copertina", cover_credit))
+    if cover is None and slide_photos:  # nessuna foto d'articolo valida: la prima foto verificata va in copertina
+        cover = slide_photos.pop(min(slide_photos))
 
-    cid = now_rome().strftime("%Y%m%d-%H%M%S")
+    car = render_carousel(c, sources, cover, slide_photos)
+    car.update({"topic": topic, "uids": uids, "reason": reason})
+    return car
+
+
+def render_carousel(c: dict, sources: list[dict], cover, slide_photos: dict) -> dict:
+    """Disegna le slide. cover e slide_photos: (immagine, credito, url). Ritorna anche la bozza per le correzioni."""
+    slides = c["slide"]
+    total = len(slides) + 2
+    credits = [("copertina", cover[1])] if cover else []
+    import secrets
+    cid = now_rome().strftime("%Y%m%d-%H%M%S") + secrets.token_hex(2)
     folder = POSTS / cid
-    files = [render.save(render.cover(cover_img, c["categoria"], c["titolo_copertina"],
-                                      c.get("parole_evidenziate", []), cover_credit, total), folder / f"{cid}_01.jpg")]
+    files = [render.save(render.cover(cover[0] if cover else None, c["categoria"], c["titolo_copertina"],
+                                      c.get("parole_evidenziate", []), cover[1] if cover else "", total),
+                         folder / f"{cid}_01.jpg")]
     for n, sl in enumerate(slides, start=2):
-        ph, cr = slide_photos.get(n - 2, (None, ""))
+        ph = slide_photos.get(n - 2)
         if ph is not None:
-            credits.append((f"slide {n}", cr))
+            credits.append((f"slide {n}", ph[1]))
             if sl.get("layout") == "testo":
                 sl = {**sl, "layout": "foto"}
-        files.append(render.save(render.content(sl, n, total, ph, cr), folder / f"{cid}_{n:02d}.jpg"))
-    files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total, [x["source"] for x in sources]), folder / f"{cid}_{total:02d}.jpg"))
+        files.append(render.save(render.content(sl, n, total, ph[0] if ph else None, ph[1] if ph else ""),
+                                 folder / f"{cid}_{n:02d}.jpg"))
+    files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total, [x["source"] for x in sources]),
+                             folder / f"{cid}_{total:02d}.jpg"))
     story = render.save(render.story(Image.open(files[0])), folder / f"{cid}_story.jpg")
-
     caption = writer.build_caption(c, sources, credits)
-    (folder / "carosello.json").write_text(json.dumps({"carosello": c, "fonti": sources and [
-        {k: v for k, v in x.items() if k != "text"} for x in sources], "crediti": credits},
-        indent=1, ensure_ascii=False))
-    return {"id": cid, "files": files, "story": story, "caption": caption, "topic": topic,
-            "uids": uids, "reason": reason, "links": [x["link"] for x in sources]}
+    draft = {"c": c, "sources": [{**x, "text": x.get("text", "")[:6000]} for x in sources],
+             "cover": {"url": cover[2], "credit": cover[1]} if cover else None,
+             "photos": {str(i): {"url": p[2], "credit": p[1], "query": slides[i].get("foto_ricerca", "")}
+                        for i, p in slide_photos.items()}}
+    (folder / "carosello.json").write_text(json.dumps(draft, indent=1, ensure_ascii=False))
+    return {"id": cid, "files": files, "story": story, "caption": caption, "draft": draft,
+            "links": [x["link"] for x in sources]}
+
+
+def revise(draft: dict, instruction: str, log=print) -> dict:
+    """Applica le correzioni scritte dall'utente e ridisegna il carosello."""
+    sources = draft["sources"]
+    c2 = writer.revise(draft["c"], instruction, sources)
+    c2["slide"] = c2["slide"][: config.SLIDES_MAX - 2]
+    # copertina: stessa foto, a meno che non sia stata chiesta una foto diversa
+    cover = None
+    if c2.get("foto_copertina_ricerca"):
+        found = photos.best_for({"titolo": c2["titolo_copertina"], "testo": "", "foto_ricerca": c2["foto_copertina_ricerca"],
+                                 "foto_tipo": "soggetto"}, set(), log)
+        cover = found
+    elif draft.get("cover"):
+        img = _image(draft["cover"]["url"])
+        cover = (img, draft["cover"]["credit"], draft["cover"]["url"]) if img else None
+    # foto interne: si riusano quelle già verificate se la slide cerca la stessa cosa, altrimenti nuova ricerca
+    old = {p["query"]: p for p in (draft.get("photos") or {}).values() if p.get("query")}
+    used = {p["url"] for p in old.values()}
+    slide_photos = {}
+    for i, sl in enumerate(c2["slide"]):
+        q = sl.get("foto_ricerca", "")
+        if not q or sl.get("layout") not in ("foto", "testo"):
+            continue
+        if q in old:
+            img = _image(old[q]["url"])
+            if img:
+                slide_photos[i] = (img, old[q]["credit"], old[q]["url"])
+                continue
+        found = photos.best_for(sl, used, log)
+        if found:
+            slide_photos[i] = found
+    return render_carousel(c2, sources, cover, slide_photos)
 
 
 # ------------------------------------------------------------------ pubblicazione
@@ -251,9 +289,29 @@ def produce(s: dict, exclude: set[str] = frozenset(), why: str = "", link: str =
             + "\n".join(car["links"]))
     mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
     s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
-                               "uids": car["uids"], "topic": car["topic"],
+                               "uids": car["uids"], "topic": car["topic"], "draft": car["draft"],
                                "created": dt.datetime.now(dt.timezone.utc).isoformat()}
     return True
+
+
+def apply_fix(s: dict, cid: str, instruction: str):
+    """Correzione scritta dall'utente su un'anteprima: nuova anteprima al posto della vecchia."""
+    p = s["pending"].get(cid)
+    if not p or not p.get("draft"):
+        bot.notify("⚠️ Questa anteprima non è più disponibile: chiedine una nuova con /nuovo.")
+        return
+    bot.notify("✏️ Correggo… (1-3 minuti)")
+    car = revise(p["draft"], instruction)
+    keep = (set(s["pending"]) - {cid}) | {car["id"]}
+    storage.push_media(car["files"] + [car["story"]], keep)
+    time.sleep(10)
+    s["pending"].pop(cid, None)
+    bot.mark(p["message_id"], "✏️ Sostituito dalla correzione")
+    note = f"ℹ️ NOTA PER TE (non viene pubblicata)\nCorrezione applicata: {instruction[:300]}"
+    mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
+    s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
+                               "uids": p["uids"], "topic": p["topic"], "draft": car["draft"],
+                               "created": p["created"]}
 
 
 # ------------------------------------------------------------------ Telegram: pulsanti e comandi
@@ -265,9 +323,28 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
         if action == "cmd":
             handle_command(s, arg)
             continue
-        if action == "link":
-            bot.notify("⏳ Ricreo questa notizia con la nostra grafica… (2-4 minuti)")
-            safe(lambda: produce(s, why="Dal tuo link: ", link=arg), "link")
+        if action == "text":
+            import re
+            if s.get("awaiting_fix"):
+                cid = s.pop("awaiting_fix")
+                safe(lambda: apply_fix(s, cid, arg), "correzione")
+            elif re.search(r"https?://\S+", arg):
+                link = re.search(r"https?://\S+", arg).group(0).rstrip(").,>")
+                bot.notify("⏳ Ricreo questa notizia con la nostra grafica… (2-4 minuti)")
+                safe(lambda: produce(s, why="Dal tuo link: ", link=link), "link")
+            else:
+                bot.notify("Per correggere un carosello premi ✏️ Correggi sotto l'anteprima. "
+                           "Per ricreare una notizia mandami un link. Comandi: /nuovo /stato")
+            continue
+        if action == "fix":
+            if arg not in s["pending"]:
+                bot.ack(u, "Già gestito")
+                continue
+            s["awaiting_fix"] = arg
+            bot.ack(u, "Scrivimi cosa correggere")
+            bot.ask("✏️ Scrivimi cosa cambiare in questo carosello, in parole semplici.\n"
+                    "Es.: \"titolo più corto\", \"togli la slide 4\", \"nella slide 3 scrivi che…\", "
+                    "\"cambia la foto di copertina con una di Trump\", \"caption più breve\".")
             continue
         p = s["pending"].pop(arg, None)
         if not p:

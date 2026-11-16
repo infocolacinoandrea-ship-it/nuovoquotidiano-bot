@@ -126,7 +126,7 @@ def candidates(query: str, kind: str, used: set[str], n: int = 5) -> list[tuple[
     return out
 
 
-def best_for(slide: dict, used: set[str], log=print) -> tuple[Image.Image, str] | None:
+def best_for(slide: dict, used: set[str], log=print) -> tuple[Image.Image, str, str] | None:
     """La foto giusta per la slide, verificata da Claude guardandola. None se nessuna c'entra davvero."""
     import writer
     cands = candidates(slide.get("foto_ricerca", ""), slide.get("foto_tipo", "concetto"), used)
@@ -138,4 +138,4 @@ def best_for(slide: dict, used: set[str], log=print) -> tuple[Image.Image, str] 
         return None
     img, credit, url = cands[idx]
     used.add(url)
-    return img, credit
+    return img, credit, url

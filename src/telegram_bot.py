@@ -1,6 +1,6 @@
 """Bot Telegram: ti manda l'anteprima del carosello e legge i tuoi pulsanti e comandi.
 
-Pulsanti sotto ogni anteprima:  ✅ Pubblica   ❌ Scarta   🔄 Un'altra notizia
+Pulsanti sotto ogni anteprima:  ✅ Pubblica   ❌ Scarta   ✏️ Correggi   🔄 Un'altra notizia
 Comandi da scrivere al bot:
   /nuovo   prepara subito un carosello con la notizia più importante del momento
   /stato   quanti caroselli oggi, quanti in attesa, prossimo orario
@@ -54,7 +54,8 @@ def keyboard(cid: str) -> str:
     return json.dumps({"inline_keyboard": [
         [{"text": "✅ Pubblica", "callback_data": f"ok:{cid}"},
          {"text": "❌ Scarta", "callback_data": f"no:{cid}"}],
-        [{"text": "🔄 Un'altra notizia", "callback_data": f"alt:{cid}"}]]})
+        [{"text": "✏️ Correggi", "callback_data": f"fix:{cid}"},
+         {"text": "🔄 Un'altra notizia", "callback_data": f"alt:{cid}"}]]})
 
 
 def send_preview(images: list[Path], caption: str, cid: str, note: str = "") -> int:
@@ -76,7 +77,7 @@ def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]]
         cq = u.get("callback_query")
         if cq and str(cq["from"]["id"]) == str(config.ADMIN_CHAT_ID):
             action, _, cid = cq.get("data", "").partition(":")
-            if action in ("ok", "no", "alt"):
+            if action in ("ok", "no", "alt", "fix"):
                 out.append((action, cid, cq))
             continue
         m = u.get("message")
@@ -84,11 +85,8 @@ def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]]
             text = m.get("text") or m.get("caption") or ""
             if text.startswith("/"):
                 out.append(("cmd", text.split()[0].split("@")[0].lower(), m))
-            else:
-                import re
-                link = re.search(r"https?://\S+", text)
-                if link:
-                    out.append(("link", link.group(0).rstrip(").,>"), m))
+            elif text.strip():
+                out.append(("text", text.strip(), m))
     return out, offset
 
 
@@ -114,6 +112,12 @@ def restore_buttons(message_id: int, cid: str):
                                              "reply_markup": keyboard(cid)})
     except RuntimeError:
         pass
+
+
+def ask(text: str):
+    """Messaggio con risposta guidata (Telegram apre subito la tastiera per rispondere)."""
+    _api("sendMessage", data={"chat_id": config.ADMIN_CHAT_ID, "text": text,
+                              "reply_markup": json.dumps({"force_reply": True, "input_field_placeholder": "Cosa correggo?"})})
 
 
 def notify(text: str):
