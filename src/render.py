@@ -126,14 +126,25 @@ def spaced(d: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: float = 0.1
 
 # ---------------------------------------------------------------- marchio
 
-def logo_mark(size: int) -> Image.Image:
-    """Quadrato lime con 'NQ' nero: il marchio della pagina."""
+def logo_mark(size: int, border: bool = True) -> Image.Image:
+    """Il marchio della pagina: quadrato nero con 'NQ' verde lime (bordo lime sottile sulle slide nere)."""
     im = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, size - 1, size - 1), radius=int(size * 0.14), fill=ACC)
-    f = font("InterTight-Black", int(size * 0.5))
+    d.rounded_rectangle((0, 0, size - 1, size - 1), radius=int(size * 0.14), fill=BG,
+                        outline=ACC if border else None, width=max(2, size // 28))
+    f = font("InterTight-Black", int(size * 0.52))
     bb = d.textbbox((0, 0), "NQ", font=f)
-    d.text(((size - (bb[2] - bb[0])) / 2 - bb[0], (size - (bb[3] - bb[1])) / 2 - bb[1]), "NQ", font=f, fill=BG)
+    d.text(((size - (bb[2] - bb[0])) / 2 - bb[0], (size - (bb[3] - bb[1])) / 2 - bb[1]), "NQ", font=f, fill=ACC)
+    return im
+
+
+def logo_full(size: int = 1080) -> Image.Image:
+    """Logo / foto profilo: sfondo nero pieno, NQ verde lime al centro."""
+    im = Image.new("RGB", (size, size), BG)
+    d = ImageDraw.Draw(im)
+    f = font("InterTight-Black", int(size * 0.44))
+    bb = d.textbbox((0, 0), "NQ", font=f)
+    d.text(((size - (bb[2] - bb[0])) / 2 - bb[0], (size - (bb[3] - bb[1])) / 2 - bb[1]), "NQ", font=f, fill=ACC)
     return im
 
 
