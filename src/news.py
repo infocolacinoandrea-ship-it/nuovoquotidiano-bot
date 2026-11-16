@@ -85,7 +85,7 @@ def fetch_items(hours: int | None = None) -> list[Item]:
 
 def fetch_article(url: str) -> dict:
     """Testo dell'articolo, foto principale e credito della foto (se la pagina lo dichiara)."""
-    res = {"text": "", "image": "", "credit": ""}
+    res = {"text": "", "image": "", "credit": "", "images": []}
     try:
         r = requests.get(url, headers={"User-Agent": UA, "Accept-Language": "en,it;q=0.8"}, timeout=25)
         html = r.text
@@ -99,6 +99,7 @@ def fetch_article(url: str) -> dict:
             res["image"] = tag["content"]
             break
     res["credit"] = _photo_credit(soup)
+    res["images"] = _image_candidates(soup, url, res["image"])
     try:
         import trafilatura
         res["text"] = (trafilatura.extract(html, include_comments=False, include_tables=False) or "")[:9000]
@@ -107,6 +108,38 @@ def fetch_article(url: str) -> dict:
     if not res["text"]:
         res["text"] = " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p"))[:9000]
     return res
+
+
+def _bigger_cdn(u: str) -> str:
+    """Alcune testate permettono di chiedere la stessa foto più grande cambiando l'indirizzo."""
+    u2 = re.sub(r"(ichef\.bbci\.co\.uk/(?:news|ace/standard|ace/ws)/)(\d{3,4})/", r"\g<1>2048/", u)  # BBC
+    u2 = re.sub(r"([?&](?:w|width|resize)=)\d{3,4}", r"\g<1>2048", u2) if "guim.co.uk" not in u2 else u2  # parametri larghezza
+    return u2
+
+
+def _image_candidates(soup: BeautifulSoup, page_url: str, og: str) -> list[str]:
+    """Possibili versioni grandi della foto principale: og:image, versioni ingrandite dal CDN,
+    e le varianti più larghe dichiarate nei srcset della foto d'apertura. Ordinate dalla più promettente."""
+    from urllib.parse import urljoin
+    found: list[tuple[int, str]] = []
+    if og:
+        found.append((1200, og))
+        big = _bigger_cdn(og)
+        if big != og:
+            found.append((2048, big))
+    scope = soup.find("article") or soup
+    for el in scope.find_all(["img", "source"])[:15]:
+        srcset = el.get("srcset") or el.get("data-srcset") or ""
+        for part in srcset.split(","):
+            bits = part.strip().split()
+            if len(bits) == 2 and bits[1].endswith("w") and bits[1][:-1].isdigit():
+                found.append((int(bits[1][:-1]), urljoin(page_url, bits[0])))
+    out, seen = [], set()
+    for w, u in sorted(found, key=lambda x: -x[0]):
+        if u.startswith("http") and u not in seen and not u.endswith(".svg"):
+            seen.add(u)
+            out.append(u)
+    return out[:6]
 
 
 def _photo_credit(soup: BeautifulSoup) -> str:

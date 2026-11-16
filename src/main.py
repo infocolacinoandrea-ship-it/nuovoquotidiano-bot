@@ -72,6 +72,10 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
         art = news.fetch_article(it.link)
         text = art["text"] if len(art["text"]) > 400 else f"{it.title}. {it.summary} {art['text']}"
         sources.append({"source": it.source, "title": it.title, "link": it.link, "text": text})
+        if it is main:  # la copertina viene dall'articolo principale
+            for url in art.get("images") or [art["image"]]:
+                if url:
+                    cover_candidates.append((url, art["credit"], it.source))
         for url in (art["image"], it.image):
             if url:
                 cover_candidates.append((url, art["credit"], it.source))
@@ -81,13 +85,23 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
     total = len(slides) + 2
 
     # --- copertina: la foto dell'articolo, solo se è abbastanza grande (niente foto sgranate)
-    cover_img, credits = None, []
-    for url, credit, src in cover_candidates:
+    # copertina: la versione più grande disponibile della foto dell'articolo (niente foto sgranate)
+    cover_img, credits, best = None, [], None
+    tried = set()
+    for url, credit, src in cover_candidates[:8]:
+        if url in tried:
+            continue
+        tried.add(url)
         img = _image(url)
-        if img and min(img.size) >= config.MIN_PHOTO_SIDE * 0.66:  # le og:image sono spesso 1200x675
-            cover_img = img
-            credits.append(("copertina", f"{credit} via {src}" if credit else f"{src} (foto dell'articolo)"))
-            break
+        if img is None:
+            continue
+        if best is None or img.width * img.height > best[0].width * best[0].height:
+            best = (img, credit, src)
+        if render.scale_needed(img, (render.W, render.H)) <= 1.15:
+            break  # abbastanza grande per tutta la slide
+    if best and best[0].width >= 940:  # largo almeno la slide: va in alto senza ingrandirla troppo
+        cover_img = best[0]
+        credits.append(("copertina", f"{best[1]} via {best[2]}" if best[1] else f"{best[2]} (foto dell'articolo)"))
     used: set[str] = set()
     cover_credit = credits[0][1] if credits else ""
     # foto interne: solo dove Claude, guardandole, conferma che c'entrano con il testo

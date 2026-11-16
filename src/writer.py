@@ -49,7 +49,7 @@ SLIDE = {
         "occhiello": {"type": "string", "description": "2-4 parole maiuscole sopra il titolo, es. 'COSA È SUCCESSO'"},
         "titolo": {"type": "string", "description": "Massimo 9 parole"},
         "testo": {"type": "string", "description": "Massimo 45 parole, frasi brevi"},
-        "numero": {"type": "string", "description": "Solo per layout dato: il numero, es. '4,25%' o '12 mld €'"},
+        "numero": {"type": "string", "description": "Solo per layout dato: il numero CON la sua unità, comprensibile da solo, es. '4,25%', '12 mld €', '6 petroliere', '19 navi'. Mai un numero nudo."},
         "autore": {"type": "string", "description": "Solo per layout citazione: chi l'ha detto e ruolo"},
         "foto_ricerca": {"type": "string", "description": ("Facoltativo, su qualsiasi slide tranne citazione: 2-5 parole IN INGLESE per cercare "
                          "una foto reale che illustri ESATTAMENTE il contenuto della slide (persona citata, luogo, edificio, "

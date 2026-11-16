@@ -22,6 +22,15 @@ import config
 UA = "NuovoQuotidianoBot/1.0 (Instagram @nuovoquotidiano; bot di notizie)"
 
 
+def _author(name: str) -> str:
+    """Nome dell'autore pulito (a volte gli archivi mettono una data o un testo lungo al suo posto)."""
+    import re
+    name = (name or "").strip()
+    if not name or re.search(r"\b(19|20)\d{2}\b", name) or len(name) > 60:
+        return "Autore sconosciuto"
+    return name
+
+
 def _big_enough(w, h) -> bool:
     return min(w or 0, h or 0) >= config.MIN_PHOTO_SIDE
 
@@ -50,7 +59,7 @@ def _openverse(query: str) -> list[tuple[str, str]]:
             lic = f"CC {it.get('license', '').upper()} {it.get('license_version', '')}".strip()
             if it.get("license") in ("cc0", "pdm"):
                 lic = "pubblico dominio"
-            out.append((it["url"], f"{(it.get('creator') or 'Autore sconosciuto')[:50]} / {it.get('source', 'Openverse')}, {lic}"))
+            out.append((it["url"], f"{_author(it.get('creator'))} / {it.get('source', 'Openverse')}, {lic}"))
         return out
     except Exception as e:
         print(f"Openverse non risponde: {e}")
@@ -77,7 +86,7 @@ def _wikimedia(query: str) -> list[tuple[str, str]]:
         if not lic or "fair use" in lic.lower() or "non-free" in lic.lower():
             continue
         artist = BeautifulSoup(meta.get("Artist", {}).get("value", ""), "html.parser").get_text(" ", strip=True)
-        out.append((ii.get("thumburl") or ii.get("url"), f"{artist[:50] or 'Autore sconosciuto'} / Wikimedia Commons, {lic}"))
+        out.append((ii.get("thumburl") or ii.get("url"), f"{_author(artist)} / Wikimedia Commons, {lic}"))
     return out
 
 

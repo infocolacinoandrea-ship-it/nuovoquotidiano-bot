@@ -34,23 +34,21 @@ def font(name: str, size: int) -> ImageFont.FreeTypeFont:
 
 # ---------------------------------------------------------------- foto
 
+def scale_needed(img: Image.Image, size: tuple[int, int]) -> float:
+    """Di quanto va ingrandita la foto per riempire `size` (sopra 1.15 si vede sgranata)."""
+    return max(size[0] / img.width, size[1] / img.height)
+
+
 def house_style(img: Image.Image, size: tuple[int, int], focus_y: float = 0.4) -> Image.Image:
-    """Il trattamento foto unico della pagina."""
+    """Il trattamento foto unico della pagina: bianco e nero puro, contrasto, neri profondi.
+    Niente grana e niente nitidezza artificiale: con la compressione di Instagram creano l'effetto "pixel"."""
     img = ImageOps.exif_transpose(img).convert("RGB")
     img = ImageOps.fit(img, size, Image.LANCZOS, centering=(0.5, focus_y))
     g = ImageOps.grayscale(img)
-    g = ImageOps.autocontrast(g, cutoff=1)
-    g = ImageEnhance.Contrast(g).enhance(1.18)
-    g = g.point(lambda v: int(max(0, v - 18) * 255 / 237))            # neri più profondi
-    g = g.filter(ImageFilter.UnsharpMask(radius=2, percent=60, threshold=2))
-    # grana leggera, sempre uguale (seme fisso) per coerenza
-    rnd = random.Random(7)
-    noise = Image.frombytes("L", (size[0] // 2, size[1] // 2),
-                            bytes(rnd.randint(108, 148) for _ in range((size[0] // 2) * (size[1] // 2))))
-    noise = noise.resize(size, Image.BILINEAR)
-    g = Image.blend(g, Image.merge("L", [noise]), 0.07)
-    # leggerissima dominante fredda per non avere un grigio "piatto"
-    return Image.merge("RGB", (g, g.point(lambda v: min(255, v + 2)), g.point(lambda v: min(255, v + 6))))
+    g = ImageOps.autocontrast(g, cutoff=0.5)
+    g = ImageEnhance.Contrast(g).enhance(1.12)
+    g = g.point(lambda v: int(max(0, v - 12) * 255 / 243))            # neri più profondi
+    return Image.merge("RGB", (g, g, g))
 
 
 def gradient(size: tuple[int, int], start: float, end: float, top_alpha=0, bottom_alpha=255) -> Image.Image:
@@ -187,7 +185,9 @@ def header(img: Image.Image, page: int | None, total: int, date: bool = False):
     else:
         txt = f"{page}/{total}" if page else ""
     if txt:
-        d.text((W - M - fr.getlength(txt), 76), txt, font=fr, fill=(200, 200, 200))
+        x = W - M - fr.getlength(txt)
+        d.text((x + 2, 78), txt, font=fr, fill=(0, 0, 0))
+        d.text((x, 76), txt, font=fr, fill=(235, 235, 235))
 
 
 def progress(img: Image.Image, page: int, total: int):
@@ -220,12 +220,25 @@ def _hl(words: list[str]) -> set[str]:
     return {_norm(w) for p in words for w in p.split()} - {""}
 
 
+COVER_TOP_MAX_H = 780
+
+
 def cover(photo: Image.Image | None, category: str, title: str, highlight: list[str], credit: str,
           total: int) -> Image.Image:
-    if photo is not None:
+    """Copertina. Se la foto è abbastanza grande riempie tutta la slide; se è piccola od orizzontale
+    va nella parte alta senza essere ingrandita (così non si sgrana) e il titolo sta sotto, sul nero."""
+    top_h = 0
+    if photo is not None and scale_needed(photo, (W, H)) <= 1.15:
         img = house_style(photo, (W, H), focus_y=0.35)
         img = darken(img, gradient((W, H), 0.30, 0.78))
-        img = darken(img, gradient((W, H), 0.0, 0.16, top_alpha=150, bottom_alpha=0))  # leggibilità del marchio
+        img = darken(img, gradient((W, H), 0.0, 0.16, top_alpha=170, bottom_alpha=0))
+    elif photo is not None:
+        top_h = min(COVER_TOP_MAX_H, round(photo.height * W / photo.width))
+        img = Image.new("RGB", (W, H), BG)
+        ph = house_style(photo, (W, top_h), focus_y=0.4)
+        ph = darken(ph, gradient((W, top_h), 0.62, 1.0))
+        ph = darken(ph, gradient((W, top_h), 0.0, 0.22, top_alpha=170, bottom_alpha=0))
+        img.paste(ph, (0, 0))
     else:  # copertina solo grafica
         img = Image.new("RGB", (W, H), BG)
         d = ImageDraw.Draw(img)
@@ -234,17 +247,21 @@ def cover(photo: Image.Image | None, category: str, title: str, highlight: list[
     header(img, None, total, date=True)
     d = ImageDraw.Draw(img)
     title = title.upper().rstrip(".")
-    f, lines = fit(title, "InterTight-Black", W - 2 * M, 6, range(96, 58, -2))
-    lh = int(f.size * 1.04)
     bottom = H - 150
+    avail = bottom - max(top_h - 40, 300) - 90   # spazio per il titolo sotto la foto
+    max_lines = 6
+    for size in range(96, 56, -2):
+        f, lines = fit(title, "InterTight-Black", W - 2 * M, max_lines, range(size, size - 1, -1))
+        if len(lines) <= max_lines and int(f.size * 1.04) * len(lines) <= avail:
+            break
+    lh = int(f.size * 1.04)
     y = bottom - lh * len(lines)
-    # etichetta categoria
     fc = font("InterTight-ExtraBold", 27)
     d.rectangle((M, y - 62, M + 34, y - 56), fill=ACC)
     spaced(d, (M + 50, y - 76), category, fc, ACC, 0.22)
     draw_lines(d, (M, y), lines, f, FG, leading=1.04, highlight=_hl(highlight))
-    # piede: crediti + invito a scorrere
-    credit_tag(img, credit, H - 112) if photo is not None else None
+    if photo is not None:
+        credit_tag(img, credit, (top_h - 34) if top_h else H - 112)
     fs = font("InterTight-ExtraBold", 26)
     spaced(d, (M, H - 92), "SCORRI  →", fs, ACC, 0.16)
     progress(img, 1, total)
@@ -280,7 +297,7 @@ def content(s: dict, page: int, total: int, photo: Image.Image | None = None, cr
         ph_h = 720
         ph = house_style(photo, (W, ph_h), focus_y=0.4)
         ph = darken(ph, gradient((W, ph_h), 0.55, 1.0))
-        ph = darken(ph, gradient((W, ph_h), 0.0, 0.25, top_alpha=150, bottom_alpha=0))
+        ph = darken(ph, gradient((W, ph_h), 0.0, 0.25, top_alpha=180, bottom_alpha=0))
         img.paste(ph, (0, 0))
         credit_tag(img, credit, ph_h - 34)
         _centered(img, ph_h, H - 110, lambda dd, y: _text_block(dd, y, s, range(60, 42, -2), 37, 2))
