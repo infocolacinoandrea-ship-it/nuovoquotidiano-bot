@@ -1,0 +1,365 @@
+"""NUOVO QUOTIDIANO bot: dalle testate del mondo al carosello Instagram.
+
+Agli orari stabiliti (config.SLOTS):
+ 1. legge le notizie delle ultime ore dalle testate in sources.json;
+ 2. Claude sceglie la più importante non ancora trattata e la confronta con le altre testate;
+ 3. Claude scrive il carosello (titolo, slide, "perché ti riguarda", caption);
+ 4. crea le immagini con la grafica della pagina (foto dell'articolo in copertina, foto libere dentro);
+ 5. ti manda l'anteprima su Telegram (✅ / ❌ / 🔄) oppure, con AUTO_PUBLISH=1, pubblica e ti avvisa.
+
+Uso:
+  python src/main.py                 # resta acceso (mini PC) o LISTEN_MINUTES minuti (GitHub)
+  python src/main.py --prova         # prepara UN carosello vero e lo salva in posts/, senza inviare nulla
+  python src/main.py --demo          # solo grafica, con testi di esempio, niente internet
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import io
+import json
+import sys
+import time
+import traceback
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+from PIL import Image
+
+import config
+import instagram
+import news
+import photos
+import render
+import storage
+import telegram_bot as bot
+import writer
+
+POSTS = config.ROOT / "posts"
+ROME = ZoneInfo("Europe/Rome")
+
+
+def now_rome() -> dt.datetime:
+    return dt.datetime.now(ROME)
+
+
+# ------------------------------------------------------------------ creazione del carosello
+
+def _image(url: str) -> Image.Image | None:
+    if not url:
+        return None
+    try:
+        img = Image.open(io.BytesIO(news.download(url)))
+        img.load()
+        return img.convert("RGB")
+    except Exception as e:
+        print(f"immagine non scaricata {url}: {e}")
+        return None
+
+
+def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
+    """Prepara un carosello completo. Ritorna i dati (immagini su disco) oppure None se non c'è niente di buono."""
+    items = [i for i in news.fetch_items() if i.uid not in set(s["seen"]) | set(exclude)]
+    log(f"{len(items)} notizie nuove dalle testate")
+    choice = writer.pick(items, [t["topic"] for t in s["topics"]])
+    if not choice:
+        return None
+    main, related = choice["main"], choice["related"]
+    log(f"Scelta: {main.title} ({main.source}) — {choice['reason']}")
+
+    sources, cover_candidates = [], []
+    for it in [main] + related:
+        art = news.fetch_article(it.link)
+        text = art["text"] if len(art["text"]) > 400 else f"{it.title}. {it.summary} {art['text']}"
+        sources.append({"source": it.source, "title": it.title, "link": it.link, "text": text})
+        for url in (art["image"], it.image):
+            if url:
+                cover_candidates.append((url, art["credit"], it.source))
+
+    c = writer.write(sources)
+    slides = c["slide"][: config.SLIDES_MAX - 2]
+    total = len(slides) + 2
+
+    # --- copertina: la foto dell'articolo, solo se è abbastanza grande (niente foto sgranate)
+    cover_img, credits = None, []
+    for url, credit, src in cover_candidates:
+        img = _image(url)
+        if img and min(img.size) >= config.MIN_PHOTO_SIDE * 0.66:  # le og:image sono spesso 1200x675
+            cover_img = img
+            credits.append(("copertina", f"{credit} via {src}" if credit else f"{src} (foto dell'articolo)"))
+            break
+    used: set[str] = set()
+    cover_credit = credits[0][1] if credits else ""
+    if cover_img is None:
+        first = next((sl for sl in slides if sl.get("foto_ricerca")), None)
+        found = photos.find(first["foto_ricerca"], first.get("foto_tipo", "soggetto"), used) if first else None
+        if found:
+            cover_img, cover_credit = found
+            credits.append(("copertina", cover_credit))
+
+    cid = now_rome().strftime("%Y%m%d-%H%M%S")
+    folder = POSTS / cid
+    files = [render.save(render.cover(cover_img, c["categoria"], c["titolo_copertina"],
+                                      c.get("parole_evidenziate", []), cover_credit, total), folder / f"{cid}_01.jpg")]
+    for n, sl in enumerate(slides, start=2):
+        ph, cr = None, ""
+        if sl.get("layout") == "foto":
+            found = photos.find(sl.get("foto_ricerca", ""), sl.get("foto_tipo", "concetto"), used)
+            if found:
+                ph, cr = found
+                credits.append((f"slide {n}", cr))
+        files.append(render.save(render.content(sl, n, total, ph, cr), folder / f"{cid}_{n:02d}.jpg"))
+    files.append(render.save(render.closing(c["perche_ti_riguarda"], total, total), folder / f"{cid}_{total:02d}.jpg"))
+    story = render.save(render.story(Image.open(files[0])), folder / f"{cid}_story.jpg")
+
+    caption = writer.build_caption(c, sources, credits)
+    (folder / "carosello.json").write_text(json.dumps({"carosello": c, "fonti": sources and [
+        {k: v for k, v in x.items() if k != "text"} for x in sources], "crediti": credits},
+        indent=1, ensure_ascii=False))
+    return {"id": cid, "files": files, "story": story, "caption": caption, "topic": choice["topic"],
+            "uids": [main.uid] + [r.uid for r in related], "reason": choice["reason"],
+            "links": [x["link"] for x in sources]}
+
+
+# ------------------------------------------------------------------ pubblicazione
+
+def upload(car: dict, s: dict):
+    keep = set(s["pending"]) | {car["id"]}
+    storage.push_media(car["files"] + [car["story"]], keep)
+    time.sleep(10)  # GitHub ha bisogno di qualche secondo per servire i file
+
+
+def publish(car_id: str, n_slides: int, caption: str) -> str:
+    urls = [storage.media_url(f"{car_id}_{i:02d}.jpg") for i in range(1, n_slides + 1)]
+    media_id = instagram.publish_carousel(urls, caption)
+    link = instagram.permalink(media_id)
+    msg = f"✅ Carosello pubblicato {link}".strip()
+    if config.AUTO_STORY:
+        try:
+            instagram.publish_story(storage.media_url(f"{car_id}_story.jpg"))
+            msg += "\n📲 Storia pubblicata"
+        except Exception as e:
+            msg += f"\n⚠️ Storia non pubblicata: {e}"
+    return media_id, msg
+
+
+def remember(s: dict, car: dict):
+    s["seen"].extend(car["uids"])
+    s["topics"].append({"topic": car["topic"], "date": now_rome().isoformat(timespec="minutes")})
+    today = now_rome().date().isoformat()
+    s["daily"][today] = s["daily"].get(today, 0) + 1
+
+
+def produce(s: dict, exclude: set[str] = frozenset(), why: str = "") -> bool:
+    """Prepara un carosello e lo manda in anteprima (o lo pubblica). Ritorna True se ha fatto qualcosa."""
+    if not config.ANTHROPIC_API_KEY:
+        bot.notify("⚠️ Manca ANTHROPIC_API_KEY: non posso scrivere i caroselli.")
+        return False
+    car = build(s, exclude)
+    if not car:
+        bot.notify("🤷 Nessuna notizia nuova abbastanza importante in questo momento.")
+        return False
+    remember(s, car)
+    upload(car, s)
+    if config.AUTO_PUBLISH:
+        try:
+            media_id, msg = publish(car["id"], len(car["files"]), car["caption"])
+            s["published"][car["id"]] = media_id
+            bot.notify(f"{msg}\n📰 {car['topic']}")
+        except Exception as e:
+            bot.notify(f"⚠️ Pubblicazione non riuscita ({car['topic']}): {e}")
+        return True
+    note = f"🗞 {why}{car['topic']}\n💡 {car['reason']}\n🔗 " + "\n🔗 ".join(car["links"])
+    mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
+    s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
+                               "uids": car["uids"], "topic": car["topic"],
+                               "created": dt.datetime.now(dt.timezone.utc).isoformat()}
+    return True
+
+
+# ------------------------------------------------------------------ Telegram: pulsanti e comandi
+
+def handle_updates(s: dict, wait: int = 0) -> bool:
+    ups, s["tg_offset"] = bot.get_updates(s["tg_offset"], wait)
+    changed = bool(ups)
+    for action, arg, u in ups:
+        if action == "cmd":
+            handle_command(s, arg)
+            continue
+        p = s["pending"].pop(arg, None)
+        if not p:
+            bot.ack(u, "Già gestito")
+            continue
+        if action == "no":
+            bot.ack(u, "Scartato")
+            bot.mark(p["message_id"], "❌ Scartato")
+        elif action == "alt":
+            bot.ack(u, "Cerco un'altra notizia…")
+            bot.mark(p["message_id"], "🔄 Sostituito")
+            s["topics"].append({"topic": p["topic"] + " (scartato)", "date": now_rome().isoformat(timespec="minutes")})
+            safe(lambda: produce(s, set(p["uids"]), why="Alternativa: "), "nuova notizia")
+        else:
+            bot.ack(u, "Pubblico su Instagram…")
+            try:
+                media_id, msg = publish(arg, p["n"], p["caption"])
+                s["published"][arg] = media_id
+                bot.mark(p["message_id"], "✅ Pubblicato")
+                bot.notify(msg)
+            except Exception as e:
+                s["pending"][arg] = p
+                bot.restore_buttons(p["message_id"], arg)
+                bot.notify(f"⚠️ Pubblicazione non riuscita: {e}\nPuoi riprovare con ✅.")
+    return changed
+
+
+def handle_command(s: dict, cmd: str):
+    if cmd in ("/nuovo", "/ora"):
+        bot.notify("⏳ Cerco la notizia più importante del momento…")
+        safe(lambda: produce(s, why="Su richiesta: "), "/nuovo")
+    elif cmd == "/pausa":
+        s["paused"] = True
+        bot.notify("⏸️ In pausa: non preparo caroselli finché non scrivi /riprendi.")
+    elif cmd == "/riprendi":
+        s["paused"] = False
+        bot.notify("▶️ Ripreso.")
+    elif cmd in ("/stato", "/start"):
+        today = now_rome().date().isoformat()
+        nxt = next((t for t in config.SLOTS if t > now_rome().strftime("%H:%M")), config.SLOTS[0] + " (domani)")
+        bot.notify(f"📊 Oggi: {s['daily'].get(today, 0)} caroselli\n⏳ In attesa: {len(s['pending'])}\n"
+                   f"🕐 Prossimo: {nxt}\n{'⏸️ IN PAUSA' if s.get('paused') else '▶️ Attivo'}"
+                   f"\nModalità: {'pubblicazione automatica' if config.AUTO_PUBLISH else 'approvazione con ✅'}\n\n"
+                   "Comandi: /nuovo /stato /pausa /riprendi")
+
+
+def due_slot(s: dict) -> str | None:
+    """L'orario da servire adesso (entro 90 minuti dall'orario previsto), se non già fatto."""
+    n = now_rome()
+    today = n.date().isoformat()
+    done = s["slots_done"].setdefault(today, [])
+    for t in config.SLOTS:
+        h, m = map(int, t.split(":"))
+        slot = n.replace(hour=h, minute=m, second=0, microsecond=0)
+        if t not in done and slot <= n < slot + dt.timedelta(minutes=90):
+            return t
+    return None
+
+
+def expire_pending(s: dict):
+    now = dt.datetime.now(dt.timezone.utc)
+    for cid, p in list(s["pending"].items()):
+        if now - dt.datetime.fromisoformat(p["created"]) > dt.timedelta(hours=config.PENDING_HOURS):
+            s["pending"].pop(cid)
+            bot.mark(p["message_id"], "⌛ Scaduto")
+
+
+def maybe_refresh_token(s: dict):
+    if not config.IG_TOKEN_EXPIRES or not config.IG_TOKEN:
+        return
+    today = dt.date.today()
+    last = dt.date.fromisoformat(s["last_refresh"]) if s["last_refresh"] else None
+    if last and (today - last).days < 7:
+        return
+    try:
+        res = instagram.refresh_token()
+        s["last_refresh"] = today.isoformat()
+        if res.get("access_token") and res["access_token"] != config.IG_TOKEN:
+            bot.notify("🔑 Nuovo token Instagram: aggiorna IG_ACCESS_TOKEN con questo valore:\n\n" + res["access_token"])
+    except Exception as e:
+        bot.notify(f"⚠️ Non riesco a rinnovare il token Instagram: {e}")
+
+
+def safe(fn, what: str):
+    try:
+        return fn()
+    except Exception as e:
+        traceback.print_exc()
+        try:
+            bot.notify(f"⚠️ Errore ({what}): {e}")
+        except Exception:
+            pass
+
+
+def tick(s: dict) -> bool:
+    """Controlli periodici: anteprime scadute e orari di pubblicazione."""
+    expire_pending(s)
+    slot = due_slot(s)
+    if not slot or s.get("paused"):
+        return False
+    s["slots_done"][now_rome().date().isoformat()].append(slot)
+    if s["daily"].get(now_rome().date().isoformat(), 0) >= config.MAX_PER_DAY:
+        return True
+    if instagram.publishing_room() < 2:
+        bot.notify("⏸️ Limite giornaliero di Instagram quasi raggiunto: salto questo giro.")
+        return True
+    safe(lambda: produce(s, why=f"Ore {slot} · "), f"carosello delle {slot}")
+    return True
+
+
+def run():
+    s = storage.load_state()
+    end = time.time() + config.LISTEN_MINUTES * 60 if config.LISTEN_MINUTES else float("inf")
+    safe(lambda: maybe_refresh_token(s), "token")
+    next_tick = 0.0
+    try:
+        while time.time() < end - 60:
+            changed = False
+            try:
+                changed = handle_updates(s, wait=50)
+            except Exception as e:
+                print(f"Telegram: {e}", file=sys.stderr)
+                time.sleep(10)
+            if time.time() >= next_tick:
+                next_tick = time.time() + 120
+                changed = bool(safe(lambda: tick(s), "giro")) or changed
+            if changed:
+                storage.save_state(s)
+    finally:
+        storage.save_state(s)
+
+
+# ------------------------------------------------------------------ prove
+
+def prova():
+    s = storage.load_state()
+    car = build(s)
+    if not car:
+        print("Nessuna notizia scelta.")
+        return
+    print(f"\nCarosello pronto in {car['files'][0].parent}\n\n{car['caption']}")
+
+
+def demo():
+    """Solo grafica, nessuna rete: utile per ritoccare render.py."""
+    c = {"categoria": "ECONOMIA", "titolo_copertina": "La BCE taglia ancora i tassi: mutui più leggeri da dicembre",
+         "parole_evidenziate": ["taglia", "mutui"], "slide": [
+             {"layout": "testo", "occhiello": "COSA È SUCCESSO", "titolo": "Tassi giù di un quarto di punto",
+              "testo": "Testo di esempio: qui va il fatto principale, in frasi brevi."},
+             {"layout": "dato", "occhiello": "IL NUMERO", "numero": "1,75%", "titolo": "Il nuovo tasso",
+              "testo": "Testo di esempio per spiegare il numero."},
+             {"layout": "citazione", "occhiello": "LA FRASE", "testo": "Una citazione di esempio, tra virgolette.",
+              "autore": "Nome Cognome, ruolo"}],
+         "perche_ti_riguarda": "Testo di esempio: cosa cambia per chi vive in Italia."}
+    total = len(c["slide"]) + 2
+    out = POSTS / "demo"
+    render.save(render.cover(None, c["categoria"], c["titolo_copertina"], c["parole_evidenziate"], "", total), out / "01.jpg")
+    for n, sl in enumerate(c["slide"], start=2):
+        render.save(render.content(sl, n, total), out / f"{n:02d}.jpg")
+    render.save(render.closing(c["perche_ti_riguarda"], total, total), out / f"{total:02d}.jpg")
+    print(f"Demo salvata in {out}")
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--prova", action="store_true")
+    ap.add_argument("--demo", action="store_true")
+    a = ap.parse_args()
+    try:
+        prova() if a.prova else demo() if a.demo else run()
+    except Exception:
+        traceback.print_exc()
+        if config.BOT_TOKEN and config.ADMIN_CHAT_ID and not (a.prova or a.demo):
+            try:
+                bot.notify("⚠️ NUOVO QUOTIDIANO bot: errore\n" + traceback.format_exc()[-800:])
+            except Exception:
+                pass
+        sys.exit(1)

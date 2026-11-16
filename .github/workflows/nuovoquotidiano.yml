@@ -1,0 +1,58 @@
+name: NUOVO QUOTIDIANO bot
+
+# Il bot resta acceso ~25 minuti per giro e poi si rilancia da solo (catena continua).
+# Il controllo programmato ogni 30 minuti è solo di scorta, se la catena si interrompe.
+# Quando il bot passa sul mini PC: Actions → questo workflow → "Disable workflow".
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: nuovoquotidiano
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 32
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Configura git
+        run: |
+          git config user.name "nuovoquotidiano-bot"
+          git config user.email "nuovoquotidiano-bot@users.noreply.github.com"
+
+      - name: Giro del bot (resta in ascolto ~25 minuti)
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_ADMIN_CHAT_ID: ${{ secrets.TG_ADMIN_CHAT_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          LISTEN_MINUTES: "25"
+          SLOTS: "07:30,12:30,18:00,21:00"   # orari dei caroselli (ora italiana)
+          AUTO_PUBLISH: "0"                  # 0 = anteprima su Telegram con ✅/❌; 1 = pubblica da solo
+        run: python src/main.py
+
+      - name: Rilancia il bot
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          [ "$JOB_STATUS" != "success" ] && sleep 120
+          gh workflow run nuovoquotidiano.yml --ref main

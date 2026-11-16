@@ -1,0 +1,24 @@
+{
+  "_nota": "Testate da cui il bot legge le notizie. 'peso' da 1 a 3: quanto conta la testata quando più fonti parlano della stessa cosa. Per togliere una fonte metti \"attiva\": false.",
+  "fonti": [
+    {"nome": "BBC News",          "rss": "https://feeds.bbci.co.uk/news/world/rss.xml",                     "peso": 3, "attiva": true},
+    {"nome": "BBC News",          "rss": "https://feeds.bbci.co.uk/news/business/rss.xml",                  "peso": 3, "attiva": true},
+    {"nome": "The Guardian",      "rss": "https://www.theguardian.com/world/rss",                           "peso": 3, "attiva": true},
+    {"nome": "The Guardian",      "rss": "https://www.theguardian.com/business/rss",                        "peso": 3, "attiva": true},
+    {"nome": "New York Times",    "rss": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",          "peso": 3, "attiva": true},
+    {"nome": "New York Times",    "rss": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",       "peso": 3, "attiva": true},
+    {"nome": "Financial Times",   "rss": "https://www.ft.com/world?format=rss",                             "peso": 3, "attiva": true},
+    {"nome": "Bloomberg",         "rss": "https://feeds.bloomberg.com/markets/news.rss",                    "peso": 3, "attiva": true},
+    {"nome": "Al Jazeera",        "rss": "https://www.aljazeera.com/xml/rss/all.xml",                       "peso": 2, "attiva": true},
+    {"nome": "CNBC",              "rss": "https://www.cnbc.com/id/100727362/device/rss/rss.html",           "peso": 2, "attiva": true},
+    {"nome": "CNBC",              "rss": "https://www.cnbc.com/id/10001147/device/rss/rss.html",            "peso": 2, "attiva": true},
+    {"nome": "Deutsche Welle",    "rss": "https://rss.dw.com/rdf/rss-en-all",                               "peso": 2, "attiva": true},
+    {"nome": "France 24",         "rss": "https://www.france24.com/en/rss",                                 "peso": 2, "attiva": true},
+    {"nome": "Politico Europe",   "rss": "https://www.politico.eu/feed/",                                   "peso": 2, "attiva": true},
+    {"nome": "Euronews",          "rss": "https://www.euronews.com/rss",                                    "peso": 2, "attiva": true},
+    {"nome": "ANSA",              "rss": "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",            "peso": 2, "attiva": true},
+    {"nome": "ANSA",              "rss": "https://www.ansa.it/sito/notizie/economia/economia_rss.xml",      "peso": 2, "attiva": true},
+    {"nome": "Il Sole 24 Ore",    "rss": "https://www.ilsole24ore.com/rss/mondo.xml",                       "peso": 2, "attiva": true},
+    {"nome": "Il Sole 24 Ore",    "rss": "https://www.ilsole24ore.com/rss/economia.xml",                    "peso": 2, "attiva": true}
+  ]
+}

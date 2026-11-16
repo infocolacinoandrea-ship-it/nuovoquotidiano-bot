@@ -1,0 +1,12 @@
+# Mini PC: il bot gira sempre, si riavvia da solo, e legge i segreti dal file .env
+services:
+  nuovoquotidiano:
+    build: .
+    container_name: nuovoquotidiano-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TZ: Europe/Rome
+      LISTEN_MINUTES: "0"   # 0 = sempre acceso
+    volumes:
+      - ./:/app             # codice, stato e immagini restano nella cartella del bot
