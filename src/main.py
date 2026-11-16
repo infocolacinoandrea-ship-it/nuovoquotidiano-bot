@@ -290,6 +290,7 @@ def produce(s: dict, exclude: set[str] = frozenset(), why: str = "", link: str =
     mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
     s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
                                "uids": car["uids"], "topic": car["topic"], "draft": car["draft"],
+                               "chat": bot._chat(),
                                "created": dt.datetime.now(dt.timezone.utc).isoformat()}
     return True
 
@@ -306,12 +307,12 @@ def apply_fix(s: dict, cid: str, instruction: str):
     storage.push_media(car["files"] + [car["story"]], keep)
     time.sleep(10)
     s["pending"].pop(cid, None)
-    bot.mark(p["message_id"], "✏️ Sostituito dalla correzione")
+    bot.mark(p["message_id"], "✏️ Sostituito dalla correzione", p.get("chat"))
     note = f"ℹ️ NOTA PER TE (non viene pubblicata)\nCorrezione applicata: {instruction[:300]}"
-    mid = bot.send_preview(car["files"], car["caption"], car["id"], note)
+    mid = bot.send_preview(car["files"], car["caption"], car["id"], note, p.get("chat"))
     s["pending"][car["id"]] = {"message_id": mid, "caption": car["caption"], "n": len(car["files"]),
                                "uids": p["uids"], "topic": p["topic"], "draft": car["draft"],
-                               "created": p["created"]}
+                               "chat": p.get("chat"), "created": p["created"]}
 
 
 # ------------------------------------------------------------------ Telegram: pulsanti e comandi
@@ -320,13 +321,32 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
     ups, s["tg_offset"] = bot.get_updates(s["tg_offset"], wait)
     changed = bool(ups)
     for action, arg, u in ups:
+        chat = (u.get("chat") or {}).get("id") or ((u.get("message") or {}).get("chat") or {}).get("id") \
+            or (u.get("from") or {}).get("id")
+        bot.reply_to = str(chat) if chat else None
+        if action == "denied":
+            seen = s.setdefault("denied_seen", [])
+            if arg not in seen:
+                seen.append(arg)
+                who = u.get("from", {})
+                name = " ".join(x for x in (who.get("first_name"), who.get("last_name")) if x) or "?"
+                user = f" (@{who['username']})" if who.get("username") else ""
+                bot.notify(f"🔒 Questo bot è privato. Il tuo ID Telegram è {arg}: mandalo all'amministratore "
+                           "per essere abilitato.", chat=arg)
+                bot.notify(f"👤 {name}{user} ha scritto al bot ma non è abilitato. ID Telegram: {arg}\n"
+                           "Per abilitarlo aggiungi questo ID a TG_EXTRA_IDS su GitHub (o dimmelo e lo faccio io).",
+                           chat=config.ADMIN_CHAT_ID)
+            continue
         if action == "cmd":
             handle_command(s, arg)
             continue
         if action == "text":
             import re
-            if s.get("awaiting_fix"):
-                cid = s.pop("awaiting_fix")
+            waiting = s.setdefault("awaiting_fix", {})
+            if not isinstance(waiting, dict):
+                waiting = s["awaiting_fix"] = {}
+            if bot._chat() in waiting:
+                cid = waiting.pop(bot._chat())
                 safe(lambda: apply_fix(s, cid, arg), "correzione")
             elif re.search(r"https?://\S+", arg):
                 link = re.search(r"https?://\S+", arg).group(0).rstrip(").,>")
@@ -340,7 +360,9 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
             if arg not in s["pending"]:
                 bot.ack(u, "Già gestito")
                 continue
-            s["awaiting_fix"] = arg
+            if not isinstance(s.get("awaiting_fix"), dict):
+                s["awaiting_fix"] = {}
+            s["awaiting_fix"][bot._chat()] = arg
             bot.ack(u, "Scrivimi cosa correggere")
             bot.ask("✏️ Scrivimi cosa cambiare in questo carosello, in parole semplici.\n"
                     "Es.: \"titolo più corto\", \"togli la slide 4\", \"nella slide 3 scrivi che…\", "
@@ -352,10 +374,10 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
             continue
         if action == "no":
             bot.ack(u, "Scartato")
-            bot.mark(p["message_id"], "❌ Scartato")
+            bot.mark(p["message_id"], "❌ Scartato", p.get("chat"))
         elif action == "alt":
             bot.ack(u, "Cerco un'altra notizia…")
-            bot.mark(p["message_id"], "🔄 Sostituito")
+            bot.mark(p["message_id"], "🔄 Sostituito", p.get("chat"))
             s["topics"].append({"topic": p["topic"] + " (scartato)", "date": now_rome().isoformat(timespec="minutes")})
             safe(lambda: produce(s, set(p["uids"]), why="Alternativa: "), "nuova notizia")
         else:
@@ -363,12 +385,13 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
             try:
                 media_id, msg = publish(arg, p["n"], p["caption"])
                 s["published"][arg] = media_id
-                bot.mark(p["message_id"], "✅ Pubblicato")
+                bot.mark(p["message_id"], "✅ Pubblicato", p.get("chat"))
                 bot.notify(msg)
             except Exception as e:
                 s["pending"][arg] = p
-                bot.restore_buttons(p["message_id"], arg)
+                bot.restore_buttons(p["message_id"], arg, p.get("chat"))
                 bot.notify(f"⚠️ Pubblicazione non riuscita: {e}\nPuoi riprovare con ✅.")
+    bot.reply_to = None
     return changed
 
 
@@ -409,7 +432,7 @@ def expire_pending(s: dict):
     for cid, p in list(s["pending"].items()):
         if now - dt.datetime.fromisoformat(p["created"]) > dt.timedelta(hours=config.PENDING_HOURS):
             s["pending"].pop(cid)
-            bot.mark(p["message_id"], "⌛ Scaduto")
+            bot.mark(p["message_id"], "⌛ Scaduto", p.get("chat"))
 
 
 def maybe_refresh_token(s: dict):
@@ -451,6 +474,7 @@ def tick(s: dict) -> bool:
     if instagram.publishing_room() < 2:
         bot.notify("⏸️ Limite giornaliero di Instagram quasi raggiunto: salto questo giro.")
         return True
+    bot.reply_to = None  # i caroselli degli orari vanno all'amministratore
     safe(lambda: produce(s, why=f"Ore {slot} · "), f"carosello delle {slot}")
     return True
 

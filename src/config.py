@@ -35,6 +35,9 @@ COLORS = {
 # --- Bot Telegram ---
 BOT_TOKEN = os.getenv("TG_BOT_TOKEN", "")
 ADMIN_CHAT_ID = os.getenv("TG_ADMIN_CHAT_ID", "")
+# Altri utenti Telegram autorizzati (ID separati da virgola): possono mandare link, /nuovo e correggere.
+EXTRA_IDS = [x.strip() for x in os.getenv("TG_EXTRA_IDS", "").split(",") if x.strip()]
+ALLOWED_IDS = {str(ADMIN_CHAT_ID), *EXTRA_IDS} - {""}
 
 # --- Instagram (stessa app Meta di Dr.Scount o una nuova) ---
 IG_USER_ID = os.getenv("IG_USER_ID", "")

@@ -19,6 +19,14 @@ import requests
 import config
 
 
+# Chat a cui rispondere: chi ha scritto al bot (se autorizzato), altrimenti l'amministratore.
+reply_to: str | None = None
+
+
+def _chat(chat: str | None = None) -> str:
+    return str(chat or reply_to or config.ADMIN_CHAT_ID)
+
+
 def _api(method: str, **kwargs):
     for attempt in range(4):
         try:
@@ -36,14 +44,14 @@ def _api(method: str, **kwargs):
     return data["result"]
 
 
-def send_album(images: list[Path]) -> list[int]:
+def send_album(images: list[Path], chat: str | None = None) -> list[int]:
     """Le slide come album (massimo 10)."""
     files, media = {}, []
     for i, p in enumerate(images[:10]):
         files[f"f{i}"] = open(p, "rb")
         media.append({"type": "photo", "media": f"attach://f{i}"})
     try:
-        msgs = _api("sendMediaGroup", data={"chat_id": config.ADMIN_CHAT_ID, "media": json.dumps(media)}, files=files)
+        msgs = _api("sendMediaGroup", data={"chat_id": _chat(chat), "media": json.dumps(media)}, files=files)
     finally:
         for f in files.values():
             f.close()
@@ -58,10 +66,10 @@ def keyboard(cid: str) -> str:
          {"text": "🔄 Un'altra notizia", "callback_data": f"alt:{cid}"}]]})
 
 
-def send_preview(images: list[Path], caption: str, cid: str, note: str = "") -> int:
-    send_album(images)
+def send_preview(images: list[Path], caption: str, cid: str, note: str = "", chat: str | None = None) -> int:
+    send_album(images, chat)
     text = (f"{note}\n\n" if note else "") + "━━━━━━━━━━\n📝 CAPTION (viene pubblicata così)\n━━━━━━━━━━\n\n" + caption
-    msg = _api("sendMessage", data={"chat_id": config.ADMIN_CHAT_ID, "text": text[:4000],
+    msg = _api("sendMessage", data={"chat_id": _chat(chat), "text": text[:4000],
                                      "reply_markup": keyboard(cid), "disable_web_page_preview": "true"})
     return msg["message_id"]
 
@@ -75,13 +83,16 @@ def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]]
     for u in updates:
         offset = max(offset, u["update_id"] + 1)
         cq = u.get("callback_query")
-        if cq and str(cq["from"]["id"]) == str(config.ADMIN_CHAT_ID):
+        if cq and str(cq["from"]["id"]) in config.ALLOWED_IDS:
             action, _, cid = cq.get("data", "").partition(":")
             if action in ("ok", "no", "alt", "fix"):
                 out.append((action, cid, cq))
             continue
         m = u.get("message")
-        if m and str(m.get("chat", {}).get("id")) == str(config.ADMIN_CHAT_ID):
+        if m and str(m.get("chat", {}).get("id")) not in config.ALLOWED_IDS and m.get("chat", {}).get("type") == "private":
+            out.append(("denied", str(m["chat"]["id"]), m))
+            continue
+        if m and str(m.get("chat", {}).get("id")) in config.ALLOWED_IDS:
             text = m.get("text") or m.get("caption") or ""
             if text.startswith("/"):
                 out.append(("cmd", text.split()[0].split("@")[0].lower(), m))
@@ -97,18 +108,18 @@ def ack(cq: dict, text: str):
         pass
 
 
-def mark(message_id: int, text: str):
+def mark(message_id: int, text: str, chat: str | None = None):
     try:
         _api("editMessageReplyMarkup", data={
-            "chat_id": config.ADMIN_CHAT_ID, "message_id": message_id,
+            "chat_id": _chat(chat), "message_id": message_id,
             "reply_markup": json.dumps({"inline_keyboard": [[{"text": text, "callback_data": "noop"}]]})})
     except RuntimeError:
         pass
 
 
-def restore_buttons(message_id: int, cid: str):
+def restore_buttons(message_id: int, cid: str, chat: str | None = None):
     try:
-        _api("editMessageReplyMarkup", data={"chat_id": config.ADMIN_CHAT_ID, "message_id": message_id,
+        _api("editMessageReplyMarkup", data={"chat_id": _chat(chat), "message_id": message_id,
                                              "reply_markup": keyboard(cid)})
     except RuntimeError:
         pass
@@ -116,10 +127,10 @@ def restore_buttons(message_id: int, cid: str):
 
 def ask(text: str):
     """Messaggio con risposta guidata (Telegram apre subito la tastiera per rispondere)."""
-    _api("sendMessage", data={"chat_id": config.ADMIN_CHAT_ID, "text": text,
+    _api("sendMessage", data={"chat_id": _chat(), "text": text,
                               "reply_markup": json.dumps({"force_reply": True, "input_field_placeholder": "Cosa correggo?"})})
 
 
-def notify(text: str):
-    _api("sendMessage", data={"chat_id": config.ADMIN_CHAT_ID, "text": text[:4000],
+def notify(text: str, chat: str | None = None):
+    _api("sendMessage", data={"chat_id": _chat(chat), "text": text[:4000],
                               "disable_web_page_preview": "true"})
