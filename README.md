@@ -88,6 +88,7 @@ python src/main.py --prova   # un carosello vero (serve ANTHROPIC_API_KEY), salv
 
 | Impostazione | Default | Cosa fa |
 |---|---|---|
+| `TG_EXTRA_IDS` | (vuoto) | altri utenti Telegram abilitati, ID separati da virgola. Si imposta su GitHub in *Settings → Secrets and variables → Actions → Variables*. Chi scrive al bot senza essere abilitato riceve il suo ID |
 | `SLOTS` | 07:30,12:30,18:00,21:00 | orari dei caroselli (ora italiana) |
 | `MAX_PER_DAY` | 6 | caroselli massimi al giorno (contano anche quelli fatti con `/nuovo`) |
 | `LOOKBACK_HOURS` | 10 | ignora le notizie più vecchie |

@@ -496,8 +496,25 @@ def code_changed() -> bool:
         return False
 
 
+def welcome_new_users(s: dict):
+    """Messaggio di benvenuto (una volta sola) a chi è appena stato abilitato."""
+    done = s.setdefault("welcomed", [])
+    for uid in config.EXTRA_IDS:
+        if uid in done:
+            continue
+        try:
+            bot.notify("✅ Sei abilitato al bot di NUOVO QUOTIDIANO.\n\n"
+                       "• Mandami il link di un articolo o di un post Instagram e lo ricreo con la nostra grafica.\n"
+                       "• /nuovo per un carosello con la notizia più importante del momento.\n"
+                       "• Sotto ogni anteprima: ✅ Pubblica, ❌ Scarta, ✏️ Correggi, 🔄 Un'altra notizia.", chat=uid)
+            done.append(uid)
+        except Exception as e:
+            print(f"benvenuto non inviato a {uid}: {e}")
+
+
 def run():
     s = storage.load_state()
+    safe(lambda: welcome_new_users(s), "benvenuto")
     end = time.time() + config.LISTEN_MINUTES * 60 if config.LISTEN_MINUTES else float("inf")
     safe(lambda: maybe_refresh_token(s), "token")
     next_tick = 0.0
