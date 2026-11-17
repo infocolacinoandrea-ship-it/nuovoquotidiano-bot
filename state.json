@@ -42,7 +42,8 @@
   "2a3ec71536f9",
   "285d70164db6",
   "4061b69852c6",
-  "09a764319905"
+  "09a764319905",
+  "d57c19bd7a37"
  ],
  "topics": [
   {
@@ -88,6 +89,10 @@
   {
    "topic": "Presunto piano iraniano di bomba sporca a Washington, Trump: 'lo prendiamo molto sul serio'",
    "date": "2026-11-17T18:01+01:00"
+  },
+  {
+   "topic": "Inflazione Italia ottobre 2026 al 5,5%",
+   "date": "2026-11-17T21:02+01:00"
   }
  ],
  "pending": {
@@ -280,6 +285,99 @@
    },
    "chat": "1286321102",
    "created": "2026-11-17T17:02:09.806089+00:00"
+  },
+  "20261117-210228ff8b": {
+   "message_id": 142,
+   "caption": "Inflazione in Italia al 5,5% a ottobre, il livello più alto da oltre tre anni\n\nSecondo il dato definitivo dell'Istat, i prezzi al consumo sono saliti del 5,5% su base annua, oltre la stima preliminare del 5,4% e in netto rialzo dal 4,2% di settembre. A pesare sono soprattutto i beni energetici, passati da +22,6% a +31,9%, insieme agli alimentari non lavorati e ai trasporti. Unc e Codacons stimano per una coppia con due figli un aggravio superiore ai 2.000 euro l'anno, mentre Assoutenti chiede al governo un taglio di Iva e oneri di sistema in bolletta.\n\nQuale rincaro state notando di più nella vostra spesa quotidiana?\n\nFonti: ANSA.\nFoto: copertina ANSA (foto dell'articolo); slide 4 Tiia Monto / Wikimedia Commons, CC BY-SA 3.0.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#istat #inflazione #bollette #economia #nuovoquotidiano",
+   "n": 8,
+   "uids": [
+    "d57c19bd7a37"
+   ],
+   "topic": "Inflazione Italia ottobre 2026 al 5,5%",
+   "draft": {
+    "c": {
+     "categoria": "ITALIA",
+     "titolo_copertina": "Inflazione al 5,5%: prezzi ai massimi da oltre tre anni, energia +31,9%",
+     "parole_evidenziate": [
+      "5,5%",
+      "massimi"
+     ],
+     "slide": [
+      {
+       "layout": "foto",
+       "occhiello": "COSA È SUCCESSO",
+       "titolo": "Ottobre, l'inflazione supera anche le stime",
+       "testo": "Secondo il dato definitivo Istat, i prezzi al consumo salgono del 5,5% in un anno e dell'1% in un mese. La stima preliminare era del 5,4%. A settembre il dato era +4,2%.",
+       "foto_ricerca": "Istat headquarters Rome",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "dato",
+       "occhiello": "IL MOTORE",
+       "titolo": "L'energia trascina i prezzi",
+       "numero": "+31,9%",
+       "testo": "I beni energetici passano da +22,6% a +31,9%, influenzati dal quadro geopolitico, spiega l'Istat. I beni regolamentati arrivano a +61,6% annuo, con un balzo del 20,3% in un solo mese."
+      },
+      {
+       "layout": "foto",
+       "occhiello": "LA SPESA",
+       "titolo": "Carrello più caro, pomodori +52,6%",
+       "testo": "Il carrello della spesa sale da +1,5% a +2,3%. Gli acquisti ad alta frequenza a +5,8%. Rincari annui: pomodori +52,6%, fragole +41,3%, carciofi +31,4%, insalata +13,7%, uova +7,4%. Trasporti raddoppiati: da +1,6% a +3,2%.",
+       "foto_ricerca": "Italian supermarket vegetables",
+       "foto_tipo": "concetto"
+      },
+      {
+       "layout": "dato",
+       "occhiello": "IL CONTO PER LE FAMIGLIE",
+       "titolo": "La stima delle associazioni consumatori",
+       "numero": "oltre 2.000 €",
+       "testo": "Secondo Unc e Codacons, per una coppia con due figli il carovita supera ampiamente i 2.000 euro l'anno. In testa ai rincari mensili, per Unc, l'elettricità del mercato tutelato: +34,1%."
+      },
+      {
+       "layout": "citazione",
+       "occhiello": "L'ALLARME DEL COMMERCIO",
+       "titolo": "Consumi e crescita a rischio",
+       "testo": "Questa fiammata dell'inflazione rischia di compromettere le prospettive dei consumi e della crescita.",
+       "autore": "Confesercenti"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "COSA SUCCEDE ORA",
+       "titolo": "Pressing sul governo, si teme il Natale",
+       "testo": "Assoutenti chiede al governo di tagliare subito Iva e oneri di sistema in bolletta per alleggerire la spesa invernale del gas. Il Codacons avverte: in arrivo una stangata di Natale."
+      }
+     ],
+     "perche_ti_riguarda": "Benzina, bollette, trasporti e spesa costano di più. Per una famiglia con due figli l'aggravio stimato dalle associazioni supera i 2.000 euro l'anno. E secondo il Codacons i prossimi mesi non andranno meglio.",
+     "caption": "Inflazione in Italia al 5,5% a ottobre, il livello più alto da oltre tre anni\n\nSecondo il dato definitivo dell'Istat, i prezzi al consumo sono saliti del 5,5% su base annua, oltre la stima preliminare del 5,4% e in netto rialzo dal 4,2% di settembre. A pesare sono soprattutto i beni energetici, passati da +22,6% a +31,9%, insieme agli alimentari non lavorati e ai trasporti. Unc e Codacons stimano per una coppia con due figli un aggravio superiore ai 2.000 euro l'anno, mentre Assoutenti chiede al governo un taglio di Iva e oneri di sistema in bolletta.\n\nQuale rincaro state notando di più nella vostra spesa quotidiana?",
+     "hashtag": [
+      "istat",
+      "inflazione",
+      "bollette",
+      "economia"
+     ]
+    },
+    "sources": [
+     {
+      "source": "ANSA",
+      "title": "I prezzi volano oltre le stime, ad ottobre +5,5%",
+      "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/i-prezzi-volano-oltre-le-stime-ad-ottobre-55-_271f43bc-5cc0-4d56-a06b-c59f4b63700e.html",
+      "text": "I prezzi volano e per le famiglie italiane far benzina all'auto, spostarsi, pagare bollette o fare la spesa di tutti i giorni diventa sempre più oneroso. Con aggravi per i bilanci personali che rischiano di arrivare addirittura a superare i 2.000 all'anno. E' questo l'esito di una nuova fiammata dell'inflazione, che a ottobre è salita al livello più alto da oltre tre anni superando anche le stime preliminari avanzate dall'Istat alla fine del mese scorso.\nSotto la spinta soprattutto dei rincari dei prodotti energetici, degli alimentari e di servizi essenziali quali i trasporti, il dato definitivo di ottobre registra un aumento dei prezzi al consumo dell'1% su base mensile e del 5,5% in un anno, contro la stima preliminare del 5,4% e ben oltre il +4,2% di settembre.\nL'Istat spiega che la corsa dell'inflazione risente principalmente del rialzo dei beni energetici, da +22,6% a +31,9%, ancora influenzato dal quadro geopolitico internazionale. Un contributo si deve poi agli alimentari non lavorati (da +5,5% a +7,5%) e ai trasporti, raddoppiati da +1,6% a +3,2%.\nTra gli energetici in particolare, a rendere i dati definitivi più pesanti delle stime sono stati soprattutto i beni regolamentati, la cui crescita tendenziale è passata dal +59,5% preliminare a +61,6% (da +25,8% di settembre), con un balzo del 20,3% in un solo mese. Il contagio non risparmia tuttavia la vita quotidiana e i beni essenziali: il carrello della spesa, che mette insieme beni alimentari, per la cura della casa e della persona è infatti salito dal +1,5% di settembre a +2,3%. Mentre i prodotti ad alta frequenza d'acquisto, le spese obbligate di tutti i giorni, vanno al +5,8% dal precedente +5,2% precedente.\nL'allarme prezzi si fa sentire tra i consumatori. Al pari del Codacons anche Unc calcola ad esempio che per una coppia con 2 figli la stangata dovuta al carovita supera ampiamente la soglia dei 2.000 euro, mentre indica al primo posto nella top ten dei rincari mensili l'elettricità per il mercato tutelato, con +34,1%. L'Adusbef fa notare che la voce alimentari e bevande analcoliche registra un'inflazione del +2,7% che, a parità di consumi, equivale ad un aggravio di spesa da complessivi 4,8 miliardi di euro in un anno solo per cibi e bevande.\nEffettivamente sono molti gli alimenti di largo consumo i cui prezzi stanno registrando rincari record: i pomodori aumentano in media del 52,6% su base annua, le fragole del 41,3%, i carciofi del 31,4%, cavolfiori e broccoli +14,8%, l'insalata del +13,7%, le arance segnano un +9,5%, le patate +7,8% e le uova +7,4%. Ma nei prossimi mesi non andrà meglio: secondo il Codacons gli italiani devono prepararsi ad una stangata di Natale determinata dai forti rincari di prezzi e tariffe che stanno caratterizzando i diversi comparti.\nAssoutenti chiede al governo di intervenire subito disponendo un taglio dell'Iva e degli oneri di sistema in bolletta, in modo da alleggerire almeno la spesa invernale delle famiglie per i consumi di gas. Un grido di allarme arriva anche dal mondo del commercio. La nuova fiammata dell' inflazione \"rischia di compromettere le prospettive dei consumi e della crescita\" avverte Confesercenti che ritiene perciò \"essenziale concentrare le risorse disponibili sul contrasto al caro energia e sul sostegno al potere d'acquisto\".\nRiproduzione riservata © Copyright ANSA"
+     }
+    ],
+    "cover": {
+     "url": "https://www.ansa.it/webimages/img_1280x720/2015/11/30/3c682bbf1dc6662743db1474af50611a.jpg",
+     "credit": "ANSA (foto dell'articolo)"
+    },
+    "photos": {
+     "2": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Vegetables_in_Despar.jpg/1920px-Vegetables_in_Despar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Tiia Monto / Wikimedia Commons, CC BY-SA 3.0",
+      "query": "Italian supermarket vegetables"
+     }
+    }
+   },
+   "chat": "1286321102",
+   "created": "2026-11-17T20:02:43.863771+00:00"
   }
  },
  "published": {
@@ -290,7 +388,7 @@
  "tg_offset": 146859008,
  "daily": {
   "2026-11-16": 6,
-  "2026-11-17": 5
+  "2026-11-17": 6
  },
  "slots_done": {
   "2026-11-16": [
@@ -301,7 +399,8 @@
   "2026-11-17": [
    "07:30",
    "12:30",
-   "18:00"
+   "18:00",
+   "21:00"
   ]
  },
  "last_refresh": "",
