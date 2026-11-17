@@ -60,133 +60,13 @@
    "date": "2026-11-17T07:32+01:00"
   }
  ],
- "pending": {
-  "20261117-073210218f": {
-   "message_id": 91,
-   "caption": "Una fuga di 15 milioni di file svela i rapporti di Deutsche Bank con gli oligarchi russi\n\nSecondo il Financial Times, i documenti interni di Deutsche Bank mettono in luce carenze sistemiche e riguardano anche la carriera dell'amministratore delegato Christian Sewing. Il New York Times riporta che per anni i responsabili del rischio hanno segnalato i pericoli dei rapporti con clienti come Oleg Deripaska e Viktor Vekselberg. Secondo il quotidiano, i profitti hanno avuto la meglio ogni volta. Dopo l'invasione dell'Ucraina nel febbraio 2022, una mail interna chiedeva se consigliare ai clienti di ritirare il denaro «finché possono ancora».\n\nSecondo voi, le banche devono rispondere di come applicano le sanzioni?\n\nFonti: Financial Times, New York Times.\nFoto: copertina New York Times (foto dell'articolo); slide 5 Epizentrum / Wikimedia Commons, CC BY-SA 3.0.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#deutschebank #russia #economia #esteri #nuovoquotidiano",
-   "n": 8,
-   "uids": [
-    "f9577dc61a8b",
-    "320d1bda3a57",
-    "c000dff0aa5c",
-    "6d76facca9f5",
-    "93bad545b711"
-   ],
-   "topic": "Deutsche Bank, fuga di 15 milioni di documenti: oligarchi russi e dati fiscali di Trump",
-   "draft": {
-    "c": {
-     "categoria": "BUSINESS",
-     "titolo_copertina": "Fuga di 15 milioni di file Deutsche Bank: i legami con gli oligarchi russi",
-     "parole_evidenziate": [
-      "15 milioni",
-      "oligarchi russi"
-     ],
-     "slide": [
-      {
-       "layout": "dato",
-       "occhiello": "COSA È SUCCESSO",
-       "titolo": "La fuga di documenti dalla banca tedesca",
-       "numero": "15 mln di file",
-       "testo": "Il Financial Times parla di una fuga di 15 milioni di file di Deutsche Bank. Il quotidiano scrive che i documenti mettono in luce carenze sistemiche. Ci sono email, indagini interne e altri documenti."
-      },
-      {
-       "layout": "citazione",
-       "occhiello": "LA MAIL DEL 2022",
-       "titolo": "L'allarme dopo l'invasione dell'Ucraina",
-       "testo": "Come sapete, abbiamo un'ampia clientela di oligarchi russi",
-       "autore": "Specialista anti-crimini finanziari di Deutsche Bank, email del febbraio 2022 citata dal New York Times"
-      },
-      {
-       "layout": "testo",
-       "occhiello": "LA DOMANDA INTERNA",
-       "titolo": "Ritirare i soldi «finché possono ancora»",
-       "testo": "Secondo il New York Times, la specialista chiedeva quali posizioni dei clienti si potessero chiudere e quali no. Si chiedeva anche se la banca dovesse consigliare ai clienti di ritirare il denaro «finché possono ancora»."
-      },
-      {
-       "layout": "foto",
-       "occhiello": "AVVERTIMENTI IGNORATI",
-       "titolo": "Vinsero i profitti, ogni volta",
-       "testo": "Tra i clienti c'erano i miliardari russi Oleg Deripaska e Viktor Vekselberg. Secondo il New York Times, i responsabili del rischio avvertirono più volte, per anni, che quei rapporti erano pericolosi. I profitti ebbero sempre la meglio.",
-       "foto_ricerca": "Deutsche Bank headquarters Frankfurt",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "foto",
-       "occhiello": "IL CASO SEWING",
-       "titolo": "Il ruolo dell'amministratore delegato Christian Sewing",
-       "testo": "Il Financial Times scrive che i file fanno nuova luce sulla carriera di Sewing alla guida della banca. Nel 2017 una violazione di dati rese pubbliche le dichiarazioni dei redditi di Trump. Sewing, allora capo della banca privata, la definì internamente un «terribile errore».",
-       "foto_ricerca": "Christian Sewing",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "testo",
-       "occhiello": "IL CONTESTO",
-       "titolo": "La scommessa tedesca sulla Russia è fallita",
-       "testo": "Per decenni politici e imprenditori tedeschi hanno creduto che legami economici più stretti con la Russia avrebbero scoraggiato le aggressioni di Mosca. Secondo il New York Times, quella strategia è crollata con l'invasione dell'Ucraina."
-      }
-     ],
-     "perche_ti_riguarda": "Deutsche Bank è una delle banche più grandi al mondo. I documenti mostrano come una grande banca europea ha gestito i clienti russi quando i governi occidentali hanno imposto le sanzioni. Le sanzioni sono uno strumento chiave anche per l'Italia nella guerra in Ucraina.",
-     "caption": "Una fuga di 15 milioni di file svela i rapporti di Deutsche Bank con gli oligarchi russi\n\nSecondo il Financial Times, i documenti interni di Deutsche Bank mettono in luce carenze sistemiche e riguardano anche la carriera dell'amministratore delegato Christian Sewing. Il New York Times riporta che per anni i responsabili del rischio hanno segnalato i pericoli dei rapporti con clienti come Oleg Deripaska e Viktor Vekselberg. Secondo il quotidiano, i profitti hanno avuto la meglio ogni volta. Dopo l'invasione dell'Ucraina nel febbraio 2022, una mail interna chiedeva se consigliare ai clienti di ritirare il denaro «finché possono ancora».\n\nSecondo voi, le banche devono rispondere di come applicano le sanzioni?",
-     "hashtag": [
-      "deutschebank",
-      "russia",
-      "economia",
-      "esteri"
-     ]
-    },
-    "sources": [
-     {
-      "source": "Financial Times",
-      "title": "Leak of 15mn Deutsche Bank files exposes systemic failures",
-      "link": "https://www.ft.com/content/f263fbf0-e0cc-48dd-b6be-d28b9ce45dd7?syn-25a6b1a6=1",
-      "text": "Leak of 15mn Deutsche Bank files exposes systemic failures. Email, internal probes and other documents throw new light on the career and leadership of chief executive Christian Sewing Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bcb1387cd5e611"
-     },
-     {
-      "source": "New York Times",
-      "title": "Leaked Records Show Deutsche Bank Courting Russian Oligarchs",
-      "link": "https://www.nytimes.com/2026/11/17/world/europe/deutsche-bank-russia-oligarchs-leaked-documents.html",
-      "text": "Leaked Files Show Deutsche Bank Protected Russian Profits Despite Warnings\n“As you know we have a large Russian Oligarchs client population,” an analyst wrote as the bank braced for sanctions against wealthy clients.\nWhen Russian missiles began pummeling Ukraine in February 2022, executives at one of the world’s largest banks sensed trouble headed their way.\nWithin hours of an invasion that set off a war that is now in its fifth year, Western governments issued new financial sanctions intended to further isolate Russia from the world economy.\nAt Deutsche Bank, a longtime bank of Russian industry titans and oligarchs, officials scrambled to get ahead of the damage. “Russian Sanctions Urgent Request” read the subject line of an email sent by one of Deutsche’s anti-financial crime specialists to her colleagues.\n“As you know we have a large Russian Oligarchs client population” and other clients with investments in Russian companies, she wrote. She asked which of those clients “we potentially could unwind and which not.” Should the bank advise them, she wondered, to withdraw their money “while they still can?”\nThis email exchange was the beginning of a frenzied reckoning within the scandal-plagued bank over its long resistance to breaking with Russia’s most important business titans under Vladimir V. Putin, the Russian president. The bank’s clients included the Russian billionaires Oleg V. Deripaska and Viktor F. Vekselberg. Time and again over many years, records show, Deutsche Bank’s risk managers warned that such relationships were perilous.\nBut profits associated with maintaining its Russian clients won out every time.\nRussia’s war in Ukraine swept up Deutsche Bank in a larger shift. For decades, German politicians and business leaders believed that working with Russia and deepening economic ties between the two countries would discourage Russian aggression. That strategy collapsed after the invasion.\nRelated Content\nAdvertisement"
-     },
-     {
-      "source": "Financial Times",
-      "title": "How DB lost its bet on Putin’s Russia",
-      "link": "https://www.ft.com/content/bf775dda-4148-49f9-a8b4-a4a02f44207e?syn-25a6b1a6=1",
-      "text": "How DB lost its bet on Putin’s Russia. Compliance staff had raised concerns as executives pushed for profits, growth and new business with Russian oligarchs Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bcb13d6b18f685"
-     },
-     {
-      "source": "Financial Times",
-      "title": "An ‘awful mistake’ that leaked Trump’s tax statements",
-      "link": "https://www.ft.com/content/784cbdc7-c852-4081-b1e5-390779e9fad1?syn-25a6b1a6=1",
-      "text": "An ‘awful mistake’ that leaked Trump’s tax statements. Data breach in 2017 was described internally as an ‘awful mistake’ by Christian Sewing, then head of lender’s private bank Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bcb13dc9a2d468"
-     },
-     {
-      "source": "Financial Times",
-      "title": "FirstFT: Leak of 15mn Deutsche Bank files exposes systemic failures",
-      "link": "https://www.ft.com/content/e3364118-7282-4faa-9686-e56e854dab7d?syn-25a6b1a6=1",
-      "text": "FirstFT: Leak of 15mn Deutsche Bank files exposes systemic failures. Also in today’s newsletter: Russia talks and Rothschild’s Italian expansion Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bcb13e1e7c6ffb"
-     }
-    ],
-    "cover": {
-     "url": "https://static01.nyt.com/images/2026/11/18/multimedia/17int-russia-deutschebank-01-gkjc/17int-russia-deutschebank-01-gkjc-mediumSquareAt3X.jpg",
-     "credit": "New York Times (foto dell'articolo)"
-    },
-    "photos": {
-     "3": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Frankfurt_Deutsche_Bank_Headquarters.20140221.jpg/1920px-Frankfurt_Deutsche_Bank_Headquarters.20140221.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "credit": "Epizentrum / Wikimedia Commons, CC BY-SA 3.0",
-      "query": "Deutsche Bank headquarters Frankfurt"
-     }
-    }
-   },
-   "chat": "1286321102",
-   "created": "2026-11-17T06:32:26.673913+00:00"
-  }
- },
+ "pending": {},
  "published": {
   "20261116-144455": "18110135360227059",
-  "20261116-172755": "17990605335084874"
+  "20261116-172755": "17990605335084874",
+  "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859002,
+ "tg_offset": 146859003,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 1
