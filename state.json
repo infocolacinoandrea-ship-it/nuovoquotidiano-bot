@@ -197,108 +197,6 @@
    },
    "chat": "1286321102",
    "created": "2026-11-17T11:32:49.620874+00:00"
-  },
-  "20261117-14370402fe": {
-   "message_id": 113,
-   "caption": "Iceye offre 41 euro per azione per Avio, valutata circa 2 miliardi di euro.\n\nIl gruppo satellitare, finlandese secondo Euronews e finlandese-polacco secondo il Financial Times, vuole creare una società europea integrata per spazio e difesa. Secondo un calcolo di AFP, l'offerta valuta Avio 2,05 miliardi di euro. Iceye promette 1 miliardo di investimenti in Italia in cinque anni. L'operazione richiede l'approvazione delle autorità, e Roma, che detiene circa il 30% di Leonardo, primo azionista di Avio con il 18%, la esaminerà da vicino.\n\nSecondo voi il governo dovrebbe dare il via libera all'operazione?\n\nFonti: Financial Times, Euronews, ANSA.\nFoto: copertina ANSA (foto dell'articolo).\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#avio #iceye #leonardo #economia #nuovoquotidiano",
-   "n": 8,
-   "uids": [
-    "6d59e2188f29",
-    "6950aa878ab3",
-    "7f2166a46194"
-   ],
-   "topic": "Iceye offerta 2 miliardi per Avio",
-   "draft": {
-    "c": {
-     "categoria": "BUSINESS",
-     "titolo_copertina": "Il gruppo satellitare Iceye offre 2 miliardi di euro per i razzi italiani di Avio",
-     "parole_evidenziate": [
-      "2 miliardi",
-      "Avio"
-     ],
-     "slide": [
-      {
-       "layout": "foto",
-       "occhiello": "COSA È SUCCESSO",
-       "titolo": "Iceye vuole comprare tutta Avio",
-       "testo": "Iceye fornisce immagini satellitari a difesa e intelligence. Martedì ha annunciato un'offerta su tutte le azioni ordinarie di Avio, società italiana di propulsione spaziale e lanciatori. Prezzo offerto: 41 euro per azione.",
-       "foto_ricerca": "Avio rocket launch",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "dato",
-       "occhiello": "IL VALORE",
-       "titolo": "Quanto vale l'operazione",
-       "numero": "2,05 mld €",
-       "testo": "È la valutazione di Avio secondo un calcolo di AFP. Il Financial Times parla di un'offerta da 2 miliardi di euro. Euronews definisce Iceye finlandese, il Financial Times gruppo finlandese-polacco.",
-       "foto_tipo": "concetto"
-      },
-      {
-       "layout": "dato",
-       "occhiello": "LA BORSA",
-       "titolo": "Avio vola a Piazza Affari",
-       "numero": "+15%",
-       "testo": "Secondo ANSA, il titolo è salito a 39,2 euro, avvicinandosi al prezzo dell'offerta. Intanto Milano nel complesso perdeva lo 0,5%."
-      },
-      {
-       "layout": "citazione",
-       "occhiello": "IL PROGETTO",
-       "titolo": "Un unico gruppo spaziale europeo",
-       "testo": "I governi hanno bisogno del controllo delle loro infrastrutture spaziali critiche, e l'Europa ne ha bisogno più di tutti.",
-       "autore": "Rafal Modrzewski, amministratore delegato di Iceye"
-      },
-      {
-       "layout": "foto",
-       "occhiello": "IL NODO ROMA",
-       "titolo": "Leonardo e Stato hanno voce in capitolo",
-       "testo": "Il primo azionista di Avio è Leonardo, con il 18%. Lo Stato italiano detiene circa il 30% di Leonardo. Secondo Euronews, l'offerta sarà probabilmente esaminata da vicino dal governo.",
-       "foto_ricerca": "Leonardo SpA headquarters",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "testo",
-       "occhiello": "COSA SUCCEDE ORA",
-       "titolo": "Promesse per l'Italia, ma serve il via libera",
-       "testo": "Iceye dice che lanciatori e propulsione resterebbero in Italia. Promette 1 miliardo di euro di investimenti in cinque anni, oltre ai piani già previsti da Avio. L'operazione richiede l'approvazione delle autorità."
-      }
-     ],
-     "perche_ti_riguarda": "Avio è un'azienda italiana strategica per l'accesso europeo allo spazio. Il suo primo azionista è Leonardo, partecipata dallo Stato. In gioco ci sono il controllo di una tecnologia chiave e 1 miliardo di investimenti promessi in Italia.",
-     "caption": "Iceye offre 41 euro per azione per Avio, valutata circa 2 miliardi di euro.\n\nIl gruppo satellitare, finlandese secondo Euronews e finlandese-polacco secondo il Financial Times, vuole creare una società europea integrata per spazio e difesa. Secondo un calcolo di AFP, l'offerta valuta Avio 2,05 miliardi di euro. Iceye promette 1 miliardo di investimenti in Italia in cinque anni. L'operazione richiede l'approvazione delle autorità, e Roma, che detiene circa il 30% di Leonardo, primo azionista di Avio con il 18%, la esaminerà da vicino.\n\nSecondo voi il governo dovrebbe dare il via libera all'operazione?",
-     "hashtag": [
-      "avio",
-      "iceye",
-      "leonardo",
-      "economia"
-     ]
-    },
-    "sources": [
-     {
-      "source": "Financial Times",
-      "title": "Satellite group Iceye launches €2bn bid for Italian rocket maker Avio",
-      "link": "https://www.ft.com/content/9fed851a-d75f-4f7e-8afa-700f3786391d?syn-25a6b1a6=1",
-      "text": "Satellite group Iceye launches €2bn bid for Italian rocket maker Avio. Finnish-Polish group seeks to create integrated European space and defence company as governments push for greater independence from US Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bf1fbefbc669e8"
-     },
-     {
-      "source": "Euronews",
-      "title": "Finland’s satellite provider Iceye bids €2 billion for Italian rocket maker Avio",
-      "link": "https://www.euronews.com/2026/11/17/finlands-satellite-provider-iceye-bids-2-billion-for-italian-rocket-maker-avio",
-      "text": "The satellite firm is promising €1 billion of investment in Italy, but the deal is likely to face scrutiny in Rome, which has a say through its stake in Avio’s biggest shareholder.\nFinnish satellite operator Iceye has made a €2 billion offer for Italian rocket maker Avio, aiming to create an “integrated European space and defence company”.\nIceye announced the bid on Tuesday, offering €41 per share for all of Avio’s ordinary shares. According to an AFP calculation, that values the company, which specialises in space propulsion and launch vehicles, at €2.05 billion.\nIceye provides satellite imaging to the defence and intelligence sectors and said that \"Europe’s need for sovereign space and defence capabilities is growing.\"\n\"Governments need control of their critical space infrastructure, and Europe needs it most,\" chief executive Rafal Modrzewski said in a statement.\nThe company argued that combining the two businesses would give governments more confidence in their access to space.\n\"The combined group would be vertically integrated, bringing together satellite production, launch and mission operations in one company. That would give governments greater certainty over deployment and continuity of supply,\" Iceye said.\nUnder the plans, Avio’s launch and propulsion business would stay centred in Italy. Iceye said it would also invest €1 billion in the country over five years “on top of Avio’s existing plans”.\nAny deal would need regulatory approval.\nThe bid is likely to be closely examined by the Italian government. Rome holds around 30% of defence contractor Leonardo, which is Avio’s largest shareholder with an 18% stake."
-     },
-     {
-      "source": "ANSA",
-      "title": "Borsa: Milano debole (-0,5%) con l'Europa in attesa di Wall street",
-      "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/borsa-milano-debole-05-con-leuropa-in-attesa-di-wall-street_a5666977-b1c4-4992-9ca7-f6652b86d2a8.html",
-      "text": "I mercati azionari del Vecchio\ncontinente superano la boa di metà giornata ancora tutti in\nnegativo, con Londra che cede un punto percentuale, Parigi e\nFrancoforte lo 0,8% e Milano lo 0,5%.\n                                    \nIn attesa dell'avvio di Wall street in Piazza Affari accelera\nancora Avio che corre del 15% a 39,2 euro, avvicinandosi al\nprezzo dell'Opa lanciata dalla finlandese Iceye. Bene Saipem che\ncresce di due punti percentuali dopo il via libera per il\nprogetto Longtail Guyana di ExxonMobil, calme le banche.\n                                    \nMoncler perde invece il 4% e Pirelli tre punti dopo\nl'indiscrezione di Bloomberg su un collocamento di Marco Polo (i\ncinesi di Sinochem) da 70 milioni di azioni.\n                                    \nA Francoforte riduce i cali Deutsche Bank, che cede comunque\nil 3% dopo che il gruppo è finito con altri di nuovo sotto la\nlente dei media internazionali, per \"pratiche commerciali\ndiscutibili e carenze nei controlli\".\n                                    \nLo spread tra Btp e Bund scende a 103 punti base, con l'euro\nin calo dello 0,1% sotto quota 1,1 contro il dollaro.\n                                    \nNel settore energia piatto il gas ad Amsterdam sugli 84 euro\nal Megawattora, in lieve aumento il petrolio a New York in\ncrescita di mezzo punto percentuale a 86,2 dollari al barile.\n                                    \nRiproduzione riservata © Copyright ANSA"
-     }
-    ],
-    "cover": {
-     "url": "https://www.ansa.it/webimages/img_1280x720/2026/4/23/c040ae925a880b1759ddaaaab9c44262.jpg",
-     "credit": "ANSA (foto dell'articolo)"
-    },
-    "photos": {}
-   },
-   "chat": "135194270",
-   "created": "2026-11-17T13:37:20.451702+00:00"
   }
  },
  "published": {
@@ -306,7 +204,7 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859004,
+ "tg_offset": 146859006,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 3
