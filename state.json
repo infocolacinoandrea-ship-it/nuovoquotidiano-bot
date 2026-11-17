@@ -36,7 +36,8 @@
   "cf7d471cbf20",
   "6d59e2188f29",
   "6950aa878ab3",
-  "7f2166a46194"
+  "7f2166a46194",
+  "627ca8dd54b7"
  ],
  "topics": [
   {
@@ -74,6 +75,10 @@
   {
    "topic": "Iceye offerta 2 miliardi per Avio",
    "date": "2026-11-17T14:37+01:00"
+  },
+  {
+   "topic": "Iran attacca base USA in Bahrain e colpisce due petroliere a Hormuz",
+   "date": "2026-11-17T16:42+01:00"
   }
  ],
  "pending": {
@@ -197,6 +202,76 @@
    },
    "chat": "1286321102",
    "created": "2026-11-17T11:32:49.620874+00:00"
+  },
+  "20261117-16421619e5": {
+   "message_id": 124,
+   "caption": "L'Iran attacca una base aerea USA in Bahrein, colpite due petroliere a Hormuz\n\nSecondo il Financial Times, l'Iran ha attaccato una base aerea degli Stati Uniti in Bahrein. Due navi cisterna di carburante sono state colpite anche nello Stretto di Hormuz, secondo quanto riferito dai Pasdaran (IRGC). Al momento le fonti disponibili non riportano vittime, danni né una risposta di Washington.\n\nSecondo voi quali effetti avrà l'attacco sui prezzi dell'energia in Europa?\n\nFonti: Financial Times.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#iran #bahrein #hormuz #geopolitica #nuovoquotidiano",
+   "n": 6,
+   "uids": [
+    "627ca8dd54b7"
+   ],
+   "topic": "Iran attacca base USA in Bahrain e colpisce due petroliere a Hormuz",
+   "draft": {
+    "c": {
+     "categoria": "GUERRA",
+     "titolo_copertina": "L'Iran attacca una base aerea USA in Bahrein, i Pasdaran: colpite due petroliere a Hormuz",
+     "parole_evidenziate": [
+      "base aerea USA",
+      "Hormuz"
+     ],
+     "slide": [
+      {
+       "layout": "foto",
+       "occhiello": "COSA È SUCCESSO",
+       "titolo": "Attacco iraniano contro una base aerea americana",
+       "testo": "Secondo il Financial Times, l'Iran ha attaccato una base aerea degli Stati Uniti in Bahrein. È un attacco diretto contro una struttura militare americana nel Golfo.",
+       "foto_ricerca": "US air base Bahrain",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "dato",
+       "occhiello": "LO STRETTO DI HORMUZ",
+       "titolo": "Colpite anche due petroliere",
+       "numero": "2 petroliere",
+       "testo": "Secondo i Pasdaran, il Corpo delle Guardie della rivoluzione islamica (IRGC), sono state colpite anche due navi cisterna di carburante nello Stretto di Hormuz."
+      },
+      {
+       "layout": "foto",
+       "occhiello": "CHI LO DICE",
+       "titolo": "La versione arriva dai Pasdaran",
+       "testo": "L'attacco alle petroliere è riportato sulla base di quanto afferma l'IRGC. Dalle fonti disponibili non risultano conferme indipendenti.",
+       "foto_ricerca": "Strait of Hormuz tanker",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "COSA NON SAPPIAMO",
+       "titolo": "Vittime, danni e risposta USA: nessun dettaglio",
+       "testo": "Le fonti disponibili non indicano vittime, entità dei danni, nomi delle navi colpite né una reazione di Washington. Sono gli elementi da seguire nelle prossime ore."
+      }
+     ],
+     "perche_ti_riguarda": "Hormuz è una rotta del carburante, come mostrano le petroliere colpite. Se la tensione si allarga, può farsi sentire sui prezzi dell'energia, quindi su bollette e carburanti anche in Italia.",
+     "caption": "L'Iran attacca una base aerea USA in Bahrein, colpite due petroliere a Hormuz\n\nSecondo il Financial Times, l'Iran ha attaccato una base aerea degli Stati Uniti in Bahrein. Due navi cisterna di carburante sono state colpite anche nello Stretto di Hormuz, secondo quanto riferito dai Pasdaran (IRGC). Al momento le fonti disponibili non riportano vittime, danni né una risposta di Washington.\n\nSecondo voi quali effetti avrà l'attacco sui prezzi dell'energia in Europa?",
+     "hashtag": [
+      "iran",
+      "bahrein",
+      "hormuz",
+      "geopolitica"
+     ]
+    },
+    "sources": [
+     {
+      "source": "Financial Times",
+      "title": "Iran attacks US air base in Bahrain",
+      "link": "https://www.ft.com/content/e79991c9-3f45-461a-9e3a-9c9f15ec029a?syn-25a6b1a6=1",
+      "text": "Iran attacks US air base in Bahrain. Two fuel tankers also struck in the Strait of Hormuz, according to IRGC Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5bfd6bb3c07be38"
+     }
+    ],
+    "cover": null,
+    "photos": {}
+   },
+   "chat": "135194270",
+   "created": "2026-11-17T15:42:32.402367+00:00"
   }
  },
  "published": {
@@ -204,10 +279,10 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859007,
+ "tg_offset": 146859008,
  "daily": {
   "2026-11-16": 6,
-  "2026-11-17": 3
+  "2026-11-17": 4
  },
  "slots_done": {
   "2026-11-16": [
