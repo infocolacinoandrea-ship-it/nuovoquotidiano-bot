@@ -50,7 +50,9 @@
   "42ca288f8728",
   "1f1ebcd243d9",
   "3ede538b4ee3",
-  "4cd5c37b1d2a"
+  "4cd5c37b1d2a",
+  "803a19202ec5",
+  "87c3487f69cd"
  ],
  "topics": [
   {
@@ -108,6 +110,10 @@
   {
    "topic": "BCE Financial Stability Review: rischio bolla AI come dotcom (scartato)",
    "date": "2026-11-18T12:53+01:00"
+  },
+  {
+   "topic": "USA criticano i deep strikes ucraini in Russia, scontro con gli alleati europei",
+   "date": "2026-11-18T12:56+01:00"
   }
  ],
  "pending": {
@@ -230,6 +236,110 @@
    },
    "chat": "1286321102",
    "created": "2026-11-18T06:31:24.515455+00:00"
+  },
+  "20261118-125640e258": {
+   "message_id": 166,
+   "caption": "Il Pentagono critica i raid ucraini in Russia, Berlino e Londra lo contestano\n\nSecondo CNBC, il sottosegretario alla Difesa USA Elbridge Colby ha detto a Bruxelles che i \"deep strike\" ucraini non hanno aiutato a chiudere la guerra e avrebbero rafforzato la determinazione russa. Il ministro tedesco Boris Pistorius ha definito la critica \"una cosa piuttosto stupida\", il britannico Wes Streeting ha detto che non spetta agli alleati dire a Kiev come combattere. Lo scontro arriva prima del vertice di giovedì tra Trump, Putin e Xi a Shenzhen.\n\nGli alleati devono porre limiti alle scelte militari di Kiev?\n\nFonti: France 24, CNBC.\nFoto: copertina Getty Images News via CNBC; slide 2 U.S. Department of Defense / Wikimedia Commons, Public domain; slide 7 Mitte27 / Wikimedia Commons, CC BY-SA 4.0.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#ucraina #russia #nato #esteri #nuovoquotidiano",
+   "n": 8,
+   "uids": [
+    "803a19202ec5",
+    "87c3487f69cd"
+   ],
+   "topic": "USA criticano i deep strikes ucraini in Russia, scontro con gli alleati europei",
+   "draft": {
+    "c": {
+     "categoria": "GUERRA",
+     "titolo_copertina": "Gli Stati Uniti criticano i raid ucraini in Russia, Germania e Regno Unito li difendono",
+     "parole_evidenziate": [
+      "criticano",
+      "difendono"
+     ],
+     "slide": [
+      {
+       "layout": "foto",
+       "occhiello": "COSA È SUCCESSO",
+       "titolo": "Colby attacca i \"deep strike\" di Kiev",
+       "testo": "Al quartier generale NATO in Belgio, il sottosegretario alla Difesa USA Elbridge Colby ha paragonato i raid ucraini in profondità in Russia a uno spettacolo. Secondo lui \"non sono stati efficaci\" per chiudere la guerra né per frenare le avanzate russe.",
+       "foto_ricerca": "Elbridge Colby",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "IL CASO WILDBERRIES",
+       "titolo": "Il bersaglio contestato dal Pentagono",
+       "testo": "Colby cita gli attacchi a Wildberries, il più grande rivenditore online russo: colpire \"infrastrutture civili\" avrebbe rafforzato la determinazione russa. Kiev sostiene che i magazzini fornivano componenti militari. Wildberries e il Cremlino negano."
+      },
+      {
+       "layout": "dato",
+       "occhiello": "IL FRONTE",
+       "titolo": "Ma l'Ucraina guadagna terreno",
+       "numero": "2 mesi di fila",
+       "testo": "Secondo Colby, a ottobre le forze ucraine hanno conquistato più territorio della Russia per il secondo mese consecutivo. Gli attacchi a medio raggio con droni, ammette, sono stati \"molto efficaci\"."
+      },
+      {
+       "layout": "citazione",
+       "occhiello": "LA RISPOSTA DI BERLINO",
+       "titolo": "Pistorius respinge la critica americana",
+       "testo": "Criticare questi attacchi contro obiettivi militari strategici in Russia è una cosa piuttosto stupida, credo.",
+       "autore": "Boris Pistorius, ministro della Difesa tedesco"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "ANCHE LONDRA",
+       "titolo": "\"Non spetta a noi dirlo all'Ucraina\"",
+       "testo": "Il ministro della Difesa britannico Wes Streeting: \"Non spetta a noi dire all'Ucraina come combattere la sua guerra\". Secondo lui, i raid hanno contribuito a indebolire la macchina bellica di Putin, \"guadagnando tempo e salvando vite\"."
+      },
+      {
+       "layout": "foto",
+       "occhiello": "COSA SUCCEDE ORA",
+       "titolo": "Colpito il ponte di Kerch, poi il vertice",
+       "testo": "Zelensky rivendica un'\"operazione senza precedenti\" con droni e missili sul ponte tra Russia e Crimea occupata, che è stato danneggiato. Mosca promette di ricostruirlo. Giovedì Trump, Putin e Xi si incontrano a Shenzhen, a margine dell'APEC.",
+       "foto_ricerca": "Kerch Bridge Crimea",
+       "foto_tipo": "soggetto"
+      }
+     ],
+     "perche_ti_riguarda": "La divisione tra Washington ed Europa sulla strategia ucraina pesa su NATO e UE, di cui l'Italia fa parte. E i raid sulle raffinerie russe toccano l'energia: Trump li ha accusati di causare una carenza globale di gasolio.",
+     "caption": "Il Pentagono critica i raid ucraini in Russia, Berlino e Londra lo contestano\n\nSecondo CNBC, il sottosegretario alla Difesa USA Elbridge Colby ha detto a Bruxelles che i \"deep strike\" ucraini non hanno aiutato a chiudere la guerra e avrebbero rafforzato la determinazione russa. Il ministro tedesco Boris Pistorius ha definito la critica \"una cosa piuttosto stupida\", il britannico Wes Streeting ha detto che non spetta agli alleati dire a Kiev come combattere. Lo scontro arriva prima del vertice di giovedì tra Trump, Putin e Xi a Shenzhen.\n\nGli alleati devono porre limiti alle scelte militari di Kiev?",
+     "hashtag": [
+      "ucraina",
+      "russia",
+      "nato",
+      "esteri"
+     ]
+    },
+    "sources": [
+     {
+      "source": "France 24",
+      "title": "US hits out at Ukraine's 'deep strikes' against Russia in rift with EU over war tactics",
+      "link": "https://www.france24.com/en/video/20261118-us-hits-out-at-ukraine-s-deep-strikes-against-russia-in-rift-with-eu-over-war-tactics",
+      "text": "US hits out at Ukraine's 'deep strikes' against Russia in rift with EU over war tactics. Top US defence official Elbridge Colby criticised Ukraine's \"deep strikes\" against Russia Tuesday, as President Volodymyr Zelensky urged Kyiv's backers to send air defences without delay. His comments, delivered at a gathering of Ukraine's allies in Brussels, was flat out rejected by both Germany and the United Kingdom, who hit back at the Americans' suggestion. You don't have permission to access the page you requested. What is this page? The website you are visiting is protected. For security reasons this page cannot be displayed."
+     },
+     {
+      "source": "CNBC",
+      "title": "Ukraine allies reject U.S. criticism of deep strikes inside Russia ahead of Trump-Putin-Xi summit",
+      "link": "https://www.cnbc.com/2026/11/18/ukraine-russia-war-trump-putin-deep-strikes.html",
+      "text": "Germany and the U.K. have pushed back against U.S. criticism of Ukraine's deep strike campaign inside Russia, underscoring tensions between Washington and European allies over Kyiv's war strategy.\nThe clash comes ahead of a highly anticipated trilateral meeting on Thursday between U.S. President Donald Trump, Russian President Vladimir Putin and Chinese President Xi Jinping on the sidelines of the Asia-Pacific Economic Cooperation forum in Shenzhen, China.\nGeopolitical flashpoints such as trade, artificial intelligence and nuclear weapons are expected to be a major focus of Trump, Putin and Xi's meeting, with external observers closely monitoring any discussion of Russia's full-scale invasion of Ukraine.\nSpeaking at NATO's headquarters in Belgium on Tuesday, U.S. Undersecretary of Defense Elbridge Colby likened Ukraine's deep strikes inside Russia to a spectacle, adding that they \"have not been effective in driving an end to the war, nor do they contribute to blunting Russia's advances on the front line.\"\nThe Pentagon policy chief acknowledged Ukraine's mid-range strike campaign using novel drone technologies and tactics to deny Russian advances on the front line has proven \"very effective.\"\nHe added that Ukraine's Armed Forces gained more territory than Russia for the second consecutive month in October.\nHowever, Colby said Ukraine's deep strikes targeting \"civilian infrastructure,\" citing Russia's biggest online retailer Wildberries, \"have actually probably hardened the Russian public's resolve and the Kremlin's own willingness to escalate.\"\nKyiv has said that warehouses targeted by Ukrainian drones were involved in providing Russian forces with drone components, navigation equipment and other military components. Wildberries and the Kremlin have denied the company is involved in Russia's war in Ukraine.\nAsked whether he shared Colby's position on Ukraine's deep strike campaign inside Russia, German Defense Minister Boris Pistorius said criticizing strikes designed to destroy strategic military and military-use targets in Russia \"is quite a stupid thing, I think.\"\n\"Instead of criticizing that, we should rather criticize and talk about the terroristic strikes every night and every day on civil energy, water and heating infrastructure in Ukraine. This is kind of terrorism,\" Pistorius said at a news conference.\nBritish Secretary of State for Defence Wes Streeting echoed those comments, saying it is \"not for us to tell Ukraine how to fight their war.\"\nHe added: \"There is no doubt in my mind that it has helped to degrade Putin's war machine, buying time and saving lives.\"\nKerch Bridge\nTrump has previously called on Ukraine to halt strikes on Russian oil refineries and infrastructure used to produce and distribute diesel, saying the attacks were responsible for a global shortage.\nUkraine has stepped up its strikes on Russian oil facilities and logistics infrastructure in recent months, seeking to raise the cost of the war for Moscow after more than 4½ years of conflict.\nUkrainian President Volodymyr Zelenskyy on Tuesday lauded an \"unprecedented operation\" targeting the Kerch Bridge linking Russia to occupied Crimea in what marked a symbolic blow to the Kremlin's war effort.\nA coordinated drone and missile strike on the bridge, which provides a road and rail route for Russian forces and is one of Putin's signature projects, damaged the crossing.\nIn response, Russia said the bridge would be restored and \"will be even better than before.\""
+     }
+    ],
+    "cover": {
+     "url": "https://image.cnbcfm.com/api/v1/image/108553950-1794994767952-gettyimages-2305562577-ohv_1069_ehfrz7fp.jpeg?v=1794994824&w=1920&h=1080",
+     "credit": "Getty Images News via CNBC"
+    },
+    "photos": {
+     "0": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Elbridge_A._Colby_%282%29.jpg/1920px-Elbridge_A._Colby_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "U.S. Department of Defense / Wikimedia Commons, Public domain",
+      "query": "Elbridge Colby"
+     },
+     "5": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/%D0%9A%D0%B5%D1%80%D1%87%D1%8C%2C_2019_%D0%B3%D0%BE%D0%B4%2C_03.jpg/1920px-%D0%9A%D0%B5%D1%80%D1%87%D1%8C%2C_2019_%D0%B3%D0%BE%D0%B4%2C_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Mitte27 / Wikimedia Commons, CC BY-SA 4.0",
+      "query": "Kerch Bridge Crimea"
+     }
+    }
+   },
+   "chat": "135194270",
+   "created": "2026-11-18T11:56:55.870897+00:00"
   }
  },
  "published": {
@@ -237,11 +347,11 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859010,
+ "tg_offset": 146859011,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
-  "2026-11-18": 1
+  "2026-11-18": 2
  },
  "slots_done": {
   "2026-11-16": [
@@ -318,35 +428,6 @@
    "message_id": 152,
    "chat": "1286321102",
    "created": "2026-11-18T11:30:14.969597+00:00"
-  },
-  "125312c54e": {
-   "main": {
-    "title": "US hits out at Ukraine's 'deep strikes' against Russia in rift with EU over war tactics",
-    "summary": "Top US defence official Elbridge Colby criticised Ukraine's \"deep strikes\" against Russia Tuesday, as President Volodymyr Zelensky urged Kyiv's backers to send air defences without delay. His comments, delivered at a gathering of Ukraine's allies in Brussels, was flat out rejected by both Germany and the United Kingdom, who hit back at the Americans' suggestion.",
-    "link": "https://www.france24.com/en/video/20261118-us-hits-out-at-ukraine-s-deep-strikes-against-russia-in-rift-with-eu-over-war-tactics",
-    "source": "France 24",
-    "weight": 2,
-    "published": "2026-11-18T10:45:35+00:00",
-    "image": "https://s.france24.com/media/display/02f3310c-e337-11f1-a31f-1ba7ddfab527/w:1024/p:16x9/EN-20261118-101143-101345-CS.jpg",
-    "uid": "803a19202ec5"
-   },
-   "related": [
-    {
-     "title": "Ukraine allies reject U.S. criticism of deep strikes inside Russia ahead of Trump-Putin-Xi summit",
-     "summary": "The dispute comes ahead of a planned meeting between Donald Trump, Vladimir Putin and Xi Jinping.",
-     "link": "https://www.cnbc.com/2026/11/18/ukraine-russia-war-trump-putin-deep-strikes.html",
-     "source": "CNBC",
-     "weight": 2,
-     "published": "2026-11-18T10:49:37+00:00",
-     "image": "",
-     "uid": "87c3487f69cd"
-    }
-   ],
-   "topic": "USA criticano i deep strikes ucraini in Russia, scontro con gli alleati europei",
-   "reason": "Crepa tra USA e alleati europei sulla guerra in Ucraina alla vigilia del vertice Trump-Xi-Putin, ripresa da più testate e con conseguenze dirette sulla sicurezza europea.",
-   "message_id": 156,
-   "chat": "135194270",
-   "created": "2026-11-18T11:53:12.752162+00:00"
   }
  }
 }
