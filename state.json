@@ -48,7 +48,9 @@
   "0febd4b104b3",
   "d9189d60a49d",
   "42ca288f8728",
-  "1f1ebcd243d9"
+  "1f1ebcd243d9",
+  "3ede538b4ee3",
+  "4cd5c37b1d2a"
  ],
  "topics": [
   {
@@ -102,6 +104,10 @@
   {
    "topic": "Dem vincono Senato Alaska, maggioranza 56 seggi",
    "date": "2026-11-18T07:31+01:00"
+  },
+  {
+   "topic": "BCE Financial Stability Review: rischio bolla AI come dotcom (scartato)",
+   "date": "2026-11-18T12:53+01:00"
   }
  ],
  "pending": {
@@ -231,7 +237,7 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859009,
+ "tg_offset": 146859010,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -313,34 +319,34 @@
    "chat": "1286321102",
    "created": "2026-11-18T11:30:14.969597+00:00"
   },
-  "1252529fcc": {
+  "125312c54e": {
    "main": {
-    "title": "ECB draws parallels between AI boom and dotcom bubble as tech giants pile on debt",
-    "summary": "The European Central Bank drew parallels between the AI boom and the dotcom bubble in its Financial Stability Review on Wednesday, warning that a wave of large IPOs could signal late-cycle exuberance as tech giants pile on debt, leaving markets exposed to an abrupt sell-off.",
-    "link": "https://www.euronews.com/2026/11/18/ecb-draws-parallels-between-ai-boom-and-dotcom-bubble-as-tech-giants-pile-on-debt",
-    "source": "Euronews",
+    "title": "US hits out at Ukraine's 'deep strikes' against Russia in rift with EU over war tactics",
+    "summary": "Top US defence official Elbridge Colby criticised Ukraine's \"deep strikes\" against Russia Tuesday, as President Volodymyr Zelensky urged Kyiv's backers to send air defences without delay. His comments, delivered at a gathering of Ukraine's allies in Brussels, was flat out rejected by both Germany and the United Kingdom, who hit back at the Americans' suggestion.",
+    "link": "https://www.france24.com/en/video/20261118-us-hits-out-at-ukraine-s-deep-strikes-against-russia-in-rift-with-eu-over-war-tactics",
+    "source": "France 24",
     "weight": 2,
-    "published": "2026-11-18T11:01:55+00:00",
-    "image": "",
-    "uid": "3ede538b4ee3"
+    "published": "2026-11-18T10:45:35+00:00",
+    "image": "https://s.france24.com/media/display/02f3310c-e337-11f1-a31f-1ba7ddfab527/w:1024/p:16x9/EN-20261118-101143-101345-CS.jpg",
+    "uid": "803a19202ec5"
    },
    "related": [
     {
-     "title": "Bce: Intelligenza artificiale e tensioni geopolitiche alimentano i rischi per la stabilità finanziaria nell’area euro",
-     "summary": "La Bce segnala come le valutazioni AI, le incertezze geoeconomiche e i debiti pubblici elevati possano mettere sotto pressione il sistema finanziario europeo",
-     "link": "https://www.ilsole24ore.com/art/bce-rischi-stabilita-finanziaria-restano-elevati-pesano-e-geopolitica-AJxbRXKC",
-     "source": "Il Sole 24 Ore",
+     "title": "Ukraine allies reject U.S. criticism of deep strikes inside Russia ahead of Trump-Putin-Xi summit",
+     "summary": "The dispute comes ahead of a planned meeting between Donald Trump, Vladimir Putin and Xi Jinping.",
+     "link": "https://www.cnbc.com/2026/11/18/ukraine-russia-war-trump-putin-deep-strikes.html",
+     "source": "CNBC",
      "weight": 2,
-     "published": "2026-11-18T10:26:00+00:00",
-     "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/19/Immagini/Ritagli/998753bd8d2f084f828e416b4b3f714b-U03108250036rSX-1440x752@IlSole24Ore-Web.jpg",
-     "uid": "4cd5c37b1d2a"
+     "published": "2026-11-18T10:49:37+00:00",
+     "image": "",
+     "uid": "87c3487f69cd"
     }
    ],
-   "topic": "BCE Financial Stability Review: rischio bolla AI come dotcom",
-   "reason": "La BCE, nella sua Financial Stability Review, paragona il boom dell'AI alla bolla dot-com e segnala rischi per la stabilità finanziaria dell'eurozona. Le cause indicate sono il debito dei giganti tech, le tensioni geopolitiche e i debiti pubblici alti: un tema concreto per i risparmiatori italiani, alla vigilia della possibile IPO record di Anthropic.",
-   "message_id": 155,
+   "topic": "USA criticano i deep strikes ucraini in Russia, scontro con gli alleati europei",
+   "reason": "Crepa tra USA e alleati europei sulla guerra in Ucraina alla vigilia del vertice Trump-Xi-Putin, ripresa da più testate e con conseguenze dirette sulla sicurezza europea.",
+   "message_id": 156,
    "chat": "135194270",
-   "created": "2026-11-18T11:52:52.427272+00:00"
+   "created": "2026-11-18T11:53:12.752162+00:00"
   }
  }
 }
