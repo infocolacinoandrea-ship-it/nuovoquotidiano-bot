@@ -43,7 +43,12 @@
   "285d70164db6",
   "4061b69852c6",
   "09a764319905",
-  "d57c19bd7a37"
+  "d57c19bd7a37",
+  "d798c7876945",
+  "0febd4b104b3",
+  "d9189d60a49d",
+  "42ca288f8728",
+  "1f1ebcd243d9"
  ],
  "topics": [
   {
@@ -93,9 +98,134 @@
   {
    "topic": "Inflazione Italia ottobre 2026 al 5,5%",
    "date": "2026-11-17T21:02+01:00"
+  },
+  {
+   "topic": "Dem vincono Senato Alaska, maggioranza 56 seggi",
+   "date": "2026-11-18T07:31+01:00"
   }
  ],
- "pending": {},
+ "pending": {
+  "20261118-073108c1c4": {
+   "message_id": 151,
+   "caption": "Mary Peltola vince in Alaska: i democratici salgono a 56 seggi al Senato USA\n\nSecondo l'Associated Press, la democratica Mary Peltola ha battuto il senatore repubblicano Dan Sullivan con 144.302 voti contro 131.844, poco oltre il 50%. È il nono seggio strappato ai repubblicani in queste elezioni di metà mandato. Il Senato passa da 53-47 per i repubblicani a 56-44 per i democratici. La corsa è stata segnata dal caso di un secondo candidato di nome Dan Sullivan: Peltola nega ogni coinvolgimento, mentre secondo CNBC il Dipartimento di Giustizia ha aperto un'indagine penale.\n\nCon un Senato all'opposizione, quanto cambierà il secondo mandato di Trump?\n\nFonti: Euronews, Deutsche Welle, ANSA, Financial Times, CNBC.\nFoto: copertina Bloomberg via CNBC; slide 2 Leah Herman, House Creative Services / Wikimedia Commons, Public domain.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#alaska #trump #midterm #esteri #nuovoquotidiano",
+   "n": 8,
+   "uids": [
+    "d798c7876945",
+    "0febd4b104b3",
+    "d9189d60a49d",
+    "42ca288f8728",
+    "1f1ebcd243d9"
+   ],
+   "topic": "Dem vincono Senato Alaska, maggioranza 56 seggi",
+   "draft": {
+    "c": {
+     "categoria": "POLITICA",
+     "titolo_copertina": "Alaska, i democratici strappano il seggio: al Senato USA è maggioranza 56-44",
+     "parole_evidenziate": [
+      "Alaska",
+      "56-44"
+     ],
+     "slide": [
+      {
+       "layout": "foto",
+       "occhiello": "COSA È SUCCESSO",
+       "titolo": "Mary Peltola batte il repubblicano Dan Sullivan",
+       "testo": "L'ex deputata democratica vince il seggio dell'Alaska al Senato, secondo l'Associated Press. Sullivan era in carica da due mandati. È l'ultima corsa per il Senato delle elezioni di metà mandato 2026 a essere assegnata.",
+       "foto_ricerca": "Mary Peltola",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "dato",
+       "occhiello": "IL NUOVO SENATO",
+       "titolo": "La maggioranza passa ai democratici",
+       "numero": "56 seggi su 100",
+       "testo": "I repubblicani erano arrivati al voto con 53 seggi contro 47, ricorda l'ANSA. Ora i democratici ne hanno 56. Secondo CNBC, la maggioranza scatta da gennaio. Il partito ha conquistato anche la Camera."
+      },
+      {
+       "layout": "testo",
+       "occhiello": "I NUMERI DEL VOTO",
+       "titolo": "144.302 voti contro 131.844",
+       "testo": "Peltola ha superato di poco il 50% al primo turno, evitando il ballottaggio a preferenze. Lo spoglio è durato due settimane per i villaggi remoti e il voto per corrispondenza. Secondo DW, è il primo senatore democratico dell'Alaska da quasi 20 anni."
+      },
+      {
+       "layout": "testo",
+       "occhiello": "IL CASO",
+       "titolo": "Due candidati con lo stesso nome",
+       "testo": "Secondo un'inchiesta del New York Times, collaboratori di Peltola avrebbero reclutato un secondo Dan Sullivan per sottrarre voti al senatore. Peltola nega di sapere nulla. Quel candidato ha preso 4.760 voti: meno dello scarto finale.",
+       "foto_ricerca": "Anchorage Alaska",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "citazione",
+       "occhiello": "LE PAROLE",
+       "titolo": "Peltola dopo la vittoria",
+       "testo": "Mi opporrò a chiunque per affrontare il sistema truccato di Washington e ottenere risultati per le famiglie lavoratrici dell'Alaska.",
+       "autore": "Mary Peltola, senatrice eletta dell'Alaska"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "COSA SUCCEDE ORA",
+       "titolo": "La partita si sposta nei tribunali",
+       "testo": "Un giudice federale ha respinto la causa dell'amministrazione Trump per bloccare la certificazione. Secondo CNBC, il Dipartimento di Giustizia ha fatto ricorso e ha aperto un'indagine penale sulla candidatura del secondo Sullivan."
+      }
+     ],
+     "perche_ti_riguarda": "Con 56 seggi su 100 i democratici potranno bloccare leggi e nomine di Trump e avviare indagini sulla sua amministrazione. Un Congresso ostile riduce i margini della Casa Bianca, anche nelle scelte che riguardano gli alleati come l'Italia.",
+     "caption": "Mary Peltola vince in Alaska: i democratici salgono a 56 seggi al Senato USA\n\nSecondo l'Associated Press, la democratica Mary Peltola ha battuto il senatore repubblicano Dan Sullivan con 144.302 voti contro 131.844, poco oltre il 50%. È il nono seggio strappato ai repubblicani in queste elezioni di metà mandato. Il Senato passa da 53-47 per i repubblicani a 56-44 per i democratici. La corsa è stata segnata dal caso di un secondo candidato di nome Dan Sullivan: Peltola nega ogni coinvolgimento, mentre secondo CNBC il Dipartimento di Giustizia ha aperto un'indagine penale.\n\nCon un Senato all'opposizione, quanto cambierà il secondo mandato di Trump?",
+     "hashtag": [
+      "alaska",
+      "trump",
+      "midterm",
+      "esteri"
+     ]
+    },
+    "sources": [
+     {
+      "source": "Euronews",
+      "title": "Democrat Mary Peltola unseats Republican and flips US Senate seat in tight race in Alaska",
+      "link": "https://www.euronews.com/2026/11/18/democrat-mary-peltola-unseats-republican-and-flips-us-senate-seat-in-tight-race-in-alaska",
+      "text": "Democrats will control 56 seats in the 100-seat Senate which will give them the power to block legislation, launch broad investigations into Trump's administration and thwart his judicial and senior government appointments.\nDemocrat Mary Peltola flipped the US Senate seat in Alaska on Tuesday after a tight race that unseated Republican incumbent Dan S. Sullivan, according to the official ballot count.\nWith 50.12% of the vote, Peltola's win means the US Senate will have a 56-44 Democratic majority, clinching the chamber's last open race in a midterm election that crushed Republicans across the country and handed US President Donald Trump a firm rebuke of his second term.\n\"As our next United States Senator, I will stand up to anyone to take on the rigged system in DC and deliver results for Alaska's working families,\" Peltola said in a statement late on Tuesday.\n\"As a lifelong Alaskan who has dedicated my life to serving our state, there is no greater honour than having Alaskans' support in our fight to take on corporate greed, lower costs and put Alaska first.\"\nWith far-flung rural voters in remote villages, the vote count in Alaska took two weeks to complete, but offered Peltola a strong mandate.\nWith 144,302 votes, Peltola beat Sullivan's 131,844 votes, even when combined with a second candidate named Daniel J. Sullivan Jr. who earned 4,760 votes.\nTrump had called for another Republican candidate in the race, Gerald Heikes, to have his votes \"immediately given\" to Dan S. Sullivan, calling it the \"fair solution.\"\nHeikes won 6,105 votes in the race, but merging all the votes that Trump wanted to combine would still not have been enough to beat Peltola.\nDan Sullivan controversy\nThe Alaska Senate race had attracted national attention following a New York Times investigation revealing that aides to Peltola had recruited another man named Dan Sullivan to run for office with the goal of siphoning votes from the Republican incumbent.\n\"My opponent's campaign is literally focused on misleading Alaskans, lying and cheating,\" Senator Sullivan told reporters in Anchorage on election day.\nPeltola has denied any knowledge of the alleged plot.\nThe fact that there were two candidates named Dan Sullivan had repeatedly drawn the ire of Trump, who said Democrats had used a \"decoy\" to siphon votes from the Republican candidate.\nThe Trump administration had gone so far as to ask the courts to block certification of the results if the incumbent Sullivan lost because of the potential mix-up.\nThe legal bid, which Trump has said he ordered personally, sparked alarm in political circles, but was dismissed by a federal judge ahead of the election.\nHowever, US Attorney Michael Heyman claimed federal investigators were conducting both criminal and civil probes involving the Alaska Senate race.\nPeltola's historic victory makes her one of the first two Native American women ever to be elected to the US Senate, where she will join Minnesota Senator-elect Peggy Flanagan.\nDemocrats will control 56 seats in the 100-seat Senate which will give them the power to block legislation, launch broad investigations into Trump's administration and thwart his judicial and senior government appointments."
+     },
+     {
+      "source": "Deutsche Welle",
+      "title": "US Democrats flip Alaska Senate seat as Mary Peltola wins race",
+      "link": "https://www.dw.com/en/us-democrats-flip-alaska-senate-seat-as-mary-peltola-wins-race/a-79976628?maca=en-rss-en-all-1573-rdf",
+      "text": "US Democrats flip Alaska Senate seat as Mary Peltola wins race\nNovember 18, 2026\nThe Associated Press has declared Democrat Mary Peltola the winner of Alaska's Senate race after making it just over the 50% mark on first-rank votes.\nAlaska was the last outstanding Senate race to be declared in the US midterm elections 2026 and makes it the ninth Republican-held Senate seat to be flipped.\nThe latest victory means the Democrats now hold a 56-44 majority in the US Senate. The 53-year-old is the first Democratic senator from the state in almost 20 years.\nPeltola promises to deliver for 'Alaska's working families'\n\"As our next United States Senator, I will stand up to anyone to take on the rigged system in DC and deliver results for Alaska's working families,\" Peltola said in a statement.\n\"As a lifelong Alaskan who has dedicated my life to serving our state, there is no greater honor than having Alaskans' support in our fight to take on corporate greed, lower costs, and put Alaska first,\" Peltola said.\nPeltola beat Republican Dan Sullivan's 131,844 with 144,302 votes, the victory coming after an update in the vote count pushed her to 50.1% of the votes.\nPeltola will now become one of the first two Native American women to ever be elected to the US Senate, where she will join Minnesota Senator-elect Peggy Flanagan.\nAlaska's vast geography, remote rural communities and lengthy absentee ballot process contributed to a protracted count, with the Senate race taking over two weeks to produce a winner.\nVote siphon allegations\nThe Alaskan Senate race garnered a high degree of national interest after a New York Times report that aides to Peltola allegedly tried to use a second candidate named Dan J. Sullivan Jr, in an attempt to siphon votes from the Republican Dan Sullivan.\nThe Trump administration had approached the courts to block certifying the results in the event of there being a potential mix-up.\nThe legal bid was dismissed by a federal judge ahead of the election.\n\"My opponent's campaign is literally focused on misleading Alaskans, lying and cheating,\" Senator Sullivan told reporters in Anchorage on election day.\nPeltola has denied any knowledge of an alleged plot. In any case, the margin of victory was greater than the number of votes won by the challenger Dan Sullivan, at just 4, 760.\nThe Democrats' majority had already been secured, allowing them to block legislation and begin investigations into members of President Donald Trump's administration, but the Alaska win will likely also have a morale impact on both sides."
+     },
+     {
+      "source": "ANSA",
+      "title": "Media, con Mary Peltola i dem vincono anche in Alaska",
+      "link": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/18/media-con-mary-peltola-i-dem-vincono-anche-in-alaska_58944bde-6c8e-473f-aa22-5e1e0815f550.html",
+      "text": "L'ex deputata democratica Mary\nPeltola ha sconfitto in Alaska il senatore repubblicano Dan S.\n                                    \nSullivan, in carica da due mandati. Lo riferisce l'AP. I dem\nstrappano dunque un altro seggio detenuto dal Partito\nRepubblicano in uno Stato in cui il presidente Trump aveva vinto\ncon ampio margine nel 2024.\n                                    \nLa corsa in Alaska è l'ultima competizione per il Senato\ndegli Stati Uniti a concludersi nelle elezioni di metà mandato\ndi quest'anno, ricorda l'agenzia Associated Press. Il Partito\ndemocratico aveva già vinto le elezioni in Stati conservatori\ncome la Carolina del Sud, il Texas, il Kansas e, più\nrecentemente, il Mississippi. I Repubblicani si erano presentati\nalle elezioni di metà mandato con una maggioranza di 53 a 47,\nribaltata dai Democratici (56 a 44). \n                                    \nRiproduzione riservata © Copyright ANSA"
+     },
+     {
+      "source": "Financial Times",
+      "title": "Democrats win Alaska Senate seat to complete midterms victory",
+      "link": "https://www.ft.com/content/dc73d4ce-0139-4a72-9b2a-ab9803a84240?syn-25a6b1a6=1",
+      "text": "Democrats win Alaska Senate seat to complete midterms victory. Mary Peltola’s success in northernmost US state raises party’s tally to 56 in 100-member chamber Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5c4ecf99e17102a"
+     },
+     {
+      "source": "CNBC",
+      "title": "Democrat Mary Peltola wins Alaska Senate election",
+      "link": "https://www.cnbc.com/2026/11/18/alaska-senate-mary-peltola-wins-election.html",
+      "text": "Democratic candidate Mary Peltola won the Alaska Senate election, capping a midterm cycle that already was one of the best for Democrats in more than a half-century, the Associated Press reported Tuesday evening.\nPeltola defeated incumbent Republican Sen. Dan Sullivan in a race that was surrounded by controversy over an independent candidate who shared his name.\nPeltola had faced accusations that her campaign recruited ultra-longshot candidate Dan J. Sullivan to the race to confuse voters. The Justice Department filed a lawsuit seeking to delay certification of the election if the incumbent Sullivan lost in order to conduct an investigation into whether voter confusion tainted the outcome.\nThe Justice Department is appealing the dismissal of that civil suit. The department is also conducting a criminal investigation into the second Sullivan's decision to enter the race.\nPeltola's victory gives Democrats a solid majority of 56 seats in the Senate beginning in January.\nDemocrats this cycle flipped nine Senate seats that are currently held by Republicans.\nThat outcome, which was not considered remotely likely at the beginning of the election, came as part of a massive Democratic wave this year, which saw the party also flip majority control of the House of Representatives by a decisive margin.\nAlaska was the last Senate race to be called in the midterm elections. Peltola, a former House member, joins Senator-elect Peggy Flanagan as the first two Native American women elected to the Senate.\nThe race was called two weeks after Election Day, and six days after Peltola's fellow Democrat Scott Colom pulled off perhaps the most stunning upset of the 2026 cycle by defeating incumbent Republican Sen. Cindy Hyde-Smith in the Mississippi Senate race.\nAs of 10:39 p.m. ET, Peltola had 50.1% of the vote, and Sullivan had 45.8%. Another Republican, Gerald Heikes, had 2.1% of the vote, while Daniel J. Sullivan had 1.6% of the vote.\nIf no candidate exceeded 50% of the vote, the election would have been decided through a ranked-choice method, in which the two bottom finishers would have been eliminated, and the second choices on the ballots of voters who selected them would be allocated to the remaining two candidates.\n\"From Juneau to Utqiagvik, the message from Alaskans is clear: the status quo in DC is not working for Alaska,\" Peltola said in a statement.\n\"Over the course of this campaign I've spoken with elders in tears about empty fish racks; families struggling to find housing they can afford; and parents in the Bush faced with the impossible choice of heating their homes or putting food on the table,\" Peltola said. \"Today we take a monumental step forward in addressing those issues and putting Alaska first.\"\nAs a lifelong Alaskan who has dedicated my life to serving our state, there is no greater honor than having Alaskans' support in our fight to take on corporate greed, lower costs, and put Alaska first,\" she said. \"Thank you Alaska. Let's get to work.\""
+     }
+    ],
+    "cover": {
+     "url": "https://image.cnbcfm.com/api/v1/image/108514244-1793750165555-gettyimages-2302285848-ALASKA_MIDTERMS.jpeg?v=1793750188&w=1920&h=1080",
+     "credit": "Bloomberg via CNBC"
+    },
+    "photos": {
+     "0": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Mary_Peltola_Congressional_Member_Portrait_%282%29.jpeg/1920px-Mary_Peltola_Congressional_Member_Portrait_%282%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Leah Herman, House Creative Services / Wikimedia Commons, Public domain",
+      "query": "Mary Peltola"
+     }
+    }
+   },
+   "chat": "1286321102",
+   "created": "2026-11-18T06:31:24.515455+00:00"
+  }
+ },
  "published": {
   "20261116-144455": "18110135360227059",
   "20261116-172755": "17990605335084874",
@@ -104,7 +234,8 @@
  "tg_offset": 146859008,
  "daily": {
   "2026-11-16": 6,
-  "2026-11-17": 6
+  "2026-11-17": 6,
+  "2026-11-18": 1
  },
  "slots_done": {
   "2026-11-16": [
@@ -118,7 +249,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-18": []
+  "2026-11-18": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
