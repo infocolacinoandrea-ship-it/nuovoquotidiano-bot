@@ -231,7 +231,7 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859008,
+ "tg_offset": 146859009,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -312,6 +312,35 @@
    "message_id": 152,
    "chat": "1286321102",
    "created": "2026-11-18T11:30:14.969597+00:00"
+  },
+  "1252529fcc": {
+   "main": {
+    "title": "ECB draws parallels between AI boom and dotcom bubble as tech giants pile on debt",
+    "summary": "The European Central Bank drew parallels between the AI boom and the dotcom bubble in its Financial Stability Review on Wednesday, warning that a wave of large IPOs could signal late-cycle exuberance as tech giants pile on debt, leaving markets exposed to an abrupt sell-off.",
+    "link": "https://www.euronews.com/2026/11/18/ecb-draws-parallels-between-ai-boom-and-dotcom-bubble-as-tech-giants-pile-on-debt",
+    "source": "Euronews",
+    "weight": 2,
+    "published": "2026-11-18T11:01:55+00:00",
+    "image": "",
+    "uid": "3ede538b4ee3"
+   },
+   "related": [
+    {
+     "title": "Bce: Intelligenza artificiale e tensioni geopolitiche alimentano i rischi per la stabilità finanziaria nell’area euro",
+     "summary": "La Bce segnala come le valutazioni AI, le incertezze geoeconomiche e i debiti pubblici elevati possano mettere sotto pressione il sistema finanziario europeo",
+     "link": "https://www.ilsole24ore.com/art/bce-rischi-stabilita-finanziaria-restano-elevati-pesano-e-geopolitica-AJxbRXKC",
+     "source": "Il Sole 24 Ore",
+     "weight": 2,
+     "published": "2026-11-18T10:26:00+00:00",
+     "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/19/Immagini/Ritagli/998753bd8d2f084f828e416b4b3f714b-U03108250036rSX-1440x752@IlSole24Ore-Web.jpg",
+     "uid": "4cd5c37b1d2a"
+    }
+   ],
+   "topic": "BCE Financial Stability Review: rischio bolla AI come dotcom",
+   "reason": "La BCE, nella sua Financial Stability Review, paragona il boom dell'AI alla bolla dot-com e segnala rischi per la stabilità finanziaria dell'eurozona. Le cause indicate sono il debito dei giganti tech, le tensioni geopolitiche e i debiti pubblici alti: un tema concreto per i risparmiatori italiani, alla vigilia della possibile IPO record di Anthropic.",
+   "message_id": 155,
+   "chat": "135194270",
+   "created": "2026-11-18T11:52:52.427272+00:00"
   }
  }
 }
