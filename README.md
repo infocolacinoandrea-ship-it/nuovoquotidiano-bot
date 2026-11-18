@@ -8,6 +8,13 @@ Il bot lavora da solo, agli orari stabiliti (di base **07:30, 12:30, 18:00 e 21:
 4. crea le immagini 1080×1350 con la grafica della pagina, più una storia 1080×1920;
 5. ti manda l'**anteprima su Telegram** con tre pulsanti: ✅ Pubblica · ❌ Scarta · 🔄 Un'altra notizia.
 
+**Prima la proposta, poi il carosello:** con `/nuovo`, e agli orari automatici, il bot ti manda prima solo la notizia scelta: titolo, motivo della scelta e fonti. Sotto ci sono tre pulsanti:
+- **✍️ Genera:** crea il carosello e ti manda l'anteprima;
+- **🔄 Altra notizia:** ti propone un'altra notizia;
+- **❌ Salta:** non fa niente.
+
+Così i crediti di Claude si spendono solo per le notizie che scegli tu. I link che mandi vengono generati subito.
+
 Comandi da scrivere al bot: `/nuovo` (un carosello subito), `/stato`, `/pausa`, `/riprendi`.
 
 **✏️ Correggi:** sotto ogni anteprima c'è il pulsante ✏️ Correggi. Lo premi e scrivi cosa cambiare in parole semplici, per esempio:

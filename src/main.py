@@ -77,6 +77,47 @@ def build(s: dict, exclude: set[str] = frozenset(), log=print) -> dict | None:
                     uids=[main.uid] + [r.uid for r in related], log=log)
 
 
+def propose(s: dict, exclude: set[str] = frozenset(), why: str = "") -> bool:
+    """Sceglie la notizia e la propone su Telegram SENZA generare il carosello (costa poco).
+    Il carosello parte solo con ✍️ Genera."""
+    import dataclasses
+    import secrets
+    if not config.ANTHROPIC_API_KEY:
+        bot.notify("⚠️ Manca ANTHROPIC_API_KEY: non posso scegliere le notizie.")
+        return False
+    open_uids = {x["uid"] for pr in s.get("proposals", {}).values() for x in [pr["main"], *pr["related"]]}
+    items = [i for i in news.fetch_items() if i.uid not in set(s["seen"]) | set(exclude) | open_uids]
+    choice = writer.pick(items, [t["topic"] for t in s["topics"]] +
+                         [pr["topic"] + " (già proposta)" for pr in s.get("proposals", {}).values()])
+    if not choice:
+        bot.notify("🤷 Nessuna notizia nuova abbastanza importante in questo momento.")
+        return False
+    main, related = choice["main"], choice["related"]
+    pid = now_rome().strftime("%H%M%S") + secrets.token_hex(2)
+    fonti = "\n".join(f"• {it.source}: {it.title}\n  {it.link}" for it in [main] + related)
+    text = (f"🗞 {why}PROPOSTA\n\n{choice['topic']}\n\nPerché: {choice['reason']}\n\nFonti:\n{fonti}\n\n"
+            "Premi ✍️ Genera per creare il carosello.")
+    mid = bot.send_proposal(text, pid)
+    s.setdefault("proposals", {})[pid] = {
+        "main": dataclasses.asdict(main), "related": [dataclasses.asdict(r) for r in related],
+        "topic": choice["topic"], "reason": choice["reason"], "message_id": mid, "chat": bot._chat(),
+        "created": dt.datetime.now(dt.timezone.utc).isoformat()}
+    return True
+
+
+def build_from_proposal(p: dict, log=print) -> dict:
+    """Il carosello completo di una notizia già proposta e approvata con ✍️ Genera."""
+    main = news.Item(**p["main"])
+    related = [news.Item(**r) for r in p["related"]]
+    sources, cover_candidates = [], []
+    for it in [main] + related:
+        sources.append(_article_source(it.link, it.source, it.title, it.summary, cover_candidates, it is main))
+        if it.image:
+            cover_candidates.append((it.image, "", it.source))
+    return assemble(sources, cover_candidates, topic=p["topic"], reason=p["reason"],
+                    uids=[main.uid] + [r.uid for r in related], log=log)
+
+
 def _article_source(it_link: str, it_source: str, it_title: str, it_summary: str, cover_candidates: list,
                     with_cover: bool) -> dict:
     art = news.fetch_article(it_link)
@@ -266,12 +307,18 @@ def remember(s: dict, car: dict):
     s["daily"][today] = s["daily"].get(today, 0) + 1
 
 
-def produce(s: dict, exclude: set[str] = frozenset(), why: str = "", link: str = "") -> bool:
+def produce(s: dict, exclude: set[str] = frozenset(), why: str = "", link: str = "",
+            proposal: dict | None = None) -> bool:
     """Prepara un carosello e lo manda in anteprima (o lo pubblica). Ritorna True se ha fatto qualcosa."""
     if not config.ANTHROPIC_API_KEY:
         bot.notify("⚠️ Manca ANTHROPIC_API_KEY: non posso scrivere i caroselli.")
         return False
-    car = build_from_link(s, link) if link else build(s, exclude)
+    if link:
+        car = build_from_link(s, link)
+    elif proposal:
+        car = build_from_proposal(proposal)
+    else:
+        car = build(s, exclude)
     if not car:
         bot.notify("🤷 Nessuna notizia nuova abbastanza importante in questo momento.")
         return False
@@ -368,6 +415,28 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
                     "Es.: \"titolo più corto\", \"togli la slide 4\", \"nella slide 3 scrivi che…\", "
                     "\"cambia la foto di copertina con una di Trump\", \"caption più breve\".")
             continue
+        if action in ("gen", "next", "skip"):
+            pr = s.setdefault("proposals", {}).pop(arg, None)
+            if not pr:
+                bot.ack(u, "Già gestito")
+                continue
+            uids = [pr["main"]["uid"]] + [r["uid"] for r in pr["related"]]
+            if action == "gen":
+                bot.ack(u, "Genero il carosello…")
+                bot.mark(pr["message_id"], "✍️ In preparazione…", pr.get("chat"))
+                bot.notify("⏳ Scrivo il carosello… (2-4 minuti)")
+                safe(lambda: produce(s, why="", proposal=pr), "carosello")
+            elif action == "next":
+                bot.ack(u, "Cerco un'altra notizia…")
+                bot.mark(pr["message_id"], "🔄 Scartata", pr.get("chat"))
+                s["seen"].extend(uids)
+                s["topics"].append({"topic": pr["topic"] + " (scartato)", "date": now_rome().isoformat(timespec="minutes")})
+                safe(lambda: propose(s, set(uids), why="Alternativa · "), "nuova proposta")
+            else:
+                bot.ack(u, "Saltata")
+                bot.mark(pr["message_id"], "❌ Saltata", pr.get("chat"))
+                s["seen"].extend(uids)
+            continue
         p = s["pending"].pop(arg, None)
         if not p:
             bot.ack(u, "Già gestito")
@@ -379,7 +448,7 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
             bot.ack(u, "Cerco un'altra notizia…")
             bot.mark(p["message_id"], "🔄 Sostituito", p.get("chat"))
             s["topics"].append({"topic": p["topic"] + " (scartato)", "date": now_rome().isoformat(timespec="minutes")})
-            safe(lambda: produce(s, set(p["uids"]), why="Alternativa: "), "nuova notizia")
+            safe(lambda: propose(s, set(p["uids"]), why="Alternativa · "), "nuova notizia")
         else:
             bot.ack(u, "Pubblico su Instagram…")
             try:
@@ -398,7 +467,7 @@ def handle_updates(s: dict, wait: int = 0) -> bool:
 def handle_command(s: dict, cmd: str):
     if cmd in ("/nuovo", "/ora"):
         bot.notify("⏳ Cerco la notizia più importante del momento…")
-        safe(lambda: produce(s, why="Su richiesta: "), "/nuovo")
+        safe(lambda: (produce(s, why="Su richiesta: ") if config.AUTO_PUBLISH else propose(s)), "/nuovo")
     elif cmd == "/pausa":
         s["paused"] = True
         bot.notify("⏸️ In pausa: non preparo caroselli finché non scrivi /riprendi.")
@@ -408,7 +477,8 @@ def handle_command(s: dict, cmd: str):
     elif cmd in ("/stato", "/start"):
         today = now_rome().date().isoformat()
         nxt = next((t for t in config.SLOTS if t > now_rome().strftime("%H:%M")), config.SLOTS[0] + " (domani)")
-        bot.notify(f"📊 Oggi: {s['daily'].get(today, 0)} caroselli\n⏳ In attesa: {len(s['pending'])}\n"
+        bot.notify(f"📊 Oggi: {s['daily'].get(today, 0)} caroselli\n⏳ Anteprime in attesa: {len(s['pending'])}\n"
+                   f"🗞 Notizie proposte in attesa: {len(s.get('proposals', {}))}\n"
                    f"🕐 Prossimo: {nxt}\n{'⏸️ IN PAUSA' if s.get('paused') else '▶️ Attivo'}"
                    f"\nModalità: {'pubblicazione automatica' if config.AUTO_PUBLISH else 'approvazione con ✅'}\n\n"
                    "Comandi: /nuovo /stato /pausa /riprendi\nOppure mandami un link (articolo o post Instagram) e lo ricreo.")
@@ -429,6 +499,10 @@ def due_slot(s: dict) -> str | None:
 
 def expire_pending(s: dict):
     now = dt.datetime.now(dt.timezone.utc)
+    for pid, pr in list(s.get("proposals", {}).items()):
+        if now - dt.datetime.fromisoformat(pr["created"]) > dt.timedelta(hours=config.PENDING_HOURS):
+            s["proposals"].pop(pid)
+            bot.mark(pr["message_id"], "⌛ Scaduta", pr.get("chat"))
     for cid, p in list(s["pending"].items()):
         if now - dt.datetime.fromisoformat(p["created"]) > dt.timedelta(hours=config.PENDING_HOURS):
             s["pending"].pop(cid)
@@ -475,7 +549,10 @@ def tick(s: dict) -> bool:
         bot.notify("⏸️ Limite giornaliero di Instagram quasi raggiunto: salto questo giro.")
         return True
     bot.reply_to = None  # i caroselli degli orari vanno all'amministratore
-    safe(lambda: produce(s, why=f"Ore {slot} · "), f"carosello delle {slot}")
+    if config.AUTO_PUBLISH:
+        safe(lambda: produce(s, why=f"Ore {slot} · "), f"carosello delle {slot}")
+    else:
+        safe(lambda: propose(s, why=f"Ore {slot} · "), f"proposta delle {slot}")
     return True
 
 

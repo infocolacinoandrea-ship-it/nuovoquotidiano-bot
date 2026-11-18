@@ -74,6 +74,20 @@ def send_preview(images: list[Path], caption: str, cid: str, note: str = "", cha
     return msg["message_id"]
 
 
+def proposal_keyboard(pid: str) -> str:
+    return json.dumps({"inline_keyboard": [
+        [{"text": "✍️ Genera", "callback_data": f"gen:{pid}"}],
+        [{"text": "🔄 Altra notizia", "callback_data": f"next:{pid}"},
+         {"text": "❌ Salta", "callback_data": f"skip:{pid}"}]]})
+
+
+def send_proposal(text: str, pid: str, chat: str | None = None) -> int:
+    """La notizia scelta, prima di spendere crediti per il carosello."""
+    msg = _api("sendMessage", data={"chat_id": _chat(chat), "text": text[:4000],
+                                     "reply_markup": proposal_keyboard(pid), "disable_web_page_preview": "true"})
+    return msg["message_id"]
+
+
 def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]], int]:
     """Ritorna [(azione, argomento, update)], nuovo offset.
     azioni: ok / no / alt (pulsanti) oppure cmd (comando scritto, argomento = testo)."""
@@ -85,7 +99,7 @@ def get_updates(offset: int, wait: int = 0) -> tuple[list[tuple[str, str, dict]]
         cq = u.get("callback_query")
         if cq and str(cq["from"]["id"]) in config.ALLOWED_IDS:
             action, _, cid = cq.get("data", "").partition(":")
-            if action in ("ok", "no", "alt", "fix"):
+            if action in ("ok", "no", "alt", "fix", "gen", "next", "skip"):
                 out.append((action, cid, cq))
             continue
         m = u.get("message")
