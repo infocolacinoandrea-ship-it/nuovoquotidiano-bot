@@ -52,7 +52,10 @@
   "3ede538b4ee3",
   "4cd5c37b1d2a",
   "803a19202ec5",
-  "87c3487f69cd"
+  "87c3487f69cd",
+  "71cd87371bc0",
+  "47a4dcc6a92d",
+  "ab32642a31ce"
  ],
  "topics": [
   {
@@ -114,6 +117,10 @@
   {
    "topic": "USA criticano i deep strikes ucraini in Russia, scontro con gli alleati europei",
    "date": "2026-11-18T12:56+01:00"
+  },
+  {
+   "topic": "UniCredit-Berlino accordo su Commerzbank (scartato)",
+   "date": "2026-11-19T10:51+01:00"
   }
  ],
  "pending": {},
@@ -122,7 +129,7 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859012,
+ "tg_offset": 146859013,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -214,44 +221,34 @@
    "chat": "1286321102",
    "created": "2026-11-19T06:32:41.609461+00:00"
   },
-  "10512442e8": {
+  "105149a6f2": {
    "main": {
-    "title": "UniCredit agrees deal with Berlin on Commerzbank takeover",
-    "summary": "Move clears major obstacle for Italian lender to take control of Germany’s second-largest bank after two-year battle",
-    "link": "https://www.ft.com/content/0c6bb979-bc3f-4368-86fc-a0306fd52d78?syn-25a6b1a6=1",
-    "source": "Financial Times",
-    "weight": 3,
-    "published": "2026-11-19T09:27:50+00:00",
+    "title": "Il Financial Times: 'La filiale italiana di Deutsche Bank ha occultato perdite per 800 milioni'",
+    "summary": "La banca tedesca: 'Tutte le operazioni in Italia correttamente riflesse nei bilanci'",
+    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/ft-filiale-italiana-di-deutsche-bank-ha-occultato-le-perdite-per-800-milioni_b95dda57-639c-426b-b3a2-f1073b4cd09f.html",
+    "source": "ANSA",
+    "weight": 2,
+    "published": "2026-11-19T09:29:50+00:00",
     "image": "",
-    "uid": "71cd87371bc0"
+    "uid": "30f46f38d708"
    },
    "related": [
     {
-     "title": "Unicredit e Berlino raggiungono accordo di massima su Commerzbank",
-     "summary": "Orcel, approccio collaborativo Klingbeil determinante per accordo",
-     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/unicredit-e-berlino-raggiungono-accordo-di-massima-su-commerzbank_dbc57f6a-ebaf-4a9b-95cf-bfd6f1f48ea7.html",
+     "title": "Deutsche Bank, tutte le operazioni in Italia correttamente riflesse nei bilanci",
+     "summary": "'A livello di gruppo non si è resa necessaria alcuna ulteriore disclosure'",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/deutsche-bank-tutte-le-operazioni-in-italia-correttamente-riflesse-nei-bilanci_65d16d94-772b-4e23-a6b1-cb6e653ae140.html",
      "source": "ANSA",
      "weight": 2,
-     "published": "2026-11-19T08:06:43+00:00",
+     "published": "2026-11-19T09:19:31+00:00",
      "image": "",
-     "uid": "47a4dcc6a92d"
-    },
-    {
-     "title": "Orcel, approccio collaborativo Klingbeil determinante per accordo",
-     "summary": "'Apprezziamo sostegno ministro tedesco su nostra strategia Unlocked'",
-     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/orcel-approccio-collaborativo-klingbeil-determinante-per-accordo_392add8d-1eb6-4d69-91ba-6c0a93ae4f7f.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T08:14:41+00:00",
-     "image": "",
-     "uid": "ab32642a31ce"
+     "uid": "c14287b63009"
     }
    ],
-   "topic": "UniCredit-Berlino accordo su Commerzbank",
-   "reason": "Fatto nuovo dopo il via libera UE: con l'accordo di massima, Berlino non blocca più la scalata di UniCredit alla seconda banca tedesca, dopo due anni di scontro. È una grande operazione bancaria italiana in Europa, ripresa da FT e ANSA.",
-   "message_id": 172,
+   "topic": "FT: Deutsche Bank Italia avrebbe occultato perdite per 800 milioni",
+   "reason": "Rivelazione del Financial Times su una grande banca presente in Italia, smentita dall'istituto: notizia nuova, con ricadute dirette sul sistema bancario italiano, mentre il vertice di Shenzhen è già stato trattato.",
+   "message_id": 173,
    "chat": "1286321102",
-   "created": "2026-11-19T09:51:24.932355+00:00"
+   "created": "2026-11-19T09:51:49.886769+00:00"
   }
  }
 }
