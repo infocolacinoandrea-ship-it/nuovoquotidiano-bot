@@ -172,65 +172,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "1232163373": {
-   "main": {
-    "title": "Cina, Usa e Russia adottano una dichiarazione di pace",
-    "summary": "Si impegnano a salvaguardare la stabilità strategica e la sicurezza internazionale",
-    "link": "https://www.ansa.it/sito/notizie/mondo/asia/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_72d1e305-1c8e-4e9f-829a-4d6acdba976f.html",
-    "source": "ANSA",
-    "weight": 2,
-    "published": "2026-11-19T11:04:29+00:00",
-    "image": "",
-    "uid": "f62455b21506"
-   },
-   "related": [
-    {
-     "title": "🔴 Historic trilateral summit live: Trump, Xi and Putin agree that a nuclear war must never be fought",
-     "summary": "",
-     "link": "https://www.france24.com/en/asia-pacific/20261119-xi-trump-putin-talks-live-china-us-russia-leaders-hold-landmark-three-way-meeting",
-     "source": "France 24",
-     "weight": 2,
-     "published": "2026-11-19T11:11:03+00:00",
-     "image": "",
-     "uid": "efb9804b3f88"
-    },
-    {
-     "title": "'Trump-Putin-Xi si impegnano a dialogo per prevenire proliferazione armi nucleari'",
-     "summary": "Nella 'dichiarazione di pace' dopo il trilaterale dei leader",
-     "link": "https://www.ansa.it/sito/notizie/mondo/asia/2026/11/19/trump-putin-xi-si-impegnano-a-dialogo-per-prevenire-proliferazione-armi-nucleari_257e5152-d339-4c1d-93e3-96446a11b20a.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T11:09:52+00:00",
-     "image": "",
-     "uid": "676cc48becad"
-    },
-    {
-     "title": "'Russia-Cina-Usa prevedono di aumentare produzione di prodotti petroliferi'",
-     "summary": "Dichiarazione: 'Confermata l'importanza di un approvvigionamento energetico stabile'",
-     "link": "https://www.ansa.it/sito/notizie/mondo/asia/2026/11/19/russia-cina-usa-prevedono-di-aumentare-produzione-di-prodotti-petroliferi_f2a00917-8cfd-471d-8838-3f4f653bc10a.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T11:12:42+00:00",
-     "image": "",
-     "uid": "b11aa9715180"
-    },
-    {
-     "title": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
-     "summary": "After US president called Putin a friend, Poland’s PM said: ‘God, protect us from such friends’ For what it’s worth, the China-US-Russia ‘peace declaration’ issued after their meeting, and published by Chinese state media , includes absolutely no mention of Ukraine or Europe whatsoever. There is only one, rather generic, line that could be seen as close to these issues: “The three heads of state exchanged in-depth views on the current international situation and pledged to maintain strategic sta",
-     "link": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
-     "source": "The Guardian",
-     "weight": 3,
-     "published": "2026-11-19T11:09:58+00:00",
-     "image": "https://i.guim.co.uk/img/media/194326eb18d0979185a01324bf8eb4f154a041d2/270_0_4520_3616/master/4520.jpg?width=140&quality=85&auto=format&fit=max&s=c1721f1dbbf726d5a03787329704a58d",
-     "uid": "5ac6485bd737"
-    }
-   ],
-   "topic": "Dichiarazione di pace Trump-Xi-Putin: nucleare e petrolio",
-   "reason": "È l'esito concreto del vertice già trattato: impegno a non combattere mai una guerra nucleare, dialogo sulla non proliferazione e aumento della produzione di prodotti petroliferi, con effetti diretti sull'energia in Italia.",
-   "message_id": 185,
-   "chat": "1286321102",
-   "created": "2026-11-19T11:32:17.159034+00:00"
-  },
   "180226c62f": {
    "main": {
     "title": "Anthropic Shares Jump 34% After $107.3 Billion IPO Breaks Record",
