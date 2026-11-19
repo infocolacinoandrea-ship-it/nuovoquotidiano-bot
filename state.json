@@ -159,7 +159,8 @@
   "2026-11-19": [
    "07:30",
    "12:30",
-   "18:00"
+   "18:00",
+   "21:00"
   ]
  },
  "last_refresh": "",
@@ -230,6 +231,65 @@
    "message_id": 186,
    "chat": "1286321102",
    "created": "2026-11-19T17:02:26.586549+00:00"
+  },
+  "210030c7cf": {
+   "main": {
+    "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+    "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
+    "link": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC News",
+    "weight": 3,
+    "published": "2026-11-19T19:16:21+00:00",
+    "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1fd8/live/5c168a90-e44a-11f1-a094-5fdc692f3e33.jpg",
+    "uid": "b5502e0ebc98"
+   },
+   "related": [
+    {
+     "title": "European leaders reject 'Yalta 2.0' for Ukraine after Trump meets Putin and Xi",
+     "summary": "\"A Yalta format will not bring peace,\" German Chancellor Friedrich Merz said at the end of a Coalition of the Willing meeting in Berlin just hours after Trump, Putin and Xi held talks in China.",
+     "link": "https://www.euronews.com/2026/11/19/european-leaders-reject-yalta-20-deal-for-ukraine-after-trump-meets-putin-and-xi",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-19T18:50:06+00:00",
+     "image": "",
+     "uid": "914d1ae80cb9"
+    },
+    {
+     "title": "Zelensky ai Volenterosi: 'Kiev nella Nato'. Meloni: 'Mandato chiaro al formato E5'",
+     "summary": "Vertice a Berlino, Kushner: 'Trump non vuole un acciordo unilaterale, Mosca ha accettato la presenza degli europei'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-ai-volenterosi-kiev-nella-nato.-meloni-mandato-chiaro-al-formato-e5_63e4f927-d622-4c44-a03d-1000e20ff862.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-19T18:06:16+00:00",
+     "image": "",
+     "uid": "5080c6ffa523"
+    },
+    {
+     "title": "Putin invites European leaders to Moscow for talks on Ukraine",
+     "summary": "Russian leader signals he is unwilling to relax hardline demands for ending war",
+     "link": "https://www.ft.com/content/dddd1db4-d9f2-452b-9be8-651b49a8b1c2?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-19T18:53:08+00:00",
+     "image": "",
+     "uid": "5f0eb049080f"
+    },
+    {
+     "title": "Trump questions Europe's billions in Ukraine aid during surprise call",
+     "summary": "The US president reportedly called into a meeting of Kyiv's European allies from Air Force One, hours after talks with Putin and Xi, and said Moscow was ready to negotiate a peace deal.",
+     "link": "https://www.euronews.com/2026/11/19/trump-questions-europes-billions-in-ukraine-aid-during-surprise-call",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-19T17:24:44+00:00",
+     "image": "",
+     "uid": "dcceb54483aa"
+    }
+   ],
+   "topic": "Volenterosi a Berlino: Europa pronta a trattare con la Russia sull'Ucraina",
+   "reason": "Dopo il vertice di Shenzhen, l'Europa (Italia compresa, con Meloni e il formato E5) si presenta unita e pronta a trattare con Mosca. Putin invita i leader europei e Trump contesta gli aiuti a Kiev: è uno sviluppo nuovo, ripreso da molte testate autorevoli.",
+   "message_id": 187,
+   "chat": "1286321102",
+   "created": "2026-11-19T20:00:30.511005+00:00"
   }
  }
 }
