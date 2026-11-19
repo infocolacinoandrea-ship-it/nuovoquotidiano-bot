@@ -122,7 +122,7 @@
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587"
  },
- "tg_offset": 146859011,
+ "tg_offset": 146859012,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -213,6 +213,45 @@
    "message_id": 169,
    "chat": "1286321102",
    "created": "2026-11-19T06:32:41.609461+00:00"
+  },
+  "10512442e8": {
+   "main": {
+    "title": "UniCredit agrees deal with Berlin on Commerzbank takeover",
+    "summary": "Move clears major obstacle for Italian lender to take control of Germany’s second-largest bank after two-year battle",
+    "link": "https://www.ft.com/content/0c6bb979-bc3f-4368-86fc-a0306fd52d78?syn-25a6b1a6=1",
+    "source": "Financial Times",
+    "weight": 3,
+    "published": "2026-11-19T09:27:50+00:00",
+    "image": "",
+    "uid": "71cd87371bc0"
+   },
+   "related": [
+    {
+     "title": "Unicredit e Berlino raggiungono accordo di massima su Commerzbank",
+     "summary": "Orcel, approccio collaborativo Klingbeil determinante per accordo",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/unicredit-e-berlino-raggiungono-accordo-di-massima-su-commerzbank_dbc57f6a-ebaf-4a9b-95cf-bfd6f1f48ea7.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-19T08:06:43+00:00",
+     "image": "",
+     "uid": "47a4dcc6a92d"
+    },
+    {
+     "title": "Orcel, approccio collaborativo Klingbeil determinante per accordo",
+     "summary": "'Apprezziamo sostegno ministro tedesco su nostra strategia Unlocked'",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/orcel-approccio-collaborativo-klingbeil-determinante-per-accordo_392add8d-1eb6-4d69-91ba-6c0a93ae4f7f.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-19T08:14:41+00:00",
+     "image": "",
+     "uid": "ab32642a31ce"
+    }
+   ],
+   "topic": "UniCredit-Berlino accordo su Commerzbank",
+   "reason": "Fatto nuovo dopo il via libera UE: con l'accordo di massima, Berlino non blocca più la scalata di UniCredit alla seconda banca tedesca, dopo due anni di scontro. È una grande operazione bancaria italiana in Europa, ripresa da FT e ANSA.",
+   "message_id": 172,
+   "chat": "1286321102",
+   "created": "2026-11-19T09:51:24.932355+00:00"
   }
  }
 }
