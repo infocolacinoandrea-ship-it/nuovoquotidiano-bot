@@ -62,7 +62,11 @@
   "947e6ec92467",
   "e093ed9afe00",
   "f3004053344a",
-  "2cffe10e1ae9"
+  "2cffe10e1ae9",
+  "28e83fda17be",
+  "c1e07dd035ee",
+  "b0d89e56b8eb",
+  "3800dbc1ec35"
  ],
  "topics": [
   {
@@ -136,21 +140,140 @@
   {
    "topic": "Corte ONU (ICJ): Myanmar colpevole di genocidio contro i Rohingya (scartato)",
    "date": "2026-11-19T21:35+01:00"
+  },
+  {
+   "topic": "Macron: riaprire la questione dell'ingresso dell'Ucraina nella NATO",
+   "date": "2026-11-19T21:36+01:00"
   }
  ],
- "pending": {},
+ "pending": {
+  "20261119-21364970f2": {
+   "message_id": 201,
+   "caption": "Macron chiede di riaprire la questione dell'ingresso dell'Ucraina nella Nato\n\nIl presidente francese lo ha detto a Berlino il 19 novembre, al termine del vertice della Coalizione dei Volenterosi. Secondo ANSA, ha motivato la proposta con il \"massimalismo delle posizioni russe\" e con la sicurezza europea a lungo termine. Secondo Euronews, Zelensky ha riferito che negli ultimi colloqui di Abu Dhabi i negoziatori statunitensi hanno ipotizzato il ritiro ucraino dal Donbas in cambio dell'adesione, ma Kiev non è disposta a cedere territori.\n\nL'Ucraina nella Nato renderebbe l'Europa più sicura o più esposta?\n\nFonti: France 24, Euronews, ANSA.\nFoto: copertina ANSA (foto dell'articolo); slide 5 President of Ukraine from Україна / Wikimedia Commons, Public domain.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#nato #ucraina #macron #geopolitica #nuovoquotidiano",
+   "n": 8,
+   "uids": [
+    "28e83fda17be",
+    "c1e07dd035ee",
+    "b0d89e56b8eb",
+    "3800dbc1ec35"
+   ],
+   "topic": "Macron: riaprire la questione dell'ingresso dell'Ucraina nella NATO",
+   "draft": {
+    "c": {
+     "categoria": "GEOPOLITICA",
+     "titolo_copertina": "Macron rilancia: va riaperta la questione dell'Ucraina nella Nato",
+     "parole_evidenziate": [
+      "Ucraina",
+      "Nato"
+     ],
+     "slide": [
+      {
+       "layout": "foto",
+       "occhiello": "COSA È SUCCESSO",
+       "titolo": "A Berlino Macron chiede di riaprire il dossier",
+       "testo": "Giovedì 19 novembre, dopo il vertice della Coalizione dei Volenterosi copresieduta da Francia e Regno Unito, Macron ha chiesto di riaprire la questione dell'adesione di Kiev alla Nato. E ha esortato gli alleati ad accelerare le consegne di difesa aerea.",
+       "foto_ricerca": "Emmanuel Macron press conference",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "citazione",
+       "occhiello": "LE PAROLE",
+       "titolo": "La motivazione di Macron",
+       "testo": "Di fronte al massimalismo delle posizioni russe, è necessario riaprire la questione dell'adesione dell'Ucraina alla Nato. Questo è il momento giusto.",
+       "autore": "Emmanuel Macron, presidente della Francia"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "IL PRECEDENTE",
+       "titolo": "Un'ipotesi accantonata nel 2022",
+       "testo": "Secondo Macron l'adesione era stata messa da parte nel 2022 in un contesto \"completamente diverso\". Dopo l'invasione russa, ricorda Euronews, gli alleati l'avevano esclusa a breve termine: temevano uno scontro diretto Nato-Russia per l'Articolo 5.",
+       "foto_tipo": "concetto"
+      },
+      {
+       "layout": "foto",
+       "occhiello": "IL NEGOZIATO",
+       "titolo": "Donbas in cambio della Nato?",
+       "testo": "Dopo i colloqui mediati dagli Usa ad Abu Dhabi del 10 e 11 novembre, Zelensky ha detto che i negoziatori americani hanno ipotizzato il ritiro ucraino dal Donbas in cambio dell'adesione. Kiev, ha precisato, non è pronta a cedere territori.",
+       "foto_ricerca": "Volodymyr Zelensky",
+       "foto_tipo": "soggetto"
+      },
+      {
+       "layout": "citazione",
+       "occhiello": "LA RISPOSTA DI KIEV",
+       "titolo": "Zelensky: garanzia per tutta l'Europa",
+       "testo": "La migliore garanzia di sicurezza per l'Ucraina - e, di fatto, una garanzia per l'intera Europa - è l'adesione alla Nato.",
+       "autore": "Volodymyr Zelensky, presidente dell'Ucraina"
+      },
+      {
+       "layout": "testo",
+       "occhiello": "COSA SUCCEDE ORA",
+       "titolo": "Garanzie in discussione, decisione ai cittadini",
+       "testo": "Secondo Zelensky, con Nato e Ue si discutono \"garanzie di sicurezza specifiche\". Se arriveranno, consulterà la società ucraina: \"Non ho il diritto di decidere da solo\". Intanto, riporta Euronews, Putin, Trump e Xi si sono incontrati in Cina."
+      }
+     ],
+     "perche_ti_riguarda": "L'Italia è nella Nato: l'ingresso di Kiev estenderebbe l'impegno di difesa reciproca a un Paese oggi in guerra con la Russia. Macron lo presenta come una questione di sicurezza europea a lungo termine, non solo ucraina.",
+     "caption": "Macron chiede di riaprire la questione dell'ingresso dell'Ucraina nella Nato\n\nIl presidente francese lo ha detto a Berlino il 19 novembre, al termine del vertice della Coalizione dei Volenterosi. Secondo ANSA, ha motivato la proposta con il \"massimalismo delle posizioni russe\" e con la sicurezza europea a lungo termine. Secondo Euronews, Zelensky ha riferito che negli ultimi colloqui di Abu Dhabi i negoziatori statunitensi hanno ipotizzato il ritiro ucraino dal Donbas in cambio dell'adesione, ma Kiev non è disposta a cedere territori.\n\nL'Ucraina nella Nato renderebbe l'Europa più sicura o più esposta?",
+     "hashtag": [
+      "nato",
+      "ucraina",
+      "macron",
+      "geopolitica"
+     ]
+    },
+    "sources": [
+     {
+      "source": "France 24",
+      "title": "Macron urges Ukraine's allies to 'reopen the question' of NATO membership",
+      "link": "https://www.france24.com/en/europe/20261119-macron-urges-ukraine-allies-reopen-question-nato-membership",
+      "text": "Macron urges Ukraine's allies to 'reopen the question' of NATO membership. French President Emmanuel Macron on Thursday called for Ukraine's allies to speed up the delivery of urgently needed air defence systems and urged them to \"reopen the question\" of Ukraine's NATO membership after talks in Berlin aimed at reaffirming European support for Kyiv. You don't have permission to access the page you requested. What is this page? The website you are visiting is protected. For security reasons this page cannot be displayed."
+     },
+     {
+      "source": "Euronews",
+      "title": "Macron backs reopening 'the question' of Ukraine's NATO accession",
+      "link": "https://www.euronews.com/2026/11/19/macron-backs-reopening-the-question-of-ukraines-nato-accession",
+      "text": "French President Emmanuel Macron said that Ukraine's NATO accession was brushed aside in early 2022 in a \"completely different\" context.\nFrench President Emmanuel Macron backed \"reopening the question\" of Ukraine's NATO membership on Thursday, while urging Kyiv's allies to do the \"maximum\" to provide it with the necessary air defence systems.\n\"Faced with the maximalist nature of the Russian position, I believe we need to reopen the question of Ukraine's accession to NATO,\" said Macron, following a meeting of the Coalition of the Willing in Berlin, co-chaired by France and the UK.\nMacron stated that Ukraine’s NATO accession had been set aside in early 2022, albeit in a \"completely different\" context.\nFollowing Russia's full-scale invasion of Ukraine in 2022, Western allies ruled out Kyiv's NATO's membership for the short-term, fearing that admitting a country at war with Russia could trigger a direct NATO–Russia confrontation under Article 5.\nFollowing two day US-mediated peace talks in Abu Dhabi on 10 and 11 November, Ukrainian President Volodymyr Zelenskyy declared that US negotiators had floated the idea of Ukraine withdrawing from the eastern Donbas region in exchange for NATO membership.\nHe said that Kyiv was not prepared to concede territory, but said that \"specific security guarantees\" were being discussed with NATO and the EU.\n\"The question arises, including for us Europeans, of what happens the day after, because Ukraine will be a country with a very well-equipped and sizeable army. For our long-term security, Ukraine’s membership of NATO makes sense\", stated Macron.\nMacron's remarks came hours after Russian President Vladimir Putin, US President Donald Trump and Chinese President Xi Jinping held a historic trilateral in China.\nZelenskyy added that if Western countries laid out assurances, he would consult Ukrainian society on the proposition, saying he had “no right to make this decision alone”."
+     },
+     {
+      "source": "ANSA",
+      "title": "Macron, serve riaprire la questione dell'adesione dell'Ucraina alla Nato",
+      "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/macron-serve-riaprire-la-questione-delladesione-dellucraina-alla-nato_8a66fc6b-07ad-4cee-9411-6f76dc57eaff.html",
+      "text": "Macron, serve riaprire la questione dell'adesione dell'Ucraina alla Nato - Europa - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all’abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a €16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertirà che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicità presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nMacron, serve riaprire la questione dell'adesione dell'Ucraina alla Nato\n\"Opportuna anche ai fini della nostra sicurezza a lungo termine\"\nBERLINO,\n19 novembre 2026, 18:28\nRedazione ANSA\nCondividi\nLink copiato\n- RIPRODUZIONE RISERVATA\n\"In questo momento, di fronte al\nmassimalismo delle posizioni russe, è necessario riaprire la\nquestione dell'adesione dell'Ucraina alla Nato, come ho proposto\nqualche giorno fa. Questo è il momento giusto\". Lo ha detto il\npresidente francese Emmanuel Macron nella conferenza stampa al\ntermine della Coalizione dei Volenterosi, a Berlino, ricordando\nche l'ipotesi era stata \"accantonata nel primo semestre del\n2022, in un contesto completamente diverso. Oggi - ha\nsottolineato - la questione si pone, anche per noi europei, in\nvista del 'giorno dopo': l'Ucraina sarà infatti un Paese dotato\ndi un equipaggiamento molto consistente e di un esercito\nnumeroso, quindi, ai fini della nostra sicurezza a lungo\ntermine, la sua presenza nella Nato è opportuna\"."
+     },
+     {
+      "source": "ANSA",
+      "title": "Zelensky, la migliore garanzia di sicurezza per Kiev è l'adesione alla Nato",
+      "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-la-migliore-garanzia-di-sicurezza-per-kiev-e-ladesione-alla-nato_f79fe41b-e0a1-47dd-a68d-4a6803360020.html",
+      "text": "Zelensky, la migliore garanzia di sicurezza per Kiev è l'adesione alla Nato - Europa - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all’abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a €16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertirà che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicità presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nZelensky, la migliore garanzia di sicurezza per Kiev è l'adesione alla Nato\n'È una garanzia anche per l'intera Europa'\nBERLINO,\n19 novembre 2026, 18:06\nRedazione ANSA\nCondividi\nLink copiato\n- RIPRODUZIONE RISERVATA\n\"Sono grato ai paesi del gruppo E3\ne a tutti i nostri partner che affermano chiaramente come la\nmigliore garanzia di sicurezza per l'Ucraina - e, di fatto, una\ngaranzia per l'intera Europa - sia l'adesione alla Nato\". Lo ha\naffermato il presidente dell'Ucraina Voldymyr Zelensky nella\nconferenza stampa al termine del vertice della Coalizione dei\nVolenterosi."
+     }
+    ],
+    "cover": {
+     "url": "https://www.ansa.it/webimages/img_1280x720/2026/11/19/a6b0946b460fbdeb11a76337232dd8c0.jpg",
+     "credit": "ANSA (foto dell'articolo)"
+    },
+    "photos": {
+     "3": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Volodymyr_Zelenskyy_in_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "President of Ukraine from Україна / Wikimedia Commons, Public domain",
+      "query": "Volodymyr Zelensky"
+     }
+    }
+   },
+   "chat": "1286321102",
+   "created": "2026-11-19T20:37:04.402623+00:00"
+  }
+ },
  "published": {
   "20261116-144455": "18110135360227059",
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587",
   "20261119-1052438f73": "18191076814418392"
  },
- "tg_offset": 146859017,
+ "tg_offset": 146859018,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
   "2026-11-18": 2,
-  "2026-11-19": 1
+  "2026-11-19": 2
  },
  "slots_done": {
   "2026-11-17": [
@@ -299,55 +422,6 @@
    "message_id": 187,
    "chat": "1286321102",
    "created": "2026-11-19T20:00:30.511005+00:00"
-  },
-  "2135344ead": {
-   "main": {
-    "title": "Macron urges Ukraine's allies to 'reopen the question' of NATO membership",
-    "summary": "French President Emmanuel Macron on Thursday called for Ukraine's allies to speed up the delivery of urgently needed air defence systems and urged them to \"reopen the question\" of Ukraine's NATO membership after talks in Berlin aimed at reaffirming European support for Kyiv.",
-    "link": "https://www.france24.com/en/europe/20261119-macron-urges-ukraine-allies-reopen-question-nato-membership",
-    "source": "France 24",
-    "weight": 2,
-    "published": "2026-11-19T20:32:15+00:00",
-    "image": "https://s.france24.com/media/display/1caca7f6-e44d-11f1-80ec-e56ab3dc0809/w:1024/p:16x9/2026-11-19T181939Z-2056306323-RC23ROA5DSK2-RTRMADP-3-UKRAINE-CRISIS-GERMANY-BRITAIN.jpg",
-    "uid": "28e83fda17be"
-   },
-   "related": [
-    {
-     "title": "Macron backs reopening 'the question' of Ukraine's NATO accession",
-     "summary": "French President Emmanuel Macron said that Ukraine's NATO accession was brushed aside in early 2022 in a \"completely different\" context.",
-     "link": "https://www.euronews.com/2026/11/19/macron-backs-reopening-the-question-of-ukraines-nato-accession",
-     "source": "Euronews",
-     "weight": 2,
-     "published": "2026-11-19T19:22:16+00:00",
-     "image": "",
-     "uid": "c1e07dd035ee"
-    },
-    {
-     "title": "Macron, serve riaprire la questione dell'adesione dell'Ucraina alla Nato",
-     "summary": "\"Opportuna anche ai fini della nostra sicurezza a lungo termine\"",
-     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/macron-serve-riaprire-la-questione-delladesione-dellucraina-alla-nato_8a66fc6b-07ad-4cee-9411-6f76dc57eaff.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T17:29:58+00:00",
-     "image": "",
-     "uid": "b0d89e56b8eb"
-    },
-    {
-     "title": "Zelensky, la migliore garanzia di sicurezza per Kiev è l'adesione alla Nato",
-     "summary": "'È una garanzia anche per l'intera Europa'",
-     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-la-migliore-garanzia-di-sicurezza-per-kiev-e-ladesione-alla-nato_f79fe41b-e0a1-47dd-a68d-4a6803360020.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T17:08:20+00:00",
-     "image": "",
-     "uid": "3800dbc1ec35"
-    }
-   ],
-   "topic": "Macron: riaprire la questione dell'ingresso dell'Ucraina nella NATO",
-   "reason": "",
-   "message_id": 191,
-   "chat": "1286321102",
-   "created": "2026-11-19T20:35:35.326914+00:00"
   }
  }
 }
