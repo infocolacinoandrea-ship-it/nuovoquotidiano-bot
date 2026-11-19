@@ -129,113 +129,14 @@
    "date": "2026-11-19T10:52+01:00"
   }
  ],
- "pending": {
-  "20261119-1052438f73": {
-   "message_id": 183,
-   "caption": "Financial Times: Deutsche Bank Italia avrebbe nascosto perdite sui mutui fino a 800 milioni\n\nSecondo il Financial Times, la filiale italiana di Deutsche Bank ha usato derivati e una contabilità ombra, il cosiddetto \"tesoretto\", per occultare perdite sui prestiti ipotecari. Il meccanismo sarebbe durato oltre un decennio, fino a una segnalazione interna nel 2018. Gli esiti dell'indagine interna \"Project Aetos\" non sono mai stati resi pubblici. Deutsche Bank risponde che il revisore esterno non ha ritenuto necessario rideterminare i bilanci e che la questione non ha avuto un impatto significativo sul Gruppo.\n\nUna banca dovrebbe sempre rendere pubblici gli esiti delle sue indagini interne?\n\nFonti: ANSA.\nFoto: copertina ANSA/EPA via ANSA; slide 7 Epizentrum / Wikimedia Commons, CC BY-SA 3.0.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#deutschebank #banche #economia #finanza #nuovoquotidiano",
-   "n": 8,
-   "uids": [
-    "30f46f38d708",
-    "c14287b63009"
-   ],
-   "topic": "FT: Deutsche Bank Italia avrebbe occultato perdite per 800 milioni",
-   "draft": {
-    "c": {
-     "categoria": "BUSINESS",
-     "titolo_copertina": "Deutsche Bank Italia, perdite fino a 800 milioni nascoste per oltre dieci anni secondo il FT",
-     "parole_evidenziate": [
-      "800 milioni",
-      "nascoste"
-     ],
-     "slide": [
-      {
-       "layout": "foto",
-       "occhiello": "COSA È SUCCESSO",
-       "titolo": "L'inchiesta del Financial Times",
-       "testo": "Secondo il Financial Times, la filiale italiana di Deutsche Bank ha usato derivati e una contabilità ombra per nascondere perdite sui prestiti ipotecari.",
-       "foto_ricerca": "Deutsche Bank Milan office",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "dato",
-       "occhiello": "LA CIFRA",
-       "titolo": "Le perdite occultate",
-       "numero": "800 mln €",
-       "testo": "È la cifra massima delle perdite sui prestiti ipotecari che, secondo il FT, la filiale italiana avrebbe nascosto."
-      },
-      {
-       "layout": "testo",
-       "occhiello": "IL MECCANISMO",
-       "titolo": "Il \"tesoretto\" dei manager italiani",
-       "testo": "Il FT parla di una riserva occulta messa a punto dai manager italiani, ribattezzata \"tesoretto\". Il meccanismo sarebbe rimasto in vigore per oltre un decennio, fino al 2018. Poi una segnalazione interna lo ha fatto emergere."
-      },
-      {
-       "layout": "testo",
-       "occhiello": "L'INDAGINE INTERNA",
-       "titolo": "Project Aetos, rimasto riservato",
-       "testo": "L'indagine interna \"Project Aetos\" ha evidenziato carenze nelle operazioni bancarie di base e nella gestione del rischio sui mutui. Secondo il FT, Deutsche Bank non ha mai reso pubblici né la vicenda né gli esiti."
-      },
-      {
-       "layout": "citazione",
-       "occhiello": "LA RISPOSTA DELLA BANCA",
-       "titolo": "Nessuna revisione dei bilanci",
-       "testo": "Il revisore esterno ha concluso che non fosse necessario procedere alla rideterminazione dei bilanci precedenti di Deutsche Bank.",
-       "autore": "Deutsche Bank, nota in risposta al Financial Times"
-      },
-      {
-       "layout": "foto",
-       "occhiello": "LA LINEA DEL GRUPPO",
-       "titolo": "\"Nessun impatto significativo\"",
-       "testo": "Per la banca non serviva alcuna ulteriore comunicazione al mercato. La questione non avrebbe avuto un impatto significativo sul Gruppo. Tutte le operazioni rilevanti sarebbero state riflesse correttamente nei bilanci.",
-       "foto_ricerca": "Deutsche Bank headquarters Frankfurt",
-       "foto_tipo": "soggetto"
-      }
-     ],
-     "perche_ti_riguarda": "La vicenda riguarda i mutui concessi in Italia da una delle grandi banche estere presenti nel Paese. Pone una domanda sulla trasparenza dei controlli interni. Le fonti non indicano effetti diretti sui clienti.",
-     "caption": "Financial Times: Deutsche Bank Italia avrebbe nascosto perdite sui mutui fino a 800 milioni\n\nSecondo il Financial Times, la filiale italiana di Deutsche Bank ha usato derivati e una contabilità ombra, il cosiddetto \"tesoretto\", per occultare perdite sui prestiti ipotecari. Il meccanismo sarebbe durato oltre un decennio, fino a una segnalazione interna nel 2018. Gli esiti dell'indagine interna \"Project Aetos\" non sono mai stati resi pubblici. Deutsche Bank risponde che il revisore esterno non ha ritenuto necessario rideterminare i bilanci e che la questione non ha avuto un impatto significativo sul Gruppo.\n\nUna banca dovrebbe sempre rendere pubblici gli esiti delle sue indagini interne?",
-     "hashtag": [
-      "deutschebank",
-      "banche",
-      "economia",
-      "finanza"
-     ]
-    },
-    "sources": [
-     {
-      "source": "ANSA",
-      "title": "Il Financial Times: 'La filiale italiana di Deutsche Bank ha occultato perdite per 800 milioni'",
-      "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/ft-filiale-italiana-di-deutsche-bank-ha-occultato-le-perdite-per-800-milioni_b95dda57-639c-426b-b3a2-f1073b4cd09f.html",
-      "text": "La filiale italiana di Deutsche Bank ha fatto ricorso a derivati e a una contabilità ombra per nascondere perdite fino a 800 milioni di euro sui prestiti ipotecari. Lo riferisce il Financial Times, parlando di una riserva occulta messa a punto dai manager italiani ribattezzata 'tesoretto'.\nIl meccanismo è rimasto in vigore per oltre un decennio, fino al 2018, quando una segnalazione interna ha fatto emergere la vicenda. Deutsche Bank non ha però mai reso pubblica la vicenda né gli esiti dell'indagine interna 'Project Aetos' che ha evidenziato carenze su operazioni bancarie di base e gestione del rischio sui prestiti ipotecari.\n\"Per quanto riguarda la controllata italiana, gli esiti sono stati esaminati con il revisore esterno della Banca, che ha concluso che non fosse necessario procedere alla rideterminazione dei bilanci precedenti di Deutsche Bank\", evidenzia Deutsche Bank. \"A livello di Gruppo, non si è resa necessaria - prosegue - alcuna ulteriore disclosure, poiché la questione non ha avuto un impatto significativo sull'andamento del Gruppo o dei singoli segmenti.\nTutte le operazioni rilevanti relative agli esercizi precedenti erano state correttamente riflesse nei bilanci del Gruppo\".\nRiproduzione riservata © Copyright ANSA"
-     },
-     {
-      "source": "ANSA",
-      "title": "Deutsche Bank, tutte le operazioni in Italia correttamente riflesse nei bilanci",
-      "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/deutsche-bank-tutte-le-operazioni-in-italia-correttamente-riflesse-nei-bilanci_65d16d94-772b-4e23-a6b1-cb6e653ae140.html",
-      "text": "\"Per quanto riguarda la controllata\nitaliana, gli esiti sono stati esaminati con il revisore esterno\ndella Banca, che ha concluso che non fosse necessario procedere\nalla rideterminazione dei bilanci precedenti di Deutsche Bank\".\n                                    \nLo evidenzia Deutsche Bank in riferimento a quanto riportato dal\nFinancial Times. \"A livello di Gruppo, non si è resa necessaria\n- prosegue - alcuna ulteriore disclosure, poiché la questione\nnon ha avuto un impatto significativo sull'andamento del Gruppo\no dei singoli segmenti. Tutte le operazioni rilevanti relative\nagli esercizi precedenti erano state correttamente riflesse nei\nbilanci del Gruppo\". \n                                    \nRiproduzione riservata © Copyright ANSA"
-     }
-    ],
-    "cover": {
-     "url": "https://www.ansa.it/webimages/img_1280x720/2026/11/18/da48a6d60f424c7fa2de942f5bdb34e6.jpg",
-     "credit": "ANSA/EPA via ANSA"
-    },
-    "photos": {
-     "5": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Frankfurt_Deutsche_Bank_Headquarters.20140221.jpg/1920px-Frankfurt_Deutsche_Bank_Headquarters.20140221.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "credit": "Epizentrum / Wikimedia Commons, CC BY-SA 3.0",
-      "query": "Deutsche Bank headquarters Frankfurt"
-     }
-    }
-   },
-   "chat": "1286321102",
-   "created": "2026-11-19T09:52:58.087149+00:00"
-  }
- },
+ "pending": {},
  "published": {
   "20261116-144455": "18110135360227059",
   "20261116-172755": "17990605335084874",
-  "20261117-073210218f": "18014337299998587"
+  "20261117-073210218f": "18014337299998587",
+  "20261119-1052438f73": "18191076814418392"
  },
- "tg_offset": 146859014,
+ "tg_offset": 146859015,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
