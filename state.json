@@ -141,7 +141,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-19": []
+  "2026-11-19": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
@@ -152,5 +154,65 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "073241fb6a": {
+   "main": {
+    "title": "Anthropic's record IPO lands as Nvidia suffers its worst run since 2008",
+    "summary": "Anthropic priced its record IPO at $83 a share ahead of Thursday's debut, as Nvidia heads for a seventh weekly loss and Washington tightens AI chip exports.",
+    "link": "https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008",
+    "source": "Euronews",
+    "weight": 2,
+    "published": "2026-11-19T05:31:02+00:00",
+    "image": "",
+    "uid": "fd1a5594a359"
+   },
+   "related": [
+    {
+     "title": "FirstFT: Anthropic raises $81bn in record IPO",
+     "summary": "Also in today’s newsletter: Trump-Xi-Putin trilateral and gold loses shine",
+     "link": "https://www.ft.com/content/5f8b63e0-aaf7-48d4-8695-c8195043c537?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-19T05:31:56+00:00",
+     "image": "",
+     "uid": "d75c71314a83"
+    },
+    {
+     "title": "Anthropic Shares Indicated About 20% Higher on Gray Market",
+     "summary": "Anthropic PBC shares are indicated to open between 20% and 26% higher in gray market trading after the artificial intelligence lab’s upsized $107.3 billion initial public offering and private placement broke SpaceX’s record.",
+     "link": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-shares-indicated-more-than-20-higher-on-gray-markets",
+     "source": "Bloomberg",
+     "weight": 3,
+     "published": "2026-11-19T05:00:00+00:00",
+     "image": "",
+     "uid": "4e0b5e8dec9c"
+    },
+    {
+     "title": "AI giant Anthropic valued at up to $1.5tn ahead of stock market debut",
+     "summary": "The firm started just five years ago and is now one of the biggest names in artificial intelligence.",
+     "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-19T02:20:15+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a11/live/4dfcb420-e37d-11f1-b879-03485a55c082.jpg",
+     "uid": "584db0d8b9b3"
+    },
+    {
+     "title": "Anthropic IPO Raises $107.3B to Top SpaceX's Record Debut",
+     "summary": "\"Bloomberg: The Asia Trade\" brings you everything you need to know to get ahead as the trading day begins in Asia. Bloomberg TV is live from Sydney with Haidi Stroud-Watts and Paul Allen, getting insight and analysis from newsmakers and industry leaders on the biggest stories shaping global markets. (Source: Bloomberg)",
+     "link": "https://www.bloomberg.com/news/videos/2026-11-19/the-asia-trade-11-19-2026-video",
+     "source": "Bloomberg",
+     "weight": 3,
+     "published": "2026-11-19T04:23:16+00:00",
+     "image": "",
+     "uid": "e530f5dbd495"
+    }
+   ],
+   "topic": "Anthropic IPO record, supera SpaceX",
+   "reason": "È la più grande IPO di sempre, ripresa da tutte le principali testate. Arriva mentre il settore AI vende forte e Nvidia è in crisi: la notizia pesa sui mercati e sul dibattito sulla bolla dell'intelligenza artificiale.",
+   "message_id": 169,
+   "chat": "1286321102",
+   "created": "2026-11-19T06:32:41.609461+00:00"
+  }
+ }
 }
