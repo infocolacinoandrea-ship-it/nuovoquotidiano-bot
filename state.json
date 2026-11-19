@@ -136,7 +136,7 @@
   "20261117-073210218f": "18014337299998587",
   "20261119-1052438f73": "18191076814418392"
  },
- "tg_offset": 146859015,
+ "tg_offset": 146859016,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -290,6 +290,65 @@
    "message_id": 187,
    "chat": "1286321102",
    "created": "2026-11-19T20:00:30.511005+00:00"
+  },
+  "2135050a07": {
+   "main": {
+    "title": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
+    "summary": "In a decision with potentially broad implications, the International Court of Justice found a state culpable of genocide for the first time.",
+    "link": "https://www.nytimes.com/2026/11/19/world/europe/myanmar-genocide-icj-decision-.html",
+    "source": "New York Times",
+    "weight": 3,
+    "published": "2026-11-19T18:27:57+00:00",
+    "image": "https://static01.nyt.com/images/2026/11/19/multimedia/19int-ICJ-Myanmar-01-fkth/19int-ICJ-Myanmar-01-fkth-mediumSquareAt3X.jpg",
+    "uid": "b5b5389eec49"
+   },
+   "related": [
+    {
+     "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+     "summary": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands.",
+     "link": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-19T20:07:02+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d789/live/7c1a8b30-e435-11f1-99b6-a35a62fa4264.jpg",
+     "uid": "947e6ec92467"
+    },
+    {
+     "title": "Rohingya genocide: What was said in court and what happens now?",
+     "summary": "The verdict marks the first time a state has ever been found to have committed genocide by an international court.",
+     "link": "https://www.bbc.co.uk/news/videos/c60qj10j0ld5o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-19T17:35:05+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4dea/live/12de9420-e441-11f1-99a1-253766e7ad8b.jpg",
+     "uid": "e093ed9afe00"
+    },
+    {
+     "title": "Myanmar ruling gives new relevance to genocide convention and is ‘full of messages’ for Israel",
+     "summary": "Hailed as ‘a rare moment of justice’, judges’ decision sets out a roadmap for assessing the question of intent The international court of justice (ICJ) verdict making Myanmar the first country in history to be found guilty of committing genocide does not just deliver justice for Rohingya victims. It also gives the 1948 genocide convention new relevance in governing the actions of nation states. In their nine votes to six majority ruling, the panel of judges in The Hague set out a detailed roadma",
+     "link": "https://www.theguardian.com/law/2026/nov/19/myanmar-ruling-new-relevance-genocide-convention-messages-israel",
+     "source": "The Guardian",
+     "weight": 3,
+     "published": "2026-11-19T17:14:55+00:00",
+     "image": "https://i.guim.co.uk/img/media/12a1d2778195e55812e2b14410698d1ff3269a45/107_0_5160_4128/master/5160.jpg?width=140&quality=85&auto=format&fit=max&s=e836f93787b1a456eab77e2cd528e1be",
+     "uid": "f3004053344a"
+    },
+    {
+     "title": "World reacts to ICJ finding Myanmar guilty of genocide against Rohingya",
+     "summary": "Landmark judgement in The Hague is the first time a state has been held responsible for genocide at the ICJ.",
+     "link": "https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-19T19:19:06+00:00",
+     "image": "",
+     "uid": "2cffe10e1ae9"
+    }
+   ],
+   "topic": "Corte ONU (ICJ): Myanmar colpevole di genocidio contro i Rohingya",
+   "reason": "Sentenza storica ripresa da NYT, BBC, Guardian e Al Jazeera: per la prima volta la Corte internazionale di giustizia riconosce uno Stato responsabile di genocidio, con possibili ricadute sul caso contro Israele per Gaza.",
+   "message_id": 190,
+   "chat": "1286321102",
+   "created": "2026-11-19T20:35:05.531691+00:00"
   }
  }
 }
