@@ -186,65 +186,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "180226c62f": {
-   "main": {
-    "title": "Anthropic Shares Jump 34% After $107.3 Billion IPO Breaks Record",
-    "summary": "Anthropic PBC shares opened 34% above their IPO price after the artificial intelligence lab’s blockbuster $107.3 billion debut broke SpaceX’s record for the biggest-ever offering.",
-    "link": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-poised-to-surge-after-107-3-billion-ipo-tops-spacex",
-    "source": "Bloomberg",
-    "weight": 3,
-    "published": "2026-11-19T14:52:54+00:00",
-    "image": "",
-    "uid": "70da7e81f5bc"
-   },
-   "related": [
-    {
-     "title": "Anthropic valued at $2tn as shares surge 34% as trading begins – business live",
-     "summary": "Rolling coverage of Anthropic’s IPO, and the latest economic and financial news Anthropic to begin public trading at $1.5tn valuation after largest ever IPO Outages, spies, and trillion-dollar IPOs: is this our AI future? – Stateside with Kai and Carter Anthropic needs to grow into its $1.5tn valuation, argues Kathleen Brooks, research director at XTB: Anthropic’s triumphant IPO and its trillion dollar plus valuation is more typical of a mature company that has a history of strong fundamentals. ",
-     "link": "https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates",
-     "source": "The Guardian",
-     "weight": 3,
-     "published": "2026-11-19T16:58:51+00:00",
-     "image": "https://i.guim.co.uk/img/media/d813681eacdf9a462a84be4e3ef0e890940a2ccf/1281_0_7200_5760/master/7200.jpg?width=140&quality=85&auto=format&fit=max&s=351333af3d876ca589b3c253ac43f20d",
-     "uid": "8ea62b1fb64a"
-    },
-    {
-     "title": "Anthropic pops 34% in Wall Street debut",
-     "summary": "AI giant begins trading after raising $81bn in record IPO",
-     "link": "https://www.ft.com/content/7a6b211d-c73b-4953-97ee-ed92dab8ee07?syn-25a6b1a6=1",
-     "source": "Financial Times",
-     "weight": 3,
-     "published": "2026-11-19T16:19:06+00:00",
-     "image": "",
-     "uid": "5e899d9f2b9e"
-    },
-    {
-     "title": "Anthropic raises $81bn in record-breaking stock market debut",
-     "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world.",
-     "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
-     "source": "BBC News",
-     "weight": 3,
-     "published": "2026-11-19T15:58:58+00:00",
-     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a11/live/4dfcb420-e37d-11f1-b879-03485a55c082.jpg",
-     "uid": "584db0d8b9b3"
-    },
-    {
-     "title": "Anthropic verso esordio a 105 dollari per azione, +26% rispetto a prezzo fissato",
-     "summary": "Amodei suona la campanella del Nasdaq, 'ossessionati dalla sicurezza dell'IA'",
-     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/19/anthropic-verso-esordio-a-100-dollari-per-azione-20-rispetto-a-prezzo-fissato_2e046503-9db2-43c7-bf74-f7a19ea93b97.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-19T15:31:50+00:00",
-     "image": "",
-     "uid": "44304794d79b"
-    }
-   ],
-   "topic": "IPO record di Anthropic, +34% al debutto, valutazione 2.000 miliardi",
-   "reason": "È la più grande IPO della storia: ha superato il record di SpaceX e il titolo ha aperto in rialzo del 34%. Ne parlano quasi tutte le testate principali, è un banco di prova per la fiducia dei mercati sull'AI e non l'abbiamo ancora trattata.",
-   "message_id": 186,
-   "chat": "1286321102",
-   "created": "2026-11-19T17:02:26.586549+00:00"
-  },
   "210030c7cf": {
    "main": {
     "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
