@@ -185,7 +185,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-20": []
+  "2026-11-20": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
@@ -196,5 +198,65 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "0731335b8b": {
+   "main": {
+    "title": "Putin apre il tavolo agli europei. Trump li chiama, 'basta soldi a Kiev'",
+    "summary": "Meloni con i Volenterosi: 'Mandato chiaro all'E5'. Zelensky: 'Garanzia è l'adesione Nato'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-ai-volenterosi-kiev-nella-nato.-meloni-mandato-chiaro-al-formato-e5_63e4f927-d622-4c44-a03d-1000e20ff862.html",
+    "source": "ANSA",
+    "weight": 2,
+    "published": "2026-11-20T06:25:25+00:00",
+    "image": "",
+    "uid": "5080c6ffa523"
+   },
+   "related": [
+    {
+     "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+     "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
+     "link": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-20T00:50:24+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1fd8/live/5c168a90-e44a-11f1-a094-5fdc692f3e33.jpg",
+     "uid": "b5502e0ebc98"
+    },
+    {
+     "title": "New Ukraine talks including Europe to be held 'soon' — Merz",
+     "summary": "Germany's Chancellor Friedrich Merz says European leaders could take part in fresh Ukraine talks on \"neutral ground.\" The UK and EU countries have urged a seat at the table in meetings between the US, Russia and Ukraine.",
+     "link": "https://www.dw.com/en/new-ukraine-talks-including-europe-to-be-held-soon-merz/a-79997961?maca=en-rss-en-all-1573-rdf",
+     "source": "Deutsche Welle",
+     "weight": 2,
+     "published": "2026-11-20T01:27:00+00:00",
+     "image": "",
+     "uid": "b40cd11acbf4"
+    },
+    {
+     "title": "Kushner: Trump open to NATO-like security guarantees for Ukraine",
+     "summary": "US President Donald Trump is open to offering NATO-like security guarantees to Ukraine, envoy Jared Kushner has said.",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/kushner-trump-open-to-nato-like-security-guarantees-for-ukraine?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-20T04:44:53+00:00",
+     "image": "",
+     "uid": "9a9488f940d9"
+    },
+    {
+     "title": "'Trump agli europei, Putin vuole la fine della guerra'",
+     "summary": "Lo riporta Axios",
+     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/20/trump-agli-europei-putin-vuole-la-fine-della-guerra_fad02026-ed79-4ad6-a2a0-59790fcd1a0c.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-20T02:12:14+00:00",
+     "image": "",
+     "uid": "e2a02a6cbb84"
+    }
+   ],
+   "topic": "Ucraina, Putin apre agli europei nei negoziati. Trump: 'basta soldi a Kiev'",
+   "reason": "Svolta nei negoziati sull'Ucraina: l'Europa entra al tavolo, coinvolta anche l'Italia con Meloni e i Volenterosi, ripresa da ANSA, BBC, DW e Al Jazeera.",
+   "message_id": 218,
+   "chat": "1286321102",
+   "created": "2026-11-20T06:31:33.674870+00:00"
+  }
+ }
 }
