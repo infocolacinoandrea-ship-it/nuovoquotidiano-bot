@@ -155,138 +155,16 @@
    "date": "2026-11-20T06:53+01:00"
   }
  ],
- "pending": {
-  "20261120-065327bb39": {
-   "message_id": 215,
-   "caption": "Anthropic raccoglie 81,3 miliardi di dollari nella più grande IPO della storia\n\nIl titolo del creatore di Claude ha chiuso il primo giorno al Nasdaq a +17,1%, ma secondo Euronews Wall Street ha chiuso in calo, con il Nasdaq a -2,3%. In Asia le vendite si sono concentrate sui titoli dei chip: secondo CNBC SoftBank, grande investitore in OpenAI, ha perso il 16,16%. Secondo Euronews scendono anche l'oro (oltre -4,5%) e l'argento (-7%), mentre gli investitori scommettono su un rialzo dei tassi USA a dicembre.\n\nSecondo voi il debutto di Anthropic indica fiducia nell'intelligenza artificiale o segnala una bolla?\n\nFonti: Euronews, Financial Times, CNBC, Al Jazeera, Bloomberg.\nFoto: copertina Getty Images via CNBC; slide 4 ajay_suresh / Wikimedia Commons, CC BY 2.0.\n\nSegui @nuovoquotidiano per scoprire il mondo in un minuto.\n\n#anthropic #intelligenzaartificiale #borsa #finanza #nuovoquotidiano",
-   "n": 8,
-   "uids": [
-    "038a074c68ee",
-    "734b93464fb7",
-    "71fe76ed06ab",
-    "eb42bbb391b7",
-    "af20bca6c460"
-   ],
-   "topic": "IPO record Anthropic e crollo globale dei titoli AI",
-   "draft": {
-    "c": {
-     "categoria": "MERCATI",
-     "titolo_copertina": "Anthropic debutta in Borsa con l'IPO più grande di sempre, ma le Borse affondano",
-     "parole_evidenziate": [
-      "IPO più grande",
-      "affondano"
-     ],
-     "slide": [
-      {
-       "layout": "foto",
-       "occhiello": "COSA È SUCCESSO",
-       "titolo": "Anthropic raccoglie 81,3 miliardi di dollari",
-       "testo": "L'azienda che ha creato il chatbot Claude si è quotata al Nasdaq con il simbolo \"ANT\". Secondo Euronews ha collocato le azioni a 83 dollari, per una valutazione di circa 1.500 miliardi di dollari. È l'IPO più grande della storia: supera i 75 miliardi raccolti da SpaceX a giugno.",
-       "foto_ricerca": "Anthropic logo",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "dato",
-       "occhiello": "PRIMO GIORNO",
-       "titolo": "Il titolo chiude in forte rialzo",
-       "numero": "+17,1%",
-       "testo": "Apertura a 111,50 dollari, massimo a 115,10, chiusura a 97,17 dollari. La domanda c'è stata. Ma non è bastata a fermare le vendite sul resto del settore.",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "foto",
-       "occhiello": "WALL STREET",
-       "titolo": "Da rialzo a ribasso nella stessa seduta",
-       "testo": "Giovedì l'S&P 500 è salito fino all'1,3%, poi ha chiuso a -2%: sesto calo consecutivo. Nasdaq -2,3%, Dow Jones -2,2%. Nvidia è passata da +4,7% a -3,3%, nonostante conti sopra le attese.",
-       "foto_ricerca": "Nasdaq MarketSite Times Square",
-       "foto_tipo": "soggetto"
-      },
-      {
-       "layout": "dato",
-       "occhiello": "IL CROLLO PIÙ PESANTE",
-       "titolo": "SoftBank, il grande investitore in OpenAI",
-       "numero": "-16,16%",
-       "testo": "Secondo CNBC, SoftBank ha investito 64,6 miliardi di dollari in OpenAI, rivale di Anthropic. Se il calo regge, è il suo giorno peggiore da oltre due anni. Il titolo è già a -31% questo mese."
-      },
-      {
-       "layout": "testo",
-       "occhiello": "L'ASIA DEI CHIP",
-       "titolo": "Taiwan, Corea e Giappone in caduta",
-       "testo": "Secondo Al Jazeera la Borsa di Taipei ha perso oltre il 6,8%. Per il Kospi coreano le fonti indicano cali tra il 4,5% e il 5,4%; il Nikkei fino al 4,9%. Giù TSMC, SK Hynix, Samsung."
-      },
-      {
-       "layout": "citazione",
-       "occhiello": "LA LETTURA DEGLI ANALISTI",
-       "titolo": "Un crollo di fiducia nell'IA",
-       "testo": "Invece di sostenere l'intero comparto dell'IA, la quotazione sembra aver sottratto liquidità ai titoli IA già affermati, mentre gli investitori si spostavano sulla nuova emissione.",
-       "autore": "Carlos Casanova, economista senior per l'Asia, Union Bancaire Privée"
-      }
-     ],
-     "perche_ti_riguarda": "Molti fondi ed ETF azionari globali detenuti dai risparmiatori italiani pesano molto sui titoli tecnologici e dell'IA. In più cala anche l'oro, scelto spesso come rifugio, mentre i mercati scommettono su un rialzo dei tassi USA a dicembre.",
-     "caption": "Anthropic raccoglie 81,3 miliardi di dollari nella più grande IPO della storia\n\nIl titolo del creatore di Claude ha chiuso il primo giorno al Nasdaq a +17,1%, ma secondo Euronews Wall Street ha chiuso in calo, con il Nasdaq a -2,3%. In Asia le vendite si sono concentrate sui titoli dei chip: secondo CNBC SoftBank, grande investitore in OpenAI, ha perso il 16,16%. Secondo Euronews scendono anche l'oro (oltre -4,5%) e l'argento (-7%), mentre gli investitori scommettono su un rialzo dei tassi USA a dicembre.\n\nSecondo voi il debutto di Anthropic indica fiducia nell'intelligenza artificiale o segnala una bolla?",
-     "hashtag": [
-      "anthropic",
-      "intelligenzaartificiale",
-      "borsa",
-      "finanza"
-     ]
-    },
-    "sources": [
-     {
-      "source": "Euronews",
-      "title": "Stocks, gold and silver fall after blockbuster Anthropic IPO",
-      "link": "https://www.euronews.com/2026/11/20/stocks-gold-and-silver-fall-after-blockbuster-anthropic-ipo",
-      "text": "Anthropic shares rose 17% on their Nasdaq debut, but the record IPO failed to halt a Wall Street sell-off. Asian stocks followed US markets lower on Friday, while gold and silver fell as investors braced for a US rate rise.\nAsian shares fell sharply on Friday as a sell-off in artificial intelligence and chip stocks spread from Wall Street. Global stocks were on course for their longest losing streak in more than three years, even after better-than-expected earnings from Nvidia and a strong Nasdaq debut for Anthropic.\nGold and silver also fell as the dollar held near a 19-month high and investors bet on a US interest rate rise in December. Spot gold was down by more than 4.5% at around $3,520 a troy ounce at 06:30 CET, putting it on course for its worst week in eight months. Spot silver fell 7% to $41.24 a troy ounce.\nSouth Korea's Kospi and Japan's Nikkei 225 both fell 4.5% in morning trading. Australia's S&P/ASX 200 dropped 1.6%, Hong Kong's Hang Seng fell nearly 2%, and the Shanghai Composite lost 1.7%. Among the tech stocks caught up in the sell-off were Advantest and SoftBank in Tokyo, Samsung Electronics in South Korea and Tencent in China.\nJapan's core inflation, which excludes fresh food, accelerated to 2.2% year on year in October, strengthening the case for a December rate rise. China kept its benchmark lending rates unchanged for an 18th straight month, at 3% for the one-year rate and 3.5% for the five-year rate.\nThe losses in Asia followed a sharp reversal on Wall Street on Thursday. The S&P 500 rose as much as 1.3% before closing 2% lower, its sixth straight decline. The Dow Jones Industrial Average dropped 2.2%, and the Nasdaq Composite fell 2.3%.\nAnthropic, the company behind the Claude chatbot, raised $81.3 billion (€74bn) in the largest initial public offering on record. It priced its shares at $83, valuing the company at about $1.5 trillion (€1.36tn). The stock opened on Nasdaq at $111.50 and climbed to $115.10 before closing at $97.17, up 17.1% from the offer price.\nThe debut showed strong demand for Anthropic shares, but it did little to ease concerns that other AI stocks had risen too far. Nvidia swung from a gain of 4.7% to a loss of 3.3%, despite beating earnings expectations earlier in the week. The chipmaker is also adjusting to the departure of co-founder Jensen Huang, who resigned as CEO last week. Huang helped drive enthusiasm for AI and used Nvidia’s profits to invest in the sector.\nThe yield on the 10-year US Treasury note fell to 5.04% from 5.07% on Wednesday. In early trading on Friday, US benchmark crude rose 0.38% to $83.53 a barrel, while Brent crude gained 0.40% to $92.35 a barrel.\nThe US dollar slipped to 159.22 yen from 159.60, while the euro edged down to $1.0970 from $1.0973."
-     },
-     {
-      "source": "Financial Times",
-      "title": "Anthropic’s splashy public market debut",
-      "link": "https://www.ft.com/content/01eec320-3e2d-4887-8774-04803702b8d6?syn-25a6b1a6=1",
-      "text": "Anthropic’s splashy public market debut. AI giant shares closed up 17% in its Wall Street debut Security Verification\nFor help please visit help.ft.com. We apologise for any inconvenience.\nThe following information can help our support team to resolve this issue.\n- Error Code\n- CG000 / 403\n- Request ID\n- a5d530b2db1dc8a1"
-     },
-     {
-      "source": "CNBC",
-      "title": "SoftBank plunges over 16% as AI sell-off hits Asian tech stocks following Anthropic debut",
-      "link": "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html",
-      "text": "Shares of Japan's SoftBank Group plunged 16.16% on Friday, leading a broader sell-off in Asian technology stocks following the highly anticipated market debut of artificial intelligence startup Anthropic.\nSoftBank is one of the biggest backers of OpenAI, Anthropic's rival, having invested a total of $64.6 billion in the ChatGPT maker.\nThe sharp decline underscores growing investor concerns over SoftBank's aggressive bets on artificial intelligence, particularly its exposure to OpenAI, as markets question whether massive investments in AI infrastructure will generate sufficient returns.\nSoftBank's heavy exposure to OpenAI has made its shares particularly sensitive to shifts in sentiment toward the AI sector. The stock lost 30% in October and is down 31% so far this month.\nIf Friday's losses hold, it would be SoftBank's worst day in more than two years.\nJapanese semiconductor stocks also tumbled, with Tokyo Electron falling 7.19%, Lasertec declining 6.75% and Renesas Electronics dropping 6.71%.\nThe sell-off extended to South Korea, where Nvidia suppliers SK Hynix and Samsung Electronics dropped 6% and 4.7%, respectively, pressuring the benchmark Kospi, which fell 4.6%.\nElsewhere in the region, Taiwan Semiconductor Manufacturing Co, or TSMC, fell 4.76% in Taiwan.\nChinese tech giant Tencent declined 1.89%, while memory chipmaker CXMT fell 4.35% to a fresh record low, while Baidu dropped 4.42%. AI chipmaker Enflame, dubbed as one of China's \"four little dragons\" fell 3.93%.\nThe declines in Asia come after the tech-heavy Nasdaq Composite fell more than 2% overnight following Anthropic's highly anticipated Wall Street debut."
-     },
-     {
-      "source": "Al Jazeera",
-      "title": "Asia’s stock markets dive as Anthropic debut fails to allay AI bubble fears",
-      "link": "https://www.aljazeera.com/economy/2026/11/20/asias-stock-markets-dive-as-anthropic-debut-fails-to-allay-ai-bubble-fears?traffic_source=rss",
-      "text": "Asia’s stock markets dive as Anthropic debut fails to allay AI bubble fears\nIndexes in Japan, South Korea, Taiwan and Hong Kong fall amid tech sell-off.\nAsian stock markets have opened with steep losses as fears that the AI boom is unsustainable persist despite Anthropic’s blockbuster debut.\nMarkets in Japan, South Korea, Taiwan and Hong Kong fell sharply on Friday, as investor excitement around the Claude creator’s public listing failed to allay concerns about the sustainability of the multi-trillion-dollar investments propping up AI.\nTokyo’s benchmark Nikkei 225 tumbled as much as 4.9 percent, while Seoul’s Kospi fell 5.4 percent.\nIn Taipei, the Taiex plunged more than 6.8 percent, while Hong Kong’s Hang Seng Index dipped more than 2 percent.\nThe sell-off reflects concerns that AI-led growth is slowing down and the “peak growth phase” may have passed, said Rajat Agarwal, an Asia equity strategist with Societe Generale.\n“The second element is on the demand vacuum that we are seeing,” Agarwal told Al Jazeera.\n“At the time when foreigners are not buying, it is to be seen how long can the domestic investors stay put, particularly in Korea, on which the drawdown has been more severe.”\nLike Wall Street, Asia’s main bourses are heavily exposed to AI.\nThe region is home to some of the key players in the global AI ecosystem, including South Korean memory chipmakers SK Hynix and Samsung Electronics, Taiwanese contract chipmaker TSMC, and Japanese investment holding company SoftBank Group.\nTech firms have poured trillions of dollars into AI in recent years in anticipation of future profits, stoking fears of a debt-fuelled market bubble reminiscent of the splurge that preceded the 2000 dot-com crash.\nGlobal AI-related investment is projected to reach $2.7 trillion in 2026 and $3.6 trillion in 2027, according to technology insights company Gartner.\n‘Collapse in confidence’\nCarlos Casanova, senior economist for Asia at Union Bancaire Privee in Hong Kong, said the sell-off in multiple markets reflected a “collapse in confidence in the AI investment thesis”.\n“Global technology stocks have retreated throughout the week, with Asia’s chip-heavy markets bearing the brunt of the sell-off,” Casanova told Al Jazeera.\n“Anthropic’s blockbuster IPO did little to ease broader concerns about the outlook for AI-related equities and may, if anything, have crystallised the debate,” he said.\n“Rather than lifting the broader AI complex, the listing appears to have diverted liquidity from established AI plays as investors rotated into the new issue,” he added.\n“Nvidia’s earnings earlier this week also failed to provide the reassurance markets were seeking.”\nMarket sentiment has also been dampened by moves in Washington to clamp down on China’s access to advanced chips amid claims that former Nvidia CEO Jensen Huang was romantically involved with a Chinese intelligence operative or asset.\nThe US Bureau of Industry and Security this week announced new export licence requirements aimed at preventing Chinese AI developers from remotely accessing top-of-the-line computing power at data centres in third countries, mainly in Southeast Asia.\nIn the latest in a series of probes facing Nvidia, California Attorney General Rob Bonta said on Thursday that his office had served a subpoena on the chip giant seeking information about whether its advanced chips made their way to China and whether it misled investors.\nNvidia did not respond to a request for comment about the probe.\nThe market retreat in Asia followed losses on Wall Street on Thursday, even as Anthropic shares jumped 17 percent on their first day of trading on the Nasdaq stock exchange under the ticker “ANT.”\nAnthropic’s stock price opened at $111.50 before settling just above $97, vaulting the company founded less than six years ago into the ranks of the world’s most valuable firms.\nThe San Francisco-based AI giant’s market debut came after it raised $81.3bn in the largest initial public offering (IPO) in history, leapfrogging the $75bn SpaceX initially raised in June.\nDespite the excitement around Anthropic, key indexes on Wall Street closed in the red, with the tech-heavy Nasdaq Composite down 2.3 percent and the broader S&P 500 dropping 2 percent.\n“There are many uncertainties in the AI space currently, coupled with what many seem to believe is a questionable business model, particularly regarding ANT’s pricing power dynamics,” Kevin J. Koharki, an associate professor of accounting at Purdue University, told Al Jazeera.\n“If these turn out to be weaker than many expect, the valuation will eventually ‘rerate’ downward,” he said. “Only time will tell.”"
-     },
-     {
-      "source": "Bloomberg",
-      "title": "Taiwan Stock Benchmark Plunges 7%, Set for Worst Week Since 1991",
-      "link": "https://www.bloomberg.com/news/articles/2026-11-20/taiwan-stocks-taiex-twse-1991-ai-chips-tsmc-hon-hai-foxconn",
-      "text": "To continue, please click the box below to let us know you're not a robot.\nPlease make sure your browser supports JavaScript and cookies and that you are not blocking them from loading. For more information you can review our Terms of Service and Cookie Policy.\nFor inquiries related to this message please contact our support team and provide the reference ID below.\nGet the most important global markets news at your fingertips with a Bloomberg.com subscription.\nSUBSCRIBE NOW"
-     }
-    ],
-    "cover": {
-     "url": "https://image.cnbcfm.com/api/v1/image/108316517-1780554960547-gettyimages-2230425216-raa-intelsof250820_npZoK.jpeg?v=1780555182&w=1920&h=1080",
-     "credit": "Getty Images via CNBC"
-    },
-    "photos": {
-     "2": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Nasdaq_MarketSite_%2851494550508%29.jpg/1920px-Nasdaq_MarketSite_%2851494550508%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "credit": "ajay_suresh / Wikimedia Commons, CC BY 2.0",
-      "query": "Nasdaq MarketSite Times Square"
-     }
-    }
-   },
-   "chat": "1286321102",
-   "created": "2026-11-20T05:53:42.235605+00:00"
-  }
- },
+ "pending": {},
  "published": {
   "20261116-144455": "18110135360227059",
   "20261116-172755": "17990605335084874",
   "20261117-073210218f": "18014337299998587",
   "20261119-1052438f73": "18191076814418392",
-  "20261119-21364970f2": "18128416549906007"
+  "20261119-21364970f2": "18128416549906007",
+  "20261120-065327bb39": "18159276703475348"
  },
- "tg_offset": 146859023,
+ "tg_offset": 146859024,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
