@@ -187,7 +187,8 @@
   ],
   "2026-11-20": [
    "07:30",
-   "12:30"
+   "12:30",
+   "18:00"
   ]
  },
  "last_refresh": "",
@@ -258,6 +259,65 @@
    "message_id": 219,
    "chat": "1286321102",
    "created": "2026-11-20T11:31:12.212439+00:00"
+  },
+  "180035b3a2": {
+   "main": {
+    "title": "Britain Announces Brexit Reset Deal at E.U. Summit: What to Know",
+    "summary": "Prime Minister Andy Burnham and European leaders said they had agreed to remove some of the barriers created when Britain left the European Union.",
+    "link": "https://www.nytimes.com/2026/11/20/world/europe/uk-eu-summit-brexit.html",
+    "source": "New York Times",
+    "weight": 3,
+    "published": "2026-11-20T16:50:16+00:00",
+    "image": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-eu-uk-summit-wtk-wzjf/20int-eu-uk-summit-wtk-wzjf-mediumSquareAt3X.jpg",
+    "uid": "2692dbb17486"
+   },
+   "related": [
+    {
+     "title": "Andy Burnham begins to undo Brexit with landmark EU deal",
+     "summary": "Brussels agreement overshadowed by dispute over university fees and questions about where the relationship goes next",
+     "link": "https://www.ft.com/content/334b5f12-4344-4680-be04-a7554120ec60?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-20T15:57:09+00:00",
+     "image": "",
+     "uid": "9c51560bbd52"
+    },
+    {
+     "title": "EU wants ‘closest possible relationship’ with UK after agreeing Brexit reset deal – live",
+     "summary": "President of European Council says EU ‘remains open to have the closest possible relationship’ with the UK Senior correspondent Making today’s reset deal contingent on a further agreement on the level of tuition fees for EU citizens is designed to neutralise the leverage London gets in the next six months, EU sources have said. Senior diplomats had already confirmed this week that the EU would defer the deal on the level of tuition fees for another six months , a move designed to give the UK lev",
+     "link": "https://www.theguardian.com/world/live/2026/nov/20/uk-eu-european-union-brexit-deal-andy-burnham-latest-news-updates",
+     "source": "The Guardian",
+     "weight": 3,
+     "published": "2026-11-20T16:41:54+00:00",
+     "image": "https://i.guim.co.uk/img/media/bb99120c2f7d41fd909aef903d962db65654e712/450_38_3420_2737/master/3420.jpg?width=140&quality=85&auto=format&fit=max&s=e9208e429a579acb941382730adfcc93",
+     "uid": "c8606f7a59d7"
+    },
+    {
+     "title": "Burnham has agreed EU reset deal with tuition fees issue unresolved, says No 10",
+     "summary": "Discord between EU and UK on whether arrangements for food and drink, emissions trading and youth mobility scheme depend on settlement for students UK-EU summit live – latest news updates The UK and EU have agreed a reset deal, Downing Street has said, although the level of tuition fees EU students will pay to study at UK universities remains unresolved. “The deal is done – negotiations have concluded,” a No 10 statement said, less than an hour after the prime minister, Andy Burnham, arrived at ",
+     "link": "https://www.theguardian.com/politics/2026/nov/20/fallout-over-tuition-fees-may-snag-burnhams-eu-deal-say-insiders",
+     "source": "The Guardian",
+     "weight": 3,
+     "published": "2026-11-20T16:03:13+00:00",
+     "image": "https://i.guim.co.uk/img/media/7ab90ee7eab9abe855627600310684a63cf95761/235_0_2599_2079/master/2599.jpg?width=140&quality=85&auto=format&fit=max&s=d0bd0178c32086892ed6ecb0ae5b6715",
+     "uid": "71c26b19046c"
+    },
+    {
+     "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
+     "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements.",
+     "link": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-20T16:41:52+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bd6d/live/fa851d90-e4fe-11f1-a8e4-b1e12a49db15.jpg",
+     "uid": "5024389180d8"
+    }
+   ],
+   "topic": "Accordo UE-Regno Unito per il reset dopo la Brexit (Burnham)",
+   "reason": "Svolta storica ripresa da tutte le principali testate: Londra e Bruxelles eliminano alcune barriere della Brexit, con effetti su commercio, alimentare, emissioni e mobilità giovanile, anche per l'Italia.",
+   "message_id": 220,
+   "chat": "1286321102",
+   "created": "2026-11-20T17:00:36.436253+00:00"
   }
  }
 }
