@@ -154,7 +154,7 @@
   "20261119-1052438f73": "18191076814418392",
   "20261119-21364970f2": "18128416549906007"
  },
- "tg_offset": 146859020,
+ "tg_offset": 146859021,
  "daily": {
   "2026-11-16": 6,
   "2026-11-17": 6,
@@ -185,5 +185,65 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "065229de85": {
+   "main": {
+    "title": "Stocks, gold and silver fall after blockbuster Anthropic IPO",
+    "summary": "Anthropic shares rose 17% on their Nasdaq debut, but the record IPO failed to halt a Wall Street sell-off. Asian stocks followed US markets lower on Friday, while gold and silver fell as investors braced for a US rate rise.",
+    "link": "https://www.euronews.com/2026/11/20/stocks-gold-and-silver-fall-after-blockbuster-anthropic-ipo",
+    "source": "Euronews",
+    "weight": 2,
+    "published": "2026-11-20T05:48:38+00:00",
+    "image": "",
+    "uid": "038a074c68ee"
+   },
+   "related": [
+    {
+     "title": "Anthropic’s splashy public market debut",
+     "summary": "AI giant shares closed up 17% in its Wall Street debut",
+     "link": "https://www.ft.com/content/01eec320-3e2d-4887-8774-04803702b8d6?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-20T05:00:00+00:00",
+     "image": "",
+     "uid": "734b93464fb7"
+    },
+    {
+     "title": "SoftBank plunges over 16% as AI sell-off hits Asian tech stocks following Anthropic debut",
+     "summary": "The declines in Asia come after the tech-heavy Nasdaq Composite fell more than 2% overnight following Anthropic's highly anticipated Wall Street debut.",
+     "link": "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html",
+     "source": "CNBC",
+     "weight": 2,
+     "published": "2026-11-20T03:30:34+00:00",
+     "image": "",
+     "uid": "71fe76ed06ab"
+    },
+    {
+     "title": "Asia’s stock markets dive as Anthropic debut fails to allay AI bubble fears",
+     "summary": "Indexes in Japan, South Korea, Taiwan and Hong Kong fall amid tech sell-off.",
+     "link": "https://www.aljazeera.com/economy/2026/11/20/asias-stock-markets-dive-as-anthropic-debut-fails-to-allay-ai-bubble-fears?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-20T02:54:22+00:00",
+     "image": "",
+     "uid": "eb42bbb391b7"
+    },
+    {
+     "title": "Taiwan Stock Benchmark Plunges 7%, Set for Worst Week Since 1991",
+     "summary": "Taiwan’s tech-heavy stock market witnessed another selloff on Friday as the global artificial intelligence trade came under further strain, putting the island’s benchmark on course for its worst week since 1991.",
+     "link": "https://www.bloomberg.com/news/articles/2026-11-20/taiwan-stocks-taiex-twse-1991-ai-chips-tsmc-hon-hai-foxconn",
+     "source": "Bloomberg",
+     "weight": 3,
+     "published": "2026-11-20T02:29:57+00:00",
+     "image": "",
+     "uid": "af20bca6c460"
+    }
+   ],
+   "topic": "IPO record Anthropic e crollo globale dei titoli AI",
+   "reason": "L'IPO record di Anthropic, salita del 17% al debutto, non ha fermato le vendite sui titoli AI. Il crollo è passato dal Nasdaq all'Asia: Taiwan -7%, SoftBank -16%, Hong Kong -20% dal massimo del 2026. Scendono anche oro e rame, mentre la Fed fa capire che i tassi saliranno ancora. Ne parlano molte testate e la cosa tocca da vicino i risparmi e i mercati europei.",
+   "message_id": 205,
+   "chat": "1286321102",
+   "created": "2026-11-20T05:52:29.910046+00:00"
+  }
+ }
 }
