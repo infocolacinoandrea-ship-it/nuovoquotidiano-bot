@@ -186,7 +186,8 @@
    "21:00"
   ],
   "2026-11-21": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -247,6 +248,35 @@
    "message_id": 222,
    "chat": "1286321102",
    "created": "2026-11-21T06:31:59.702194+00:00"
+  },
+  "123159c184": {
+   "main": {
+    "title": "Russian projectiles hit Poland as NATO tensions rise",
+    "summary": "Three Russian projectiles came down in Poland on Friday, prompting NATO to condemn what it called a grave violation of Polish airspace. A suspected jet-powered drone and a missile struck separate locations near the Ukrainian border, while another missile crashed just 35 kilometres from an area where European troops are taking part in military exercises. Meanwhile, troops from eight NATO countries are conducting drills in neighbouring Lithuania. With US-led peace talks yet to make a breakthrough,",
+    "link": "https://www.france24.com/en/russian-projectiles-hit-poland-as-nato-tensions-rise",
+    "source": "France 24",
+    "weight": 2,
+    "published": "2026-11-21T09:47:05+00:00",
+    "image": "https://s.france24.com/media/display/e70ff4a2-e58e-11f1-ba7b-6b451f569414/w:1024/p:16x9/EN-20261121-100222-100408-CS.jpg",
+    "uid": "b18d2ecc8787"
+   },
+   "related": [
+    {
+     "title": "Russian missiles hit Poland: What happened, and could NATO respond?",
+     "summary": "Warsaw accuses Moscow of intentional provocation, but bar for triggering NATO's collective defence clause remains high.",
+     "link": "https://www.aljazeera.com/news/2026/11/21/russian-missiles-hit-poland-what-happened-and-could-nato-respond?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-21T11:02:49+00:00",
+     "image": "",
+     "uid": "1fc111e688b6"
+    }
+   ],
+   "topic": "Proiettili russi colpiscono la Polonia, la NATO condanna",
+   "reason": "Un drone e un missile russi sono caduti su un Paese NATO: la NATO condanna, Varsavia parla di provocazione intenzionale. È un'escalation diretta che riguarda la sicurezza europea e l'Articolo 5.",
+   "message_id": 223,
+   "chat": "1286321102",
+   "created": "2026-11-21T11:32:00.189179+00:00"
   }
  }
 }
