@@ -185,7 +185,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-21": []
+  "2026-11-21": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
@@ -196,5 +198,55 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "0731596bea": {
+   "main": {
+    "title": "US judge approves Bayer's $7.25 billion cancer settlement",
+    "summary": "Bayer could end years of costly lawsuits in the US over claims that its Roundup weedkiller causes cancer. Tens of thousands of people could now receive compensation, although some lawyers say the payments are too low.",
+    "link": "https://www.dw.com/en/us-judge-approves-bayer-s-7-25-billion-cancer-settlement/a-80007474?maca=en-rss-en-all-1573-rdf",
+    "source": "Deutsche Welle",
+    "weight": 2,
+    "published": "2026-11-21T00:03:00+00:00",
+    "image": "",
+    "uid": "c55e5d041541"
+   },
+   "related": [
+    {
+     "title": "Bayer’s $7.25bn settlement over cancer cases approved by US judge",
+     "summary": "Ruling will help German chemicals group contain legal bills after years of court battles",
+     "link": "https://www.ft.com/content/e7d36416-9eb7-4479-a217-d593545499df?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-20T23:16:28+00:00",
+     "image": "",
+     "uid": "6b715e5b07fb"
+    },
+    {
+     "title": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer",
+     "summary": "The ruling, in a nationwide class-action suit, is expected to end tens of thousands of lawsuits by people claiming that Roundup caused non-Hodgkin lymphoma.",
+     "link": "https://www.nytimes.com/2026/11/20/business/judge-approves-7-billion-settlement-over-claims-that-roundup-caused-cancer.html",
+     "source": "New York Times",
+     "weight": 3,
+     "published": "2026-11-21T03:23:04+00:00",
+     "image": "https://static01.nyt.com/images/2026/11/20/multimedia/20BIZ-ROUNDUP-fqct/20BIZ-ROUNDUP-fqct-mediumSquareAt3X.jpg",
+     "uid": "43662880de3c"
+    },
+    {
+     "title": "Giudice Usa, 'la Bayer pagherà 7,25 miliardi alle vittime del diserbante Roundup'",
+     "summary": "E' uno dei più grandi risarcimenti collettivi della storia americana",
+     "link": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/20/giudice-usa-la-bayer-paghera-725-miliardi-alle-vittime-del-diserbante_b5e32c77-675d-454f-aefc-caaff9ebacfe.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-20T22:35:44+00:00",
+     "image": "",
+     "uid": "2d4427e1eb1e"
+    }
+   ],
+   "topic": "Bayer, giudice USA approva maxi-risarcimento da 7,25 miliardi per il Roundup",
+   "reason": "È una notizia nuova e ripresa da quattro testate autorevoli: per un grande gruppo europeo chiude anni di cause sul diserbante, ed è uno dei risarcimenti collettivi più grandi della storia americana.",
+   "message_id": 222,
+   "chat": "1286321102",
+   "created": "2026-11-21T06:31:59.702194+00:00"
+  }
+ }
 }
