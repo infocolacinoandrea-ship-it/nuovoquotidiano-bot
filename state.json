@@ -200,65 +200,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "073214483b": {
-   "main": {
-    "title": "New draft deal aims to avert collapse of talks at climate summit",
-    "summary": "The UN COP31 meeting in Turkey enters a second day of overtime as countries struggle to reach an agreement.",
-    "link": "https://www.bbc.co.uk/news/articles/cq7827z2841zo?at_medium=RSS&at_campaign=rss",
-    "source": "BBC News",
-    "weight": 3,
-    "published": "2026-11-22T05:26:10+00:00",
-    "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b71/live/e0c68530-e61e-11f1-94c8-1db910b5b42e.jpg",
-    "uid": "b562b9609d14"
-   },
-   "related": [
-    {
-     "title": "COP31 negotiators try to break impasse after EU raises prospect of ‘no deal’",
-     "summary": "Talks run into second day of overtime as Saudi Arabia leads opposition to inclusion of fossil fuel phase out in final agreement",
-     "link": "https://www.ft.com/content/b3ba64e9-9482-4525-acc7-49825f3daace?syn-25a6b1a6=1",
-     "source": "Financial Times",
-     "weight": 3,
-     "published": "2026-11-21T23:34:24+00:00",
-     "image": "",
-     "uid": "08423a28c440"
-    },
-    {
-     "title": "COP31: Fossil fuels still missing from draft deal at UN climate summit",
-     "summary": "The climate summit is in its second day of overtime, despite weeks of negotiations. Nations are now mulling over a new draft text that still doesn't mention fossil fuels, the main cause of global warming. DW has more.",
-     "link": "https://www.dw.com/en/cop31-fossil-fuels-still-missing-from-draft-deal-at-un-climate-summit/live-79999516?maca=en-rss-en-all-1573-rdf",
-     "source": "Deutsche Welle",
-     "weight": 2,
-     "published": "2026-11-22T05:50:00+00:00",
-     "image": "",
-     "uid": "7e45d9d1fac3"
-    },
-    {
-     "title": "Cop31, nuova bozza con riferimento indiretto a uscita da fossili",
-     "summary": "Non viene citata direttamente, ma si cita Cop28 che l'aveva prevista",
-     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/22/cop31-nuova-bozza-con-riferimento-indiretto-a-uscita-da-fossili_d5d76c15-7f98-4144-a933-3e46ce78150b.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-22T04:32:33+00:00",
-     "image": "",
-     "uid": "b36f619953a1"
-    },
-    {
-     "title": "Cop31, ancora attesa per la chiusura. Bruxelles: possibile il fallimento dei colloqui",
-     "summary": "ANTALYA (TURCHIA) - Non è bastato un giorno in più, rispetto al programma, per raggiungere un accordo alla Cop31, ancora in corso in Turchia. La conferenza è cominciata il 9...",
-     "link": "https://www.ilsole24ore.com/art/cop31-slitta-ancora-chiusura-bruxelles-avverte-possibile-fallimento-colloqui-AJYuWoOC",
-     "source": "Il Sole 24 Ore",
-     "weight": 2,
-     "published": "2026-11-21T20:56:00+00:00",
-     "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/22/Immagini/Ritagli/2026-11-21T161737Z_1911741536_RC2GSOASBWVR_RTRMADP_5_CLIMATE-COP31-U54461366848SrM-1440x752@IlSole24Ore-Web.JPG",
-     "uid": "e7c564a5357b"
-    }
-   ],
-   "topic": "COP31 in Turchia, stallo sui combustibili fossili e rischio 'no deal'",
-   "reason": "Il vertice ONU sul clima è al secondo giorno di supplementari: l'UE parla di possibile fallimento, l'Arabia Saudita guida l'opposizione all'uscita dai fossili e c'è una nuova bozza. Ne scrivono molte testate e la questione tocca da vicino la politica energetica europea.",
-   "message_id": 226,
-   "chat": "1286321102",
-   "created": "2026-11-22T06:32:15.164421+00:00"
-  },
   "123130ff20": {
    "main": {
     "title": "Russia-bound ship still on fire after attack in Gulf of Finland",
