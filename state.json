@@ -188,7 +188,8 @@
   "2026-11-22": [
    "07:30",
    "12:30",
-   "18:00"
+   "18:00",
+   "21:00"
   ]
  },
  "last_refresh": "",
@@ -259,6 +260,65 @@
    "message_id": 228,
    "chat": "1286321102",
    "created": "2026-11-22T17:00:50.179233+00:00"
+  },
+  "210141b0f6": {
+   "main": {
+    "title": "Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say",
+    "summary": "A Russian navy corvette docked at the Benghazi naval base ​in eastern Libya was hit on Sunday by a suspected Ukrainian sea drone, according to local officials. The strike severely damaged the warship and ignited a fire at the facility in what appeared to be the latest attack in Libya linked to the Russia-Ukraine war.",
+    "link": "https://www.france24.com/en/africa/20261122-russian-warship-hit-by-suspected-ukrainian-drone-at-libya-s-benghazi-naval-base",
+    "source": "France 24",
+    "weight": 2,
+    "published": "2026-11-22T19:41:23+00:00",
+    "image": "https://s.france24.com/media/display/659e3cc8-e6a9-11f1-ae55-1bac47ab2f5d/w:1024/p:16x9/AP26326649718247.jpg",
+    "uid": "a37fad3168ce"
+   },
+   "related": [
+    {
+     "title": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
+     "summary": "No one has claimed responsibility for the strike on the vessel, which had docked on its way back to Russia A suspected Ukrainian drone attack caused an explosion on a Russian warship docked at the naval base in the Libyan port city of Benghazi, Libyan officials have said. The strike severely damaged the Merkury, a Russian navy warship, and ignited a fire at the naval base, they said. Several Ukrainian sea drones were launched at the ship from a base run by Ukrainian forces in western Libya, acco",
+     "link": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
+     "source": "The Guardian",
+     "weight": 3,
+     "published": "2026-11-22T18:50:56+00:00",
+     "image": "https://i.guim.co.uk/img/media/196206fc578eb19b5303b6bfe5930996ed24961b/0_0_900_720/master/900.jpg?width=140&quality=85&auto=format&fit=max&s=4a5a7fec09c73b0d217b6d1303a01b0c",
+     "uid": "969b3e367a9a"
+    },
+    {
+     "title": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+     "summary": "Libya's eastern government says the ship had stopped for fuel and supplies on its way back to Russia.",
+     "link": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-22T19:52:50+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a198/live/5b2f71d0-e6ae-11f1-a094-5fdc692f3e33.jpg",
+     "uid": "e2830407b36a"
+    },
+    {
+     "title": "Media, nave russa colpita in Libia da attacco a lungo raggio ucraino",
+     "summary": "Lo afferma Barak Ravid di Axios citando una 'fonte a conoscenza' dell'accaduto",
+     "link": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/22/media-nave-russa-colpita-in-libia-da-attacco-a-lungo-raggio-ucraino_0c7df80f-d236-48ee-82b2-672a1d937471.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-22T15:43:32+00:00",
+     "image": "",
+     "uid": "305adb0b9038"
+    },
+    {
+     "title": "Suspected drone strike hits Russian ship at Libya’s Benghazi port, raising regional security concerns",
+     "summary": "A suspected drone strike on a Russian ship at Libya’s Benghazi port has raised concerns over the spread of the Russia-Ukraine conflict. Authorities are investigating the blast amid growing fears for regional security.",
+     "link": "https://www.euronews.com/2026/11/22/suspected-drone-strike-hits-russian-ship-at-libyas-benghazi-port-raising-regional-security",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-22T17:11:34+00:00",
+     "image": "",
+     "uid": "48cc02511f97"
+    }
+   ],
+   "topic": "Nave da guerra russa colpita a Bengasi (Libia), sospetto drone ucraino",
+   "reason": "Ne parlano molte testate autorevoli. Secondo funzionari locali, un sospetto drone ucraino ha colpito una corvetta russa a Bengasi: la guerra arriverebbe così nel Mediterraneo, a poca distanza dall'Italia, con conseguenze dirette sulla nostra sicurezza.",
+   "message_id": 229,
+   "chat": "1286321102",
+   "created": "2026-11-22T20:01:42.076419+00:00"
   }
  }
 }
