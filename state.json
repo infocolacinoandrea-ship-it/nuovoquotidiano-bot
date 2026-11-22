@@ -186,7 +186,8 @@
    "21:00"
   ],
   "2026-11-22": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -257,6 +258,55 @@
    "message_id": 226,
    "chat": "1286321102",
    "created": "2026-11-22T06:32:15.164421+00:00"
+  },
+  "123130ff20": {
+   "main": {
+    "title": "Russia-bound ship still on fire after attack in Gulf of Finland",
+    "summary": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel.",
+    "link": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
+    "source": "BBC News",
+    "weight": 3,
+    "published": "2026-11-22T11:25:14+00:00",
+    "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bf94/live/3bc66860-e665-11f1-8ebd-1d2173202734.jpg",
+    "uid": "4c9d70de279c"
+   },
+   "related": [
+    {
+     "title": "Russian ship attacked by drone in Baltic Sea off Finland",
+     "summary": "Russian ship attacked by drone in Baltic Sea off Finland",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/22/russian-ship-attacked-by-drone-in-baltic-sea-off-finland?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-22T11:15:27+00:00",
+     "image": "",
+     "uid": "84e6820247e8"
+    },
+    {
+     "title": "Russian cargo ship still on fire off Finland after drone attack",
+     "summary": "The ship, bound for Russia's Kaliningrad, was damaged in international waters before drifting into Finnish territory.",
+     "link": "https://www.aljazeera.com/news/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-drone-attack?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-22T10:39:50+00:00",
+     "image": "",
+     "uid": "6b8408444122"
+    },
+    {
+     "title": "Live: At least 14 feared trapped after Russian strike in Kyiv region, Zelensky says",
+     "summary": "Ukrainian President Volodymyr Zelensky said at least 14 people were missing after a Russian drone struck a five-story residential building in Dymer, in the Kyiv region, injuring two others. Meanwhile, Finland warned the war was \"spilling over\" after a drone set fire to a Russian cargo ship in the eastern Baltic Sea on Saturday. Follow our liveblog for the latest developments.",
+     "link": "https://www.france24.com/en/europe/20261122-live-finland-says-war-spilling-over-after-baltic-sea-drone-strike-on-russian-cargo-ship",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-22T06:15:38+00:00",
+     "image": "https://s.france24.com/media/display/91402a2e-e656-11f1-ad74-ebb478925cf0/w:1024/p:16x9/2026-11-22T082023Z-1682293497-RC2WSOAB5T2M-RTRMADP-3-UKRAINE-CRISIS-ATTACK-KYIV-REGION.jpg",
+     "uid": "133f726ebd74"
+    }
+   ],
+   "topic": "Nave diretta in Russia attaccata da drone nel Golfo di Finlandia",
+   "reason": "La guerra si allarga al Baltico, vicino a un Paese NATO: secondo la Difesa finlandese dietro l'attacco a una nave diretta a Kaliningrad c'è probabilmente l'Ucraina, la notizia è ripresa da più testate e pesa sulla sicurezza europea.",
+   "message_id": 227,
+   "chat": "1286321102",
+   "created": "2026-11-22T11:31:30.978067+00:00"
   }
  }
 }
