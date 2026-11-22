@@ -197,65 +197,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "1800459084": {
-   "main": {
-    "title": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
-    "summary": "A Russian cargo ship caught fire after a drone strike in international waters in the Gulf of Finland on Saturday and later drifted into Finnish ⁠territorial waters, Finnish authorities said. Helsinki alerted NATO and imposed temporary restrictions in the area amid heightened tensions in the Baltic Sea.",
-    "link": "https://www.france24.com/en/europe/20261121-drone-attack-sets-russian-cargo-ship-ablaze-in-gulf-of-finland",
-    "source": "France 24",
-    "weight": 2,
-    "published": "2026-11-21T12:35:54+00:00",
-    "image": "https://s.france24.com/media/display/d14e7d92-e5a1-11f1-ada4-e56ab3dc0809/w:1024/p:16x9/Cargo-Finland.jpg",
-    "uid": "53c4accc2919"
-   },
-   "related": [
-    {
-     "title": "Russian ship damaged by drone attack in Gulf of Finland, Helsinki and Moscow say",
-     "summary": "The Finnish coast guard said the ship was known to have ties with Russian armed forces.",
-     "link": "https://www.politico.eu/article/russian-ship-damaged-drone-attack-gulf-finland-helsinki-moscow-say/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-     "source": "Politico Europe",
-     "weight": 2,
-     "published": "2026-11-21T12:36:56+00:00",
-     "image": "",
-     "uid": "b8d8c4761209"
-    },
-    {
-     "title": "Russia Says Cargo Ship Attacked By Drones in Gulf of Finland",
-     "summary": "Russia said a cargo ship bound for its Kaliningrad exclave was targeted in international waters in the Gulf of Finland, highlighting growing risks to the country’s energy and food exports through critical Baltic Sea shipping routes.",
-     "link": "https://www.bloomberg.com/news/articles/2026-11-21/russia-says-cargo-ship-attacked-by-drones-in-gulf-of-finland",
-     "source": "Bloomberg",
-     "weight": 3,
-     "published": "2026-11-21T11:44:46+00:00",
-     "image": "",
-     "uid": "8e72c71d3f21"
-    },
-    {
-     "title": "Russian crew evacuating ship hit by drones off coast of Finland",
-     "summary": "Two drones attack cargo ship that Finnish authorities say has links to Russia's armed forces.",
-     "link": "https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland?traffic_source=rss",
-     "source": "Al Jazeera",
-     "weight": 2,
-     "published": "2026-11-21T12:45:24+00:00",
-     "image": "",
-     "uid": "6d5ff7529d53"
-    },
-    {
-     "title": "Russian cargo ship struck by drones in Gulf of Finland",
-     "summary": "The United States announced sanctions against the Sparta II in early May 2022, just over two months after Moscow launched its full-scale invasion of Ukraine. Ukraine has also sanctioned the vessel.",
-     "link": "https://www.euronews.com/2026/11/21/russian-cargo-ship-struck-by-drone-in-gulf-of-finland-finnish-authorities-say",
-     "source": "Euronews",
-     "weight": 2,
-     "published": "2026-11-21T14:01:37+00:00",
-     "image": "",
-     "uid": "c6e76f273679"
-    }
-   ],
-   "topic": "Droni colpiscono nave cargo russa nel Golfo di Finlandia, Helsinki allerta la NATO",
-   "reason": "È un'escalation nuova nel Baltico, ripresa da molte testate. Una nave russa è stata colpita da droni, è entrata alla deriva in acque finlandesi e Helsinki ha allertato la NATO. Ci sono rischi diretti per la sicurezza europea e per le rotte marittime.",
-   "message_id": 224,
-   "chat": "1286321102",
-   "created": "2026-11-21T17:00:46.385231+00:00"
-  },
   "2101364864": {
    "main": {
     "title": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
