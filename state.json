@@ -186,7 +186,8 @@
    "21:00"
   ],
   "2026-11-23": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -257,6 +258,65 @@
    "message_id": 230,
    "chat": "1286321102",
    "created": "2026-11-23T06:31:58.091528+00:00"
+  },
+  "123221534d": {
+   "main": {
+    "title": "Zelenskyy says Ukraine responsible for sinking Russian warship in Libya – Europe live",
+    "summary": "President says Kyiv responsible for sinking Merkury warship in Benghazi on Sunday and also drone attack on cargo vessel MV Angara Russian warship sinks in Benghazi after suspected Ukrainian drone attack Turning to Ukraine, Nato’s Rutte stresses the need to secure the flow of “crucial supplies” or air defence weapons and ammunition to Ukraine. “ It helps Ukraine to defend itself today, but it also strengthens Ukraine’s hands in any future negotiations with Russia. … But support needs to be concre",
+    "link": "https://www.theguardian.com/world/live/2026/nov/23/russia-ukraine-war-zelenskyy-libya-benghazi-drone-attack-ship-merkury-un-nato-europe-latest-news-updates",
+    "source": "The Guardian",
+    "weight": 3,
+    "published": "2026-11-23T11:15:14+00:00",
+    "image": "https://i.guim.co.uk/img/media/901579059a94e89965c7882af4effe9b1426e3ab/173_0_4984_3988/master/4984.jpg?width=140&quality=85&auto=format&fit=max&s=aee9973d6aea17ae72e1b662b0dd513f",
+    "uid": "77ece0992320"
+   },
+   "related": [
+    {
+     "title": "Ukraine blows up Russian warship in Libya’s Benghazi naval base",
+     "summary": "Volodymyr Zelenskyy describes attack as an ‘exemplary’ sea drone operation",
+     "link": "https://www.ft.com/content/b3f020fc-2617-4432-bced-af2a0b120133?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-23T09:30:44+00:00",
+     "image": "",
+     "uid": "090d1b08f2b6"
+    },
+    {
+     "title": "Zelensky says Ukraine sank Russian warship off Libya",
+     "summary": "President Volodymyr Zelensky has confirmed that Ukraine was behind the sinking of a ⁠Russian naval corvette in a Libyan port on Sunday in an attack involving seven naval drones. Zelensky said Ukraine also struck a Russian cargo ship the MV Angara, which he said Russia had ⁠used to transport weapons.",
+     "link": "https://www.france24.com/en/video/20261123-zelensky-says-ukraine-sank-russian-warship-off-libya",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-23T09:44:44+00:00",
+     "image": "https://s.france24.com/media/display/0ff70778-e721-11f1-81df-1bac47ab2f5d/w:1024/p:16x9/EN-20261123-100127-100309-CS.jpg",
+     "uid": "778ee59df916"
+    },
+    {
+     "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+     "summary": "Libya's eastern government says a sunken warship had stopped for fuel and supplies on its way back to Russia.",
+     "link": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC News",
+     "weight": 3,
+     "published": "2026-11-23T11:25:16+00:00",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7507/live/ee06aa60-e720-11f1-a094-5fdc692f3e33.jpg",
+     "uid": "e2830407b36a"
+    },
+    {
+     "title": "Zelensky rivendica gli attacchi a navi russe in Libia, 'operazione esemplare'",
+     "summary": "'Impiegati 7 droni, la affondata, colpiti un elicottero e un'altra imbarcazione'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/23/zelensky-rivendica-gli-attacchi-a-navi-russe-in-libia-operazione-esemplare_36514ab3-39c4-41a2-ae12-46b412476993.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-23T07:56:49+00:00",
+     "image": "",
+     "uid": "125bfb9d92b4"
+    }
+   ],
+   "topic": "Ucraina affonda nave da guerra russa in Libia (Bengasi)",
+   "reason": "Zelensky rivendica l'affondamento con droni navali di una corvetta russa a Bengasi: la guerra in mare arriva nel Mediterraneo, vicino all'Italia, ed è ripresa da tutte le principali testate.",
+   "message_id": 231,
+   "chat": "1286321102",
+   "created": "2026-11-23T11:32:22.180550+00:00"
   }
  }
 }
