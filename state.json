@@ -201,45 +201,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "1232148e20": {
-   "main": {
-    "title": "Nato chief vows defence against space threat after Russian nuclear satellite reports",
-    "summary": "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks.",
-    "link": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&at_campaign=rss",
-    "source": "BBC News",
-    "weight": 3,
-    "published": "2026-11-24T10:58:51+00:00",
-    "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f9e8/live/05da8d30-e7d7-11f1-a094-5fdc692f3e33.jpg",
-    "uid": "bc330a5f2959"
-   },
-   "related": [
-    {
-     "title": "Is Russia preparing to launch a nuclear-armed satellite?",
-     "summary": "German media reports, citing unnamed German military and BND spy agency sources, have claimed that Russia may be preparing to launch a nuclear-armed satellite in the coming weeks, giving it the capability to destroy other satellites. In response, NATO chief Mark Rutte said Monday the alliance would defend against threats in space. France 24’s correspondent in Berlin Nick Holdsworth has the details.",
-     "link": "https://www.france24.com/en/video/20261124-is-russia-preparing-to-launch-a-nuclear-armed-satellite",
-     "source": "France 24",
-     "weight": 2,
-     "published": "2026-11-24T10:41:37+00:00",
-     "image": "https://s.france24.com/media/display/d0bc4c9a-e7f1-11f1-bb9f-29d00e23de9a/w:1024/p:16x9/EN-20261124-101024-101433-CS.jpg",
-     "uid": "564b4f2c3cad"
-    },
-    {
-     "title": "What happens if a nuclear weapon explodes in space?",
-     "summary": "Earth's atmosphere offers protection from a nuclear blast in space, but satellites are more exposed. We explain how radiation could damage them, why the effects can linger and what protection is possible.",
-     "link": "https://www.dw.com/en/what-happens-if-a-nuclear-weapon-explodes-in-space/a-80025827?maca=en-rss-en-all-1573-rdf",
-     "source": "Deutsche Welle",
-     "weight": 2,
-     "published": "2026-11-24T08:34:00+00:00",
-     "image": "",
-     "uid": "454395689320"
-    }
-   ],
-   "topic": "Russia, presunto satellite con testata nucleare: la NATO promette difesa",
-   "reason": "La notizia, ripresa da BBC, France 24 e DW, riguarda una minaccia nucleare nello spazio contro i satelliti occidentali. Il segretario generale della NATO ha già reagito. Le fonti dei media tedeschi sono militari e del BND, ma il lancio non è confermato.",
-   "message_id": 235,
-   "chat": "1286321102",
-   "created": "2026-11-24T11:32:15.034593+00:00"
-  },
   "1801538ad8": {
    "main": {
     "title": "Commissione Ue pronta a chiudere procedura per deficit eccessivo sull’Italia: «Ma attenti alla manovra»",
