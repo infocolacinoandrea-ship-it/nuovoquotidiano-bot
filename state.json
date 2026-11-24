@@ -197,65 +197,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "180029db4b": {
-   "main": {
-    "title": "Jensen Huang reinstated as Nvidia CEO. Stock skyrockets 33%",
-    "summary": "The Nvidia board said it had input from senior levels of the U.S. government.",
-    "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
-    "source": "CNBC",
-    "weight": 2,
-    "published": "2026-11-23T16:49:27+00:00",
-    "image": "",
-    "uid": "e3a79f42fb3c"
-   },
-   "related": [
-    {
-     "title": "Trump says he 'convinced' Nvidia to reinstate Jensen Huang",
-     "summary": "The US president personally intervened to speak to members of Nvidia's board of directors.",
-     "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC News",
-     "weight": 3,
-     "published": "2026-11-23T16:49:51+00:00",
-     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e868/live/68f570d0-e758-11f1-b407-33329b1ec67a.jpg",
-     "uid": "2aa9fd24f84b"
-    },
-    {
-     "title": "Trump tells CNBC ‘I made the deal’ to reinstate Nvidia’s Jensen Huang",
-     "summary": "President Trump said his administration gave Nvidia's board assurance that Jensen Huang would not be a national security threat if he was reinstated as CEO.",
-     "link": "https://www.cnbc.com/2026/11/23/trump-nvidia-jensen-huang.html",
-     "source": "CNBC",
-     "weight": 2,
-     "published": "2026-11-23T16:22:38+00:00",
-     "image": "",
-     "uid": "93833278eb45"
-    },
-    {
-     "title": "Nasdaq jumps 7% as Nvidia shares soar",
-     "summary": "Chip giant up 33% after Huang reinstated while S&P gains 4.3%",
-     "link": "https://www.ft.com/content/0f5a7285-fbf1-4120-86df-c9cca29644fc?syn-25a6b1a6=1",
-     "source": "Financial Times",
-     "weight": 3,
-     "published": "2026-11-23T15:05:30+00:00",
-     "image": "",
-     "uid": "0cae379359fb"
-    },
-    {
-     "title": "Nvidia board reinstates Jensen Huang as CEO",
-     "summary": "Huang stepped down earlier this month after revelations of at least two affairs, including with a suspected Chinese spy.",
-     "link": "https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo?traffic_source=rss",
-     "source": "Al Jazeera",
-     "weight": 2,
-     "published": "2026-11-23T14:24:38+00:00",
-     "image": "",
-     "uid": "34b462a3814e"
-    }
-   ],
-   "topic": "Nvidia riassume Jensen Huang, Trump: 'ho fatto io l'accordo', Nasdaq +7%",
-   "reason": "Svolta clamorosa rispetto al no del board già trattato: Huang torna CEO dopo l'intervento diretto di Trump, il titolo sale del 33%, il Nasdaq del 7% e i mercati globali rimbalzano dopo la settimana peggiore dal 2020.",
-   "message_id": 232,
-   "chat": "1286321102",
-   "created": "2026-11-23T17:00:29.610195+00:00"
-  },
   "210133a783": {
    "main": {
     "title": "Ukraine Attack Off Coast of Libya Shows Reach of Its Naval Drones",
