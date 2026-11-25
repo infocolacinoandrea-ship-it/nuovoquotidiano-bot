@@ -186,7 +186,8 @@
    "21:00"
   ],
   "2026-11-25": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -247,6 +248,55 @@
    "message_id": 238,
    "chat": "1286321102",
    "created": "2026-11-25T06:32:32.088764+00:00"
+  },
+  "1232059a3d": {
+   "main": {
+    "title": "Houthis claim attacks on Saudi refinery, financial district",
+    "summary": "Iran-backed Yemeni Houthis say they carried out fresh retaliatory attacks in Saudi Arabia. A fire was reported at Ras Tanura oil refinery and Riyadh's financial district was attacked for the second time in a week.",
+    "link": "https://www.dw.com/en/houthis-claim-attacks-on-saudi-refinery-financial-district/a-80043632?maca=en-rss-en-all-1573-rdf",
+    "source": "Deutsche Welle",
+    "weight": 2,
+    "published": "2026-11-25T10:35:00+00:00",
+    "image": "",
+    "uid": "97d5d373f7fc"
+   },
+   "related": [
+    {
+     "title": "Yemen's Houthis claim attacks on Riyadh financial district, Saudi refinery",
+     "summary": "Yemen's Houthis on Wednesday claimed attacks targeting the financial district in the Saudi capital and the sprawling Ras Tanura refinery in the kingdom's oil-rich east, in retaliation for strikes on their territory. Houthi military spokesman Yahya Saree described the attack targeting the refinery as \"accurate and direct\", saying it \"caused fires to break out at the facility\". He said the attack on Riyadh was \"carried out in three phases, with strikes hitting their targets accurately\".",
+     "link": "https://www.france24.com/en/video/20261125-yemen-s-houthis-claim-attacks-on-riyadh-financial-district-saudi-refinery",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-25T11:09:43+00:00",
+     "image": "https://s.france24.com/media/display/641f92ec-e8b7-11f1-9625-29d00e23de9a/w:1024/p:16x9/EN-20261125-100213-100348-CS.jpg",
+     "uid": "e3c518c7cc02"
+    },
+    {
+     "title": "Losses Mount for Yemeni Government as Houthi Militia Advances",
+     "summary": "The Iran-backed Houthis in Yemen are on a winning streak, securing strategic territory as they fight Saudi Arabia and its Yemeni allies in an asymmetrical war of attrition.",
+     "link": "https://www.nytimes.com/2026/11/25/world/middleeast/yemen-houthis-war-government-losses.html",
+     "source": "New York Times",
+     "weight": 3,
+     "published": "2026-11-25T11:24:10+00:00",
+     "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-Yemen-assess-promo/25int-Yemen-assess-vhjk-mediumSquareAt3X.jpg",
+     "uid": "5e34a7a9f855"
+    },
+    {
+     "title": "Defending Aden, Yemen’s Holdout Against the Houthis",
+     "summary": "The war in Iran has reignited Yemen’s decade-old civil war. Saudi-backed troops are scrambling to defend against advancing Houthi fighters as the wounded are taken to the port city of Aden, the government’s provisional capital.",
+     "link": "https://www.nytimes.com/video/world/middleeast/100000011300541/defending-aden-yemens-holdout-against-the-houthis.html",
+     "source": "New York Times",
+     "weight": 3,
+     "published": "2026-11-25T11:20:25+00:00",
+     "image": "",
+     "uid": "dd60faf78501"
+    }
+   ],
+   "topic": "Houthi attaccano raffineria Ras Tanura e distretto finanziario di Riad",
+   "reason": "La guerra legata all'Iran si allarga all'Arabia Saudita: colpito il cuore petrolifero del Golfo, con effetti diretti sui prezzi di petrolio ed energia in Italia.",
+   "message_id": 239,
+   "chat": "1286321102",
+   "created": "2026-11-25T11:32:05.542758+00:00"
   }
  }
 }
