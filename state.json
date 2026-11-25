@@ -187,7 +187,8 @@
   ],
   "2026-11-25": [
    "07:30",
-   "12:30"
+   "12:30",
+   "21:00"
   ]
  },
  "last_refresh": "",
@@ -200,54 +201,64 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "1232059a3d": {
+  "2230122329": {
    "main": {
-    "title": "Houthis claim attacks on Saudi refinery, financial district",
-    "summary": "Iran-backed Yemeni Houthis say they carried out fresh retaliatory attacks in Saudi Arabia. A fire was reported at Ras Tanura oil refinery and Riyadh's financial district was attacked for the second time in a week.",
-    "link": "https://www.dw.com/en/houthis-claim-attacks-on-saudi-refinery-financial-district/a-80043632?maca=en-rss-en-all-1573-rdf",
-    "source": "Deutsche Welle",
+    "title": "US unveils proposed tariffs on major partners, including EU and China",
+    "summary": "The United States on Wednesday unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production -- the latest move by US President Donald Trump to remake Washington's trade relationships. The duties, proposed at up to 20 percent, come over allegations the economies \"are promoting production and capacity divorced from the realities of demand and market principles,\" a senior US official said on condition of anonymity. FRANCE",
+    "link": "https://www.france24.com/en/us-unveils-proposed-tariffs-on-major-partners-including-eu-and-china",
+    "source": "France 24",
     "weight": 2,
-    "published": "2026-11-25T10:35:00+00:00",
-    "image": "",
-    "uid": "97d5d373f7fc"
+    "published": "2026-11-25T19:15:03+00:00",
+    "image": "https://s.france24.com/media/display/204bc0b6-e904-11f1-8964-81da3ab2acbb/w:1024/p:16x9/EN-20261125-200200-200343-CS.jpg",
+    "uid": "c06ced3b2ac5"
    },
    "related": [
     {
-     "title": "Yemen's Houthis claim attacks on Riyadh financial district, Saudi refinery",
-     "summary": "Yemen's Houthis on Wednesday claimed attacks targeting the financial district in the Saudi capital and the sprawling Ras Tanura refinery in the kingdom's oil-rich east, in retaliation for strikes on their territory. Houthi military spokesman Yahya Saree described the attack targeting the refinery as \"accurate and direct\", saying it \"caused fires to break out at the facility\". He said the attack on Riyadh was \"carried out in three phases, with strikes hitting their targets accurately\".",
-     "link": "https://www.france24.com/en/video/20261125-yemen-s-houthis-claim-attacks-on-riyadh-financial-district-saudi-refinery",
+     "title": "EU says 'strongly' rejects premise of new US tariffs",
+     "summary": "The EU said Wednesday that it rejected the premise of new tariffs on its exports proposed by the United States and expected Washington to stick by a deal struck with Brussels last year. The US unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production. FRANCE 24's Dave Keating reports from Brussels.",
+     "link": "https://www.france24.com/en/eu-says-strongly-rejects-premise-of-new-us-tariffs",
      "source": "France 24",
      "weight": 2,
-     "published": "2026-11-25T11:09:43+00:00",
-     "image": "https://s.france24.com/media/display/641f92ec-e8b7-11f1-9625-29d00e23de9a/w:1024/p:16x9/EN-20261125-100213-100348-CS.jpg",
-     "uid": "e3c518c7cc02"
+     "published": "2026-11-25T19:48:32+00:00",
+     "image": "https://s.france24.com/media/display/d88720f4-e908-11f1-ab85-81da3ab2acbb/w:1024/p:16x9/EN-20261125-203356-203840-CS.jpg",
+     "uid": "bbeb6ebc8862"
     },
     {
-     "title": "Losses Mount for Yemeni Government as Houthi Militia Advances",
-     "summary": "The Iran-backed Houthis in Yemen are on a winning streak, securing strategic territory as they fight Saudi Arabia and its Yemeni allies in an asymmetrical war of attrition.",
-     "link": "https://www.nytimes.com/2026/11/25/world/middleeast/yemen-houthis-war-government-losses.html",
-     "source": "New York Times",
-     "weight": 3,
-     "published": "2026-11-25T11:24:10+00:00",
-     "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-Yemen-assess-promo/25int-Yemen-assess-vhjk-mediumSquareAt3X.jpg",
-     "uid": "5e34a7a9f855"
-    },
-    {
-     "title": "Defending Aden, Yemen’s Holdout Against the Houthis",
-     "summary": "The war in Iran has reignited Yemen’s decade-old civil war. Saudi-backed troops are scrambling to defend against advancing Houthi fighters as the wounded are taken to the port city of Aden, the government’s provisional capital.",
-     "link": "https://www.nytimes.com/video/world/middleeast/100000011300541/defending-aden-yemens-holdout-against-the-houthis.html",
-     "source": "New York Times",
-     "weight": 3,
-     "published": "2026-11-25T11:20:25+00:00",
+     "title": "World reacts to Trump’s new tariffs as US stocks tumble",
+     "summary": "The new levies come after an eight-month investigation launched by the United States Trade Representative.",
+     "link": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-25T18:59:26+00:00",
      "image": "",
-     "uid": "dd60faf78501"
+     "uid": "0dd658ea3483"
+    },
+    {
+     "title": "US Tariff Proposal Raises Stakes for India to Clinch Trade Deal",
+     "summary": "US tariff rates announced Wednesday put pressure on India to agree to a trade deal or face a higher levy, leaving exporters and investors with little clarity on the trade outlook.",
+     "link": "https://www.bloomberg.com/news/articles/2026-11-25/us-tariff-proposal-raises-stakes-for-india-to-clinch-trade-deal",
+     "source": "Bloomberg",
+     "weight": 3,
+     "published": "2026-11-25T21:03:17+00:00",
+     "image": "",
+     "uid": "b86cbc4bb0e4"
+    },
+    {
+     "title": "Pil Usa col botto ma corre anche l'inflazione, Fed verso il rialzo del tassi",
+     "summary": "Wall Street sotto pressione per i dazi e l'IA. Trump, 'colpa dell'esito delle midterm'",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/25/il-pil-usa-cresce-nel-terzo-trimestre-del-43-sopra-le-attese.-inflazione_58740f40-f0e3-4fd9-aa91-2fe3626eb0c4.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-25T18:47:17+00:00",
+     "image": "",
+     "uid": "c78df10a9fcd"
     }
    ],
-   "topic": "Houthi attaccano raffineria Ras Tanura e distretto finanziario di Riad",
-   "reason": "La guerra legata all'Iran si allarga all'Arabia Saudita: colpito il cuore petrolifero del Golfo, con effetti diretti sui prezzi di petrolio ed energia in Italia.",
-   "message_id": 239,
+   "topic": "USA propongono nuovi dazi su 14 economie, UE e Cina incluse",
+   "reason": "I nuovi dazi USA proposti contro UE e Cina toccano direttamente l'export italiano: Bruxelles li respinge \"con forza\" e chiede a Washington di rispettare l'accordo dell'anno scorso. Ne parlano più testate e la notizia pesa anche sui mercati.",
+   "message_id": 240,
    "chat": "1286321102",
-   "created": "2026-11-25T11:32:05.542758+00:00"
+   "created": "2026-11-25T21:30:12.411021+00:00"
   }
  }
 }
