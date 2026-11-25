@@ -200,55 +200,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "073231036c": {
-   "main": {
-    "title": "US preparing to unveil plan for new tariffs on global trading partners",
-    "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
-    "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-    "source": "BBC News",
-    "weight": 3,
-    "published": "2026-11-25T00:38:01+00:00",
-    "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/511d/live/da29c130-e860-11f1-a330-6153c8fb2fad.jpg",
-    "uid": "738443e67a1f"
-   },
-   "related": [
-    {
-     "title": "AI Rally Fizzles as US Readies New Tariffs on China",
-     "summary": "\"Bloomberg: The China Show is your definitive source for news and analysis on the world's second-biggest economy. From politics and policy to tech and trends, Yvonne Man gives global investors unique insight, delivering in-depth discussions with the newsmakers who matter.\" (Source: Bloomberg)",
-     "link": "https://www.bloomberg.com/news/videos/2026-11-25/the-china-show-11-25-2026-video",
-     "source": "Bloomberg",
-     "weight": 3,
-     "published": "2026-11-25T05:46:27+00:00",
-     "image": "",
-     "uid": "b767fc37c2b4"
-    },
-    {
-     "title": "India news: US prepares new tariffs after trade probe",
-     "summary": "The United States is reportedly readying fresh tariffs on India and 15 other economies under a trade probe. Also, a woman was allegedly gangraped by her colleagues in the national capital. Follow live.",
-     "link": "https://www.dw.com/en/india-news-us-prepares-new-tariffs-after-trade-probe/live-80042306?maca=en-rss-en-all-1573-rdf",
-     "source": "Deutsche Welle",
-     "weight": 2,
-     "published": "2026-11-25T04:44:00+00:00",
-     "image": "",
-     "uid": "1e2d4ad95952"
-    },
-    {
-     "title": "Borsa: Tokyo, apertura in calo (-0,36%)",
-     "summary": "Pesano vendite sui chip e i timori sui nuovi dazi Usa",
-     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/25/borsa-tokyo-apertura-in-calo-036_2d355356-5ba4-4a00-9a99-c4a5690834ac.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-25T00:17:26+00:00",
-     "image": "",
-     "uid": "d98ae08b6f6e"
-    }
-   ],
-   "topic": "USA preparano nuovi dazi su partner commerciali, inclusi UE e Cina (novembre 2026)",
-   "reason": "I nuovi dazi USA colpirebbero anche l'UE, con effetti diretti sull'export italiano, e stanno già pesando sui mercati asiatici.",
-   "message_id": 238,
-   "chat": "1286321102",
-   "created": "2026-11-25T06:32:32.088764+00:00"
-  },
   "1232059a3d": {
    "main": {
     "title": "Houthis claim attacks on Saudi refinery, financial district",
