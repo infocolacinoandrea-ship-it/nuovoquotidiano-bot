@@ -185,7 +185,8 @@
    "21:00"
   ],
   "2026-11-26": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -256,6 +257,65 @@
    "message_id": 241,
    "chat": "1286321102",
    "created": "2026-11-26T06:30:40.660343+00:00"
+  },
+  "123151f6a4": {
+   "main": {
+    "title": "Meloni, 'sul bilancio Ue siamo a anni luce da una soluzione'",
+    "summary": "'Accordo a dicembre? Non è la tempistica che ci fa decidere ma le nostre condizioni'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/26/meloni-sul-bilancio-ue-siamo-a-anni-luce-da-una-soluzione_4f9d77c4-a333-43d9-880a-c22c4ba3ea6d.html",
+    "source": "ANSA",
+    "weight": 2,
+    "published": "2026-11-26T11:16:57+00:00",
+    "image": "",
+    "uid": "4c47da972cf4"
+   },
+   "related": [
+    {
+     "title": "Merz, il bilancio Ue proposto è ancora troppo alto, no a nuovo debito comune",
+     "summary": "'Le ipotesi sul tavolo non sono una base per un accordo'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/26/merz-il-bilancio-ue-proposto-e-ancora-troppo-alto-no-a-nuovo-debito-comune_030a5427-30e1-4230-8ad2-cf7c3a3491f5.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-26T09:37:12+00:00",
+     "image": "",
+     "uid": "7580886443cc"
+    },
+    {
+     "title": "Meloni, 'niente tagli nel prossimo bilancio Ue, salvaguardare Pac e Coesione'",
+     "summary": "A margine del Vertice europeo la riunione degli 'Amici della Coesione'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/26/meloni-niente-tagli-nel-prossimo-bilancio-ue-salvaguardare-pac-e-coesione_633d3253-f6dd-4a77-a08e-ef8b6fac8b08.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-26T09:33:40+00:00",
+     "image": "",
+     "uid": "af6366e31031"
+    },
+    {
+     "title": "EU must find new revenue or scale back spending plans, MEP says",
+     "summary": "EU leaders are meeting in Brussels to discuss the bloc’s next seven-year budget.",
+     "link": "https://www.euronews.com/video/2026/11/26/eu-must-find-new-revenue-or-scale-back-spending-plans-mep-says",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-26T10:34:54+00:00",
+     "image": "",
+     "uid": "7adfde17c209"
+    },
+    {
+     "title": "US warns EU leaders against Big Tech tax",
+     "summary": "Washington’s opposition to the idea of a bloc-wide digital services tax complicates efforts to find new revenue sources for the EU’s €2 trillion budget.",
+     "link": "https://www.politico.eu/article/us-fires-warning-shot-ahead-of-eu-leaders-big-tech-tax-talks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+     "source": "Politico Europe",
+     "weight": 2,
+     "published": "2026-11-26T11:21:36+00:00",
+     "image": "",
+     "uid": "5823a09c03ea"
+    }
+   ],
+   "topic": "Vertice UE sul bilancio 2028-2034: scontro Meloni-Merz, USA contro tassa Big Tech",
+   "reason": "Il vertice di Bruxelles decide il bilancio UE dei prossimi sette anni: ne dipendono i fondi per agricoltura e coesione che arrivano all'Italia. Meloni dice che l'accordo è lontano, Merz chiede tagli e niente nuovo debito comune, gli Stati Uniti si oppongono alla tassa sui giganti del digitale e ne parlano più testate.",
+   "message_id": 242,
+   "chat": "1286321102",
+   "created": "2026-11-26T11:31:51.487206+00:00"
   }
  }
 }
