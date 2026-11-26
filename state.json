@@ -187,7 +187,8 @@
   "2026-11-26": [
    "07:30",
    "12:30",
-   "18:00"
+   "18:00",
+   "21:00"
   ]
  },
  "last_refresh": "",
@@ -258,6 +259,65 @@
    "message_id": 243,
    "chat": "1286321102",
    "created": "2026-11-26T17:00:48.927649+00:00"
+  },
+  "2101427c16": {
+   "main": {
+    "title": "Pablo Hernández de Cos wins race for ECB presidency",
+    "summary": "Spanish economist set to succeed Christine Lagarde after Dutch government ends support for rival candidate Klaas Knot",
+    "link": "https://www.ft.com/content/88a0691a-6ce8-4c97-abf4-7aee0351fd51?syn-25a6b1a6=1",
+    "source": "Financial Times",
+    "weight": 3,
+    "published": "2026-11-26T17:36:51+00:00",
+    "image": "",
+    "uid": "60c44d3103b6"
+   },
+   "related": [
+    {
+     "title": "European Central Bank Chooses Pablo Hernández de Cos as Next President",
+     "summary": "The early exit of Christine Lagarde as president of the European Central Bank, and two looming vacancies on the board, will make way for new leadership at the institution.",
+     "link": "https://www.nytimes.com/2026/11/26/business/ecb-pablo-hernandez-de-cos.html",
+     "source": "New York Times",
+     "weight": 3,
+     "published": "2026-11-26T19:41:34+00:00",
+     "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25Biz-ECB-Leaders-01-vmhk/25Biz-ECB-Leaders-01-vmhk-mediumSquareAt3X.jpg",
+     "uid": "4a8ad48b5c13"
+    },
+    {
+     "title": "Accordo per De Cos alla Bce, ma è muro contro muro sul bilancio Ue",
+     "summary": "Via libera dei 27 allo spagnolo. Resta lo scontro tra modernizzatori e coesionisti",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/26/confronto-tra-i-leader-sulla-bce-oggi-verso-lavvio-iter-formale_b89e1430-4300-482f-9508-c475065af9d8.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-26T19:46:09+00:00",
+     "image": "",
+     "uid": "3c9c04f9699a"
+    },
+    {
+     "title": "Spain’s Pablo Hernández de Cos set to lead European Central Bank",
+     "summary": "De Cos will lead the ECB into a period of political uncertainty and choppy growth, after winning the backing needed to succeed Christine Lagarde next year.",
+     "link": "https://www.cnbc.com/2026/11/26/pablo-hernandez-de-cos-ecb-president.html",
+     "source": "CNBC",
+     "weight": 2,
+     "published": "2026-11-26T15:28:26+00:00",
+     "image": "",
+     "uid": "981d7fc3754d"
+    },
+    {
+     "title": "Spanish economist de Cos to succeed Lagarde as head of ECB",
+     "summary": "Spanish monetary economist Pablo Hernandez de Cos on Thursday was set to replace France's Christine Lagarde as the new head of the European Central Bank (ECB). His nomination comes as the Europe's most powerful financial institution grapples with an Iran war-driven resurgence in inflation and a cost of living crisis.",
+     "link": "https://www.france24.com/en/europe/20261126-spanish-economist-de-cos-succeed-lagarde-head-ecb",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-26T15:55:45+00:00",
+     "image": "https://s.france24.com/media/display/8782840e-e9a4-11f1-a5e6-f9cf020caef6/w:1024/p:16x9/AP25290616236227.jpg",
+     "uid": "e6cabfd228c8"
+    }
+   ],
+   "topic": "Pablo Hernández de Cos nuovo presidente BCE dopo Lagarde",
+   "reason": "Il nuovo presidente della BCE deciderà sui tassi che pesano su mutui, spread e conti pubblici italiani. La notizia è ripresa da FT, NYT, ANSA, CNBC, France 24 e Al Jazeera.",
+   "message_id": 244,
+   "chat": "1286321102",
+   "created": "2026-11-26T20:01:42.515989+00:00"
   }
  }
 }
