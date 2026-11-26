@@ -199,65 +199,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "0730406699": {
-   "main": {
-    "title": "Trump rilancia i dazi: Cina, Ue e altri 12 Paesi nel mirino",
-    "summary": "Dal nostro corrispondente L’amministrazione Trump lancia una nuova offensiva economica internazionale a colpi di dazi, contro 14 grandi partner o rivali dall’Unione europea alla Cina. Tutti accusati di danneggiare gli...",
-    "link": "https://www.ilsole24ore.com/art/trump-rilancia-dazi-cina-ue-e-altri-12-paesi-mirino-AJVWr3SC",
-    "source": "Il Sole 24 Ore",
-    "weight": 2,
-    "published": "2026-11-26T05:56:37+00:00",
-    "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/27/Immagini/Ritagli/e9d6316df646fad20dc5df6617599d3c-U27175168614DDd-1440x752@IlSole24Ore-Web.jpg",
-    "uid": "eeabb01b7d9e"
-   },
-   "related": [
-    {
-     "title": "US announces new tariffs on host of countries including China",
-     "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
-     "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC News",
-     "weight": 3,
-     "published": "2026-11-26T04:10:58+00:00",
-     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cdd4/live/6fdb6db0-e946-11f1-8b2f-671485cea0be.jpg",
-     "uid": "738443e67a1f"
-    },
-    {
-     "title": "How Trump’s latest tariff moves hand India an edge over rival Asian exporters",
-     "summary": "Proposed tariffs of 18% on Bangladesh, Cambodia, Thailand, and 20% on China and Vietnam, subject to their respective trade deals, offer India a competitive advantage.",
-     "link": "https://www.cnbc.com/2026/11/26/trump-us-tariff-india-trade.html",
-     "source": "CNBC",
-     "weight": 2,
-     "published": "2026-11-26T04:12:18+00:00",
-     "image": "",
-     "uid": "385b5e5811ac"
-    },
-    {
-     "title": "Brazil blasts ‘unacceptable’ new US tariff proposals",
-     "summary": "President Lula’s office says Brazil will not yield to threats and aims for a negotiated resolution.",
-     "link": "https://www.aljazeera.com/news/2026/11/26/brazil-blasts-unacceptable-new-us-tariff-proposals?traffic_source=rss",
-     "source": "Al Jazeera",
-     "weight": 2,
-     "published": "2026-11-26T04:47:47+00:00",
-     "image": "",
-     "uid": "dc3b907c1282"
-    },
-    {
-     "title": "US Tariff Plan Raises Stakes for India to Clinch Trade Deal",
-     "summary": "The US plans to impose a 17% tariff on Indian goods, lower than regional peers like Vietnam, Malaysia and Bangladesh. The rate would be hiked to 25% if the country fails to secure a deal, according to a statement from the US Trade Representative. This puts pressure on India to agree to a trade deal or face a higher levy, leaving exporters and investors with little clarity on the trade outlook. (Source: Bloomberg)",
-     "link": "https://www.bloomberg.com/news/videos/2026-11-26/us-tariffs-raise-stakes-for-india-to-clinch-trade-deal-video",
-     "source": "Bloomberg",
-     "weight": 3,
-     "published": "2026-11-26T06:28:58+00:00",
-     "image": "",
-     "uid": "6ab6418fee3d"
-    }
-   ],
-   "topic": "Trump annuncia nuovi dazi contro UE, Cina e altri 12 Paesi",
-   "reason": "La nuova ondata di dazi USA colpisce anche l'UE e quindi l'export italiano. La notizia è ripresa da più testate autorevoli e ha già provocato reazioni internazionali, come quella del Brasile.",
-   "message_id": 241,
-   "chat": "1286321102",
-   "created": "2026-11-26T06:30:40.660343+00:00"
-  },
   "123151f6a4": {
    "main": {
     "title": "Meloni, 'sul bilancio Ue siamo a anni luce da una soluzione'",
