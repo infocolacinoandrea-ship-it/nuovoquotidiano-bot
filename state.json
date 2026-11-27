@@ -196,65 +196,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "18004870ff": {
-   "main": {
-    "title": "Two Italians killed in Iranian strike on Kuwait",
-    "summary": "Rheinmetall workers are the first reported deaths from Iranian attacks since Washington and Tehran restarted exchanging fire this month",
-    "link": "https://www.ft.com/content/e5f3128d-5f8b-416c-90d1-2549175cb091?syn-25a6b1a6=1",
-    "source": "Financial Times",
-    "weight": 3,
-    "published": "2026-11-26T16:57:26+00:00",
-    "image": "",
-    "uid": "d7cc8c1be7f2"
-   },
-   "related": [
-    {
-     "title": "Italy says two citizens killed in Iranian strike in Kuwait",
-     "summary": "The pair were technicians for German company Rheinmetall, according to Italy's foreign ministry.",
-     "link": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
-     "source": "BBC News",
-     "weight": 3,
-     "published": "2026-11-26T16:39:30+00:00",
-     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4cbd/live/babaff60-e9ac-11f1-a094-5fdc692f3e33.png",
-     "uid": "cb4c4139de5a"
-    },
-    {
-     "title": "Iranian drone attack kills 2 Italians in Kuwait",
-     "summary": "The Italians were employed as technicians for the Italian branch of German arms manufacturer Rheinmetall. One Kuwaiti and one Pakistani national were also injured in the attack.",
-     "link": "https://www.dw.com/en/iranian-drone-attack-kills-2-italians-in-kuwait/a-80064974?maca=en-rss-en-all-1573-rdf",
-     "source": "Deutsche Welle",
-     "weight": 2,
-     "published": "2026-11-26T15:11:00+00:00",
-     "image": "",
-     "uid": "c24d42f3bf30"
-    },
-    {
-     "title": "Two dead after Iranian drone attack on Kuwait",
-     "summary": "Kuwait’s army says two Italian workers were killed and four others were injured in an Iranian drone attack.",
-     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/26/two-dead-after-iranian-drone-attack-on-kuwait?traffic_source=rss",
-     "source": "Al Jazeera",
-     "weight": 2,
-     "published": "2026-11-26T15:55:15+00:00",
-     "image": "",
-     "uid": "67e879c93a30"
-    },
-    {
-     "title": "Iran nega attacchi al Kuwait, 'accuse per esacerbare instabilità'",
-     "summary": "Portavoce esercito evoca 'uso di tattiche false flag da parte di Usa e Israele'",
-     "link": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/26/iran-nega-attacchi-al-kuwait-accuse-per-esacerbare-instabilita_b21751a4-53a2-4d36-b005-8978647aaae8.html",
-     "source": "ANSA",
-     "weight": 2,
-     "published": "2026-11-26T16:33:18+00:00",
-     "image": "",
-     "uid": "ec45635c31f0"
-    }
-   ],
-   "topic": "Due italiani uccisi da attacco iraniano in Kuwait",
-   "reason": "Secondo il FT sono i primi morti segnalati da quando USA e Iran sono tornati a colpirsi questo mese. Sono due italiani e la notizia è ripresa da molte testate. L'Iran nega e Tajani protesterà con l'ambasciata iraniana.",
-   "message_id": 243,
-   "chat": "1286321102",
-   "created": "2026-11-26T17:00:48.927649+00:00"
-  },
   "2101427c16": {
    "main": {
     "title": "Pablo Hernández de Cos wins race for ECB presidency",
