@@ -184,7 +184,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-27": []
+  "2026-11-27": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
@@ -195,5 +197,55 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "073241f537": {
+   "main": {
+    "title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’",
+    "summary": "Iran's foreign minister Abbas Araghchi said \"The incident is suspicious and looks like a precooked recipe for war.\"",
+    "link": "https://www.cnbc.com/2026/11/27/us-iran-war-trump-hormuz-italian-killed-trump.html",
+    "source": "CNBC",
+    "weight": 2,
+    "published": "2026-11-27T03:30:23+00:00",
+    "image": "",
+    "uid": "123ab3511f36"
+   },
+   "related": [
+    {
+     "title": "Iran war live: Iran’s Araghchi calls deadly Kuwait attack ‘suspicious’",
+     "summary": "Iran's FM Abbas Araghchi says the deadly Kuwait incident is \"suspicious\" and looks like a \"pre-cooked recipe\" for war.",
+     "link": "https://www.aljazeera.com/news/liveblog/2026/11/27/iran-war-live-irans-araghchi-calls-deadly-kuwait-attack-suspicious?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-27T00:00:00+00:00",
+     "image": "",
+     "uid": "340eb44575a2"
+    },
+    {
+     "title": "Trump, 'la vittoria è a portata di mano in Iran'",
+     "summary": "'Staimo dando loro chance per fare un accordo, non so se ne trarranno vantaggio'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/27/trump-la-vittoria-e-a-portata-di-mano-in-iran_4a25bd9d-81e9-4fed-a86d-b4cf000c0ff1.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-26T23:18:09+00:00",
+     "image": "",
+     "uid": "93c19e68a3b4"
+    },
+    {
+     "title": "Trump downplays Russia, China support for Iran during talks with US troops",
+     "summary": "Trump praises US troops for their role in the war on Iran and says he has spoken to Netanyahu in recent days.",
+     "link": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-27T03:49:08+00:00",
+     "image": "",
+     "uid": "043962b71d2b"
+    }
+   ],
+   "topic": "Due italiani uccisi in attacco con drone in Kuwait, guerra Iran",
+   "reason": "La guerra con l'Iran colpisce direttamente l'Italia: due connazionali uccisi in Kuwait. È uno sviluppo nuovo e grave, con Teheran che definisce l'attacco \"sospetto\" e Trump che dice di poter chiudere la guerra quando vuole.",
+   "message_id": 245,
+   "chat": "1286321102",
+   "created": "2026-11-27T06:32:42.072080+00:00"
+  }
+ }
 }
