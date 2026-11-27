@@ -185,7 +185,8 @@
    "21:00"
   ],
   "2026-11-27": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -246,6 +247,45 @@
    "message_id": 245,
    "chat": "1286321102",
    "created": "2026-11-27T06:32:42.072080+00:00"
+  },
+  "12301993c3": {
+   "main": {
+    "title": "Spain’s Pablo Hernández de Cos set to lead European Central Bank",
+    "summary": "De Cos will lead the ECB into a period of political uncertainty and choppy growth, after winning the backing needed to succeed Christine Lagarde next year.",
+    "link": "https://www.cnbc.com/2026/11/26/pablo-hernandez-de-cos-ecb-president.html",
+    "source": "CNBC",
+    "weight": 2,
+    "published": "2026-11-27T06:50:38+00:00",
+    "image": "",
+    "uid": "981d7fc3754d"
+   },
+   "related": [
+    {
+     "title": "New ECB chief should prioritise inflation, economist says",
+     "summary": "Spanish economist Pablo Hernández de Cos has been named as the next president of the European Central Bank, replacing Christine Lagarde from February 2027.",
+     "link": "https://www.euronews.com/video/2026/11/27/new-ecb-chief-should-prioritise-inflation-economist-says",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-27T10:31:43+00:00",
+     "image": "",
+     "uid": "7081aec59500"
+    },
+    {
+     "title": "What the ECB’s new leadership could mean for interest rates",
+     "summary": "Pablo Hernández de Cos is set to succeed Christine Lagarde with eurozone inflation at twice the ECB’s target. Analysts expect broad policy continuity, but say he could take a more direct role in shaping interest-rate decisions.",
+     "link": "https://www.euronews.com/2026/11/27/what-the-ecbs-new-leadership-could-mean-for-interest-rates",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-27T09:18:41+00:00",
+     "image": "",
+     "uid": "09c49f8499bb"
+    }
+   ],
+   "topic": "Hernández de Cos nuovo presidente BCE dopo Lagarde",
+   "reason": "Cambia la guida della BCE con l'inflazione dell'eurozona al doppio dell'obiettivo: incide direttamente su tassi e mutui degli italiani, e la notizia è ripresa da più testate.",
+   "message_id": 246,
+   "chat": "1286321102",
+   "created": "2026-11-27T11:30:19.478670+00:00"
   }
  }
 }
