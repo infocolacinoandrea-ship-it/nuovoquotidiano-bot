@@ -187,7 +187,8 @@
   "2026-11-27": [
    "07:30",
    "12:30",
-   "18:00"
+   "18:00",
+   "21:00"
   ]
  },
  "last_refresh": "",
@@ -248,6 +249,65 @@
    "message_id": 247,
    "chat": "1286321102",
    "created": "2026-11-27T17:02:45.356465+00:00"
+  },
+  "2100516114": {
+   "main": {
+    "title": "Spagna, perché l’alleanza tra conservatori e ultradestra non fa più scandalo a 50 anni dalla fine del franchismo",
+    "summary": "Quando domenica gli spagnoli si recheranno alle urne, il confronto sarà soprattutto tra due blocchi politici contrapposti. Da una parte il premier socialdemocratico Pedro Sánchez, che secondo i sondaggi avrebbe...",
+    "link": "https://www.ilsole24ore.com/art/spagna-perche-l-alleanza-conservatori-e-ultradestra-non-fa-piu-scandalo-50-anni-fine-franchismo-AJJ86hTC",
+    "source": "Il Sole 24 Ore",
+    "weight": 2,
+    "published": "2026-11-27T16:18:36+00:00",
+    "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/27/Immagini/Ritagli/2026-11-21T121856Z_86803628_RC2CSOAJ2A3I_RTRMADP_5_SPAIN-ELECTION-PP-U00682577288hdE-1440x752@IlSole24Ore-Web.JPG",
+    "uid": "5a0418766613"
+   },
+   "related": [
+    {
+     "title": "Spain’s Far-Right Era Ended in 1975. Will This Man Change That?",
+     "summary": "If the polls are right, Santiago Abascal’s Vox party could become the first far-right group to join a Spanish government since the days of Franco.",
+     "link": "https://www.nytimes.com/2026/11/27/world/europe/santiago-abascal-vox-spain-far-right.html",
+     "source": "New York Times",
+     "weight": 3,
+     "published": "2026-11-27T14:45:20+00:00",
+     "image": "https://static01.nyt.com/images/2026/11/27/multimedia/27int-spain-abascal-promo-zlgq/27int-spain-abascal-promo-zlgq-mediumSquareAt3X.jpg",
+     "uid": "7ce82aaf328c"
+    },
+    {
+     "title": "Spain’s Pedro Sanchez bets on left-wing voting surge to defy election polls",
+     "summary": "Prime Minister Pedro Sanchez makes last bid to beat right-wing parties before Spanish vote on Sunday.",
+     "link": "https://www.aljazeera.com/news/2026/11/27/spains-pedro-sanchez-bets-on-left-wing-voting-surge-to-defy-election-polls?traffic_source=rss",
+     "source": "Al Jazeera",
+     "weight": 2,
+     "published": "2026-11-27T17:15:35+00:00",
+     "image": "",
+     "uid": "db8954460c40"
+    },
+    {
+     "title": "Spain election: Will Vox be the kingmaker, and will housing decide the vote?",
+     "summary": "A prime minister candidate needs 176 votes for an absolute majority in the first vote. What are the chances of a coalition with the conservative Partido Popular?",
+     "link": "https://www.euronews.com/2026/11/27/spain-general-election-is-vox-set-to-be-the-kingmaker-and-how-crucial-is-the-housing-issue",
+     "source": "Euronews",
+     "weight": 2,
+     "published": "2026-11-27T17:40:17+00:00",
+     "image": "",
+     "uid": "ac9eefc36288"
+    },
+    {
+     "title": "Spagna, l’allarme sui migranti spinge Popolari e ultradestra",
+     "summary": "MADRID - La città, a tre giorni dal voto, ha il passo lento di chi aspetta una sentenza. Nel grande quartiere di Carabanchel, poco fuori dalla Almenda Central e dalle...",
+     "link": "https://www.ilsole24ore.com/art/spagna-l-allarme-migranti-spinge-popolari-e-ultradestra-AJnikfSC",
+     "source": "Il Sole 24 Ore",
+     "weight": 2,
+     "published": "2026-11-27T16:40:52+00:00",
+     "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/26/Immagini/Ritagli/Imagoeconomica_2784993-U17816004704iAP-1440x752@IlSole24Ore-Web.jpg",
+     "uid": "e4bff5327487"
+    }
+   ],
+   "topic": "Elezioni in Spagna 29 novembre 2026: Vox verso il governo con il PP",
+   "reason": "Domenica la Spagna vota: secondo molte testate autorevoli, l'estrema destra potrebbe entrare al governo per la prima volta dai tempi di Franco, e questo cambierebbe gli equilibri in UE.",
+   "message_id": 248,
+   "chat": "1286321102",
+   "created": "2026-11-27T20:00:51.864640+00:00"
   }
  }
 }
