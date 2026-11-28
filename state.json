@@ -185,7 +185,9 @@
    "18:00",
    "21:00"
   ],
-  "2026-11-28": []
+  "2026-11-28": [
+   "07:30"
+  ]
  },
  "last_refresh": "",
  "paused": false,
@@ -196,5 +198,35 @@
   "135194270"
  ],
  "awaiting_fix": {},
- "proposals": {}
+ "proposals": {
+  "073150d267": {
+   "main": {
+    "title": "Iran war live: Italy says drone in deadly Kuwait attack was made in Iran",
+    "summary": "Italian Foreign Minister Antonio Tajani says the drone behind the deadly Kuwait strike was made in Iran.",
+    "link": "https://www.aljazeera.com/news/liveblog/2026/11/28/iran-war-live-italy-says-drone-in-deadly-kuwait-attack-was-made-in-iran?traffic_source=rss",
+    "source": "Al Jazeera",
+    "weight": 2,
+    "published": "2026-11-28T00:00:00+00:00",
+    "image": "",
+    "uid": "c8600abd42cc"
+   },
+   "related": [
+    {
+     "title": "US disables ship in Gulf of Oman under Iran blockade",
+     "summary": "The United States said it was continuing \"to strictly enforce the blockade\" of Iran's ports. Meanwhile, Kuwait summoned Iran's ambassador over a strike that killed two Italian technicians.",
+     "link": "https://www.dw.com/en/us-disables-ship-in-gulf-of-oman-under-iran-blockade/a-80082950?maca=en-rss-en-all-1573-rdf",
+     "source": "Deutsche Welle",
+     "weight": 2,
+     "published": "2026-11-27T23:17:00+00:00",
+     "image": "",
+     "uid": "447eadfaa4f1"
+    }
+   ],
+   "topic": "Attacco in Kuwait uccide due tecnici italiani, Tajani: drone made in Iran",
+   "reason": "Nella guerra con l'Iran sono morti due italiani e Tajani accusa direttamente Teheran: un nuovo sviluppo che riguarda l'Italia da vicino.",
+   "message_id": 249,
+   "chat": "1286321102",
+   "created": "2026-11-28T06:31:51.288928+00:00"
+  }
+ }
 }
