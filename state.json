@@ -186,7 +186,8 @@
    "21:00"
   ],
   "2026-11-28": [
-   "07:30"
+   "07:30",
+   "12:30"
   ]
  },
  "last_refresh": "",
@@ -227,6 +228,65 @@
    "message_id": 249,
    "chat": "1286321102",
    "created": "2026-11-28T06:31:51.288928+00:00"
+  },
+  "123052f8d3": {
+   "main": {
+    "title": "Two visions of Spain collide as voters weigh PM Sanchez’s record",
+    "summary": "Socialist PM Sanchez seeks re-election but polls suggest conservative PP and far-right Vox could reach majority.",
+    "link": "https://www.aljazeera.com/news/2026/11/28/two-visions-of-spain-collide-as-voters-weigh-sanchez-record?traffic_source=rss",
+    "source": "Al Jazeera",
+    "weight": 2,
+    "published": "2026-11-28T10:36:41+00:00",
+    "image": "",
+    "uid": "e726e74d1e99"
+   },
+   "related": [
+    {
+     "title": "What are the main issues driving Spain's national election ?",
+     "summary": "Spain will elect a new government on Sunday in a snap election that could unseat Prime Minister Pedro Sánchez. The progressive leader has governed Spain for 8 years, presiding over several crises, years of economic expansion and immigration-led population growth. No issue, however, has affected Spaniards during this time as much as unaffordable housing.",
+     "link": "https://www.france24.com/en/what-are-the-main-issues-driving-spain-s-national-election",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-28T10:41:30+00:00",
+     "image": "https://s.france24.com/media/display/7918910a-eb17-11f1-b189-77d069279b82/w:1024/p:16x9/2026-11-27T210740Z-1597178849-RC2KWOA2VOZ5-RTRMADP-3-SPAIN-ELECTION-VOX.jpg",
+     "uid": "e49333a5552f"
+    },
+    {
+     "title": "El Guapo’s last gasp?",
+     "summary": "The polls look grim for Pedro Sánchez — but a rightwing coalition won’t be smooth sailing if his opponents triumph",
+     "link": "https://www.ft.com/content/19dd970c-6258-49ad-8f2d-df90bff90ef2?syn-25a6b1a6=1",
+     "source": "Financial Times",
+     "weight": 3,
+     "published": "2026-11-28T11:00:02+00:00",
+     "image": "",
+     "uid": "a3ee5dc4fcf1"
+    },
+    {
+     "title": "Immigration, a key issue in Sunday's Spanish snap election",
+     "summary": "Vox has focused its campaign on immigration, which dominated politics after tens of thousands of migrants streamed into Spain's north African city of Ceuta from Morocco in July.",
+     "link": "https://www.france24.com/en/immigration-a-key-issue-in-sunday-s-spanish-snap-election",
+     "source": "France 24",
+     "weight": 2,
+     "published": "2026-11-28T10:30:47+00:00",
+     "image": "https://s.france24.com/media/display/2bd6c066-eb16-11f1-b012-f9cf020caef6/w:1024/p:16x9/2026-11-27T202624Z-1130337193-RC2JWOAD7O7N-RTRMADP-3-MIGRATION-SPAIN-CANARY-ISLANDS.jpg",
+     "uid": "30b08b32a1a8"
+    },
+    {
+     "title": "Spagna al voto, la presidente del Psoe: «Su Ceuta abbiamo sbagliato»",
+     "summary": "Madrid - L’economia che cresce, i cittadini che si impoveriscono. Quello della Spagna è un dilemma macrofinanziario che catalizza l’attenzione di molti osservatori: gli economisti, per ora, non hanno fornito...",
+     "link": "https://www.ilsole24ore.com/art/spagna-voto-presidente-psoe-su-ceuta-abbiamo-sbagliato-AJf2ofVC",
+     "source": "Il Sole 24 Ore",
+     "weight": 2,
+     "published": "2026-11-28T10:04:03+00:00",
+     "image": "https://i2.res.24o.it/images2010/S24/Documenti/2026/11/28/Immagini/Ritagli/2026-06-24T000000Z_1923159244_MT1SOPA000IELO86_RTRMADP_3_SOPA-U66516204856aWG-1440x752@IlSole24Ore-Web.JPG",
+     "uid": "e46651881197"
+    }
+   ],
+   "topic": "Spagna al voto: elezioni anticipate, Sánchez rischia contro PP e Vox",
+   "reason": "Domani vota uno dei Paesi più grandi dell'UE: secondo i sondaggi PP e Vox potrebbero avere la maggioranza, con effetti su migranti, difesa e linea europea. Ne parlano quasi tutte le testate principali.",
+   "message_id": 250,
+   "chat": "1286321102",
+   "created": "2026-11-28T11:30:53.107411+00:00"
   }
  }
 }
