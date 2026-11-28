@@ -197,55 +197,6 @@
  ],
  "awaiting_fix": {},
  "proposals": {
-  "1802440778": {
-   "main": {
-    "title": "Divisions deepen between EU member states after tense budget summit",
-    "summary": "An EU leaders summit on the bloc's seven-year budget fell apart amid divisions over how to fund Ukraine. The budget proposal also includes a 3% tax on US tech companies, in a bid for the EU to generate additional funds.",
-    "link": "https://www.dw.com/en/divisions-deepen-between-eu-member-states-after-tense-budget-summit/a-80078599?maca=en-rss-en-all-1573-rdf",
-    "source": "Deutsche Welle",
-    "weight": 2,
-    "published": "2026-11-27T16:51:00+00:00",
-    "image": "",
-    "uid": "17a999929335"
-   },
-   "related": [
-    {
-     "title": "EU leaders fail to break $1.7 trillion budget deadlock as political pressure mounts",
-     "summary": "EU leaders failed to break a deadlock over the bloc’s budget, with talks set to resume in December as a key deadline looms.",
-     "link": "https://www.cnbc.com/2026/11/27/eu-budget-2028-2034-deadlock.html",
-     "source": "CNBC",
-     "weight": 2,
-     "published": "2026-11-27T14:12:55+00:00",
-     "image": "",
-     "uid": "c94df6fa2ace"
-    },
-    {
-     "title": "EU budget summit collapses as row over money exposes clash over Europe's strategic tasks",
-     "summary": "The EU summit on the Union's common budget for 2028-2034 has initially failed. Some want to protect established spending, others to cut costs and mainly finance new strategic tasks, warns foreign policy expert Alexander Wolf of the Hanns Seidel Foundation in Berlin.",
-     "link": "https://www.euronews.com/2026/11/27/eu-budget-summit-collapses-as-row-over-money-exposes-clash-over-europes-strategic-tasks",
-     "source": "Euronews",
-     "weight": 2,
-     "published": "2026-11-27T13:33:03+00:00",
-     "image": "",
-     "uid": "b93d8b3bc01e"
-    },
-    {
-     "title": "Europe Tonight: EU budget summit collapses as Spain braces for vote and UK unveils deal",
-     "summary": "EU budget talks collapse early in Brussels as Germany and \"frugals\" walk out, pushing a deal to December. Meanwhile, Spain braces for Sunday’s snap election that could unseat PM Pedro Sánchez, and Britain unveils details of its new EU cooperation deal.",
-     "link": "https://www.euronews.com/2026/11/27/europe-tonight-eu-budget-summit-collapses-as-spain-braces-for-vote-and-uk-unveils-deal",
-     "source": "Euronews",
-     "weight": 2,
-     "published": "2026-11-27T16:58:45+00:00",
-     "image": "",
-     "uid": "65c4eaedb870"
-    }
-   ],
-   "topic": "Fallisce il vertice UE sul bilancio 2028-2034, si riprova a dicembre",
-   "reason": "La riportano più testate autorevoli e ha conseguenze concrete: i leader UE si sono divisi sul bilancio settennale da 1.700 miliardi di dollari, sui fondi per l'Ucraina e su una tassa del 3% sulle big tech USA, e questo tocca direttamente anche i fondi destinati all'Italia.",
-   "message_id": 247,
-   "chat": "1286321102",
-   "created": "2026-11-27T17:02:45.356465+00:00"
-  },
   "2100516114": {
    "main": {
     "title": "Spagna, perché l’alleanza tra conservatori e ultradestra non fa più scandalo a 50 anni dalla fine del franchismo",
