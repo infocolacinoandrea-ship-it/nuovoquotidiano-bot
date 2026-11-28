@@ -187,7 +187,8 @@
   ],
   "2026-11-28": [
    "07:30",
-   "12:30"
+   "12:30",
+   "18:00"
   ]
  },
  "last_refresh": "",
@@ -258,6 +259,35 @@
    "message_id": 250,
    "chat": "1286321102",
    "created": "2026-11-28T11:30:53.107411+00:00"
+  },
+  "180233409a": {
+   "main": {
+    "title": "Iran points to Europe’s war role after Italians killed in Kuwait strike",
+    "summary": "Italy and Kuwait say an Iranian drone was involved, but Tehran says the US and Israel may be looking to escalate war.",
+    "link": "https://www.aljazeera.com/news/2026/11/28/iran-points-to-europes-war-role-after-italians-killed-in-kuwait-strike?traffic_source=rss",
+    "source": "Al Jazeera",
+    "weight": 2,
+    "published": "2026-11-28T13:42:53+00:00",
+    "image": "",
+    "uid": "f7807102ea00"
+   },
+   "related": [
+    {
+     "title": "Tajani, 'non pensiamo a evacuazioni dal Medio Oriente, ma massima prudenza'",
+     "summary": "Ministro cita attacco a base Kuwait, 'lavoriamo per de-escalation'",
+     "link": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/28/tajani-non-pensiamo-a-evacuazioni-dal-medio-oriente-ma-massima-prudenza_6d98b4bd-c4f2-4444-9d02-b0b99c335493.html",
+     "source": "ANSA",
+     "weight": 2,
+     "published": "2026-11-28T15:57:37+00:00",
+     "image": "",
+     "uid": "9dfd546d2f8c"
+    }
+   ],
+   "topic": "Italiani uccisi in attacco in Kuwait, Iran chiama in causa l'Europa",
+   "reason": "La guerra USA-Iran colpisce direttamente l'Italia: ci sono italiani uccisi in Kuwait. Italia e Kuwait parlano di un drone iraniano, Teheran tira in ballo il ruolo dell'Europa e Tajani esclude evacuazioni ma chiede la massima prudenza.",
+   "message_id": 251,
+   "chat": "1286321102",
+   "created": "2026-11-28T17:02:34.163652+00:00"
   }
  }
 }
